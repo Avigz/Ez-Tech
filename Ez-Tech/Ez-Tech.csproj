@@ -122,9 +122,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Administrator.cs" />
     <Compile Include="Model\EztechdbContext.cs" />
     <Compile Include="Model\Hjælpere.cs" />
+    <Compile Include="Model\Kunder.cs" />
     <Compile Include="Model\Opgaver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
