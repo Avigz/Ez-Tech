@@ -13,5 +13,10 @@ namespace Ez_Tech.Model
         public bool IsDone { get; set; }
 
         public virtual Kunder Kunde { get; set; }
+
+        public override string ToString()
+        {
+            return $"{ID} {KundeID} {Beskrivelse} {HjælperTilknyttet} {IsDone}";
+        }
     }
 }
