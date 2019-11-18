@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Ez_Tech.Model;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,16 @@ namespace Ez_Tech
         public MainPage()
         {
             this.InitializeComponent();
+
+           
+        }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            ViewModel.ViewModel vm = new ViewModel.ViewModel();
+            Hjælpere Test = new Hjælpere(2, "Christopher", "1234", "123", "123.com", false);
+
+            vm.HjælpereWebApi.Create(Test.ID, Test);
         }
     }
 }
