@@ -17,5 +17,10 @@ namespace Ez_Tech.Model
         public string KundeAdresse { get; set; }
 
         public virtual ICollection<Opgaver> Opgaver { get; set; }
+
+        public override string ToString()
+        {
+            return $"{KundeID} {KundeNavn} {KundeNummer} {KundeAdresse}";
+        }
     }
 }
