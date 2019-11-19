@@ -9,7 +9,6 @@ namespace Ez_Tech.Model
         #region Instancefield
 
         private int _id;
-        private int _kundeId;
         private string _beskrivelse;
         private int? _hjælperTilknyttet;
         private bool _isDone;
