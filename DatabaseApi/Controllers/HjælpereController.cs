@@ -1,0 +1,134 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Web.Http;
+using System.Web.Http.Description;
+using DatabaseApi;
+
+namespace DatabaseApi.Controllers
+{
+    public class HjælpereController : ApiController
+    {
+        private EzDbContext db = new EzDbContext();
+
+        // GET: api/Hjælpere
+        public IQueryable<Hjælpere> GetHjælpere()
+        {
+            return db.Hjælpere;
+        }
+
+        // GET: api/Hjælpere/5
+        [ResponseType(typeof(Hjælpere))]
+        public async Task<IHttpActionResult> GetHjælpere(int id)
+        {
+            Hjælpere hjælpere = await db.Hjælpere.FindAsync(id);
+            if (hjælpere == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(hjælpere);
+        }
+
+        // PUT: api/Hjælpere/5
+        [ResponseType(typeof(void))]
+        public async Task<IHttpActionResult> PutHjælpere(int id, Hjælpere hjælpere)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != hjælpere.ID)
+            {
+                return BadRequest();
+            }
+
+            db.Entry(hjælpere).State = EntityState.Modified;
+
+            try
+            {
+                await db.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!HjælpereExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return StatusCode(HttpStatusCode.NoContent);
+        }
+
+        // POST: api/Hjælpere
+        [ResponseType(typeof(Hjælpere))]
+        public async Task<IHttpActionResult> PostHjælpere(Hjælpere hjælpere)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            db.Hjælpere.Add(hjælpere);
+
+            try
+            {
+                await db.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (HjælpereExists(hjælpere.ID))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return CreatedAtRoute("DefaultApi", new { id = hjælpere.ID }, hjælpere);
+        }
+
+        // DELETE: api/Hjælpere/5
+        [ResponseType(typeof(Hjælpere))]
+        public async Task<IHttpActionResult> DeleteHjælpere(int id)
+        {
+            Hjælpere hjælpere = await db.Hjælpere.FindAsync(id);
+            if (hjælpere == null)
+            {
+                return NotFound();
+            }
+
+            db.Hjælpere.Remove(hjælpere);
+            await db.SaveChangesAsync();
+
+            return Ok(hjælpere);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private bool HjælpereExists(int id)
+        {
+            return db.Hjælpere.Count(e => e.ID == id) > 0;
+        }
+    }
+}

@@ -6,6 +6,29 @@ namespace Ez_Tech.Model
 {
     public partial class Opgaver
     {
+        #region Instancefield
+
+        private int _id;
+        private string _beskrivelse;
+        private int? _hjælperTilknyttet;
+        private bool _isDone;
+
+        #endregion
+
+        #region Constructor
+        public Opgaver(int _id, int _kundeId, string _beskrivelse, int? _hjælperTilknyttet, bool _isDone)
+{
+    _id = ID;
+    _kundeId = KundeID;
+    _beskrivelse = Beskrivelse;
+    _hjælperTilknyttet = HjælperTilknyttet;
+    _isDone = IsDone;
+}
+
+#endregion
+
+        #region Properties
+
         public int ID { get; set; }
         public int KundeID { get; set; }
         public string Beskrivelse { get; set; }
@@ -13,10 +36,13 @@ namespace Ez_Tech.Model
         public bool IsDone { get; set; }
 
         public virtual Kunder Kunde { get; set; }
+        #endregion
 
+        #region Methods
         public override string ToString()
         {
             return $"{ID} {KundeID} {Beskrivelse} {HjælperTilknyttet} {IsDone}";
         }
+#endregion
     }
 }
