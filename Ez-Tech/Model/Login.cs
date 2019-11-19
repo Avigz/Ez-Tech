@@ -10,7 +10,9 @@ namespace Ez_Tech.Model
 {
     public class Login : INotifyPropertyChanged
     {
-            public bool LoginSuccesfull
+
+        #region  Properties
+        public bool LoginSuccesfull
             {
                 get { return LoginSuccesfull; }
                 set
@@ -21,9 +23,9 @@ namespace Ez_Tech.Model
             }
 
             public event PropertyChangedEventHandler PropertyChanged;
-
-
-            public async Task LoginAsync(string Uname, string Pw)
+#endregion 
+        #region methods
+        public async Task LoginAsync(string Uname, string Pw)
             {
                 bool correctName;
                 bool correctPw;
@@ -73,7 +75,7 @@ namespace Ez_Tech.Model
                     handler(this, new PropertyChangedEventArgs(name));
                 }
             }
-
+#endregion 
     }
 
 
