@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Ez_Tech.Model
 {
-    public partial class Hjælpere
+    public class Hjælpere
     {
       public  Hjælpere(int id, string navn,string telefonNummer, string kodeord, string email, bool isAdmin)
         {
@@ -15,6 +15,7 @@ namespace Ez_Tech.Model
             Email = email;
             IsAdmin = false;
         }
+
         public int ID { get; set; }
         public string Navn { get; set; }
         public string TelefonNummer { get; set; }

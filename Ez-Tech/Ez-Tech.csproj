@@ -122,7 +122,6 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\EztechdbContext.cs" />
     <Compile Include="Model\Hjælpere.cs" />
     <Compile Include="Model\IWebApiAsync.cs" />
     <Compile Include="Model\Kunder.cs" />
