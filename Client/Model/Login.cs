@@ -2,80 +2,43 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Net.Sockets;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Gaming.Input;
 using Client.Model;
 
 
 namespace Client.Model
 {
-    public class Login : INotifyPropertyChanged
+    public class Login 
     {
 
-        #region  Properties
-        public bool LoginSuccesfull
-            {
-                get { return LoginSuccesfull; }
-                set
-                {
-                    LoginSuccesfull = value;
-                    OnPropertyChanged();
-                }
-            }
 
-            public event PropertyChangedEventHandler PropertyChanged;
-#endregion 
         #region methods
-        public async Task LoginAsync(string Uname, string Pw)
+        public bool LoginAsync(string Uname, string Pw)
             {
                 bool correctName;
                 bool correctPw;
 
-                WebAPIAsync<Hjælpere> DbContext = new WebAPIAsync<Hjælpere>("http://localhost:60942/","Hjælpere","api");
-                List<Hjælpere> lookupList = await DbContext.Load();
-                var Lookup = from n in lookupList where n.Navn == Uname select n;
-
-                string _uname = Lookup.First().Navn;
-                string _pw = Lookup.First().Kodeord;
-
-
-                if (Uname == _uname)
+                WebAPIAsync<Hjælpere> DbContext = new WebAPIAsync<Hjælpere>("http://localhost:60942/","api","Hjælpere");
+                var lookupList = DbContext.Load();
+                var Query = from n in lookupList.Result where n.Navn == Uname && n.Kodeord == Pw select n;
+                string _uname = Query.First().Navn;
+                string _pw = Query.First().Kodeord;
+                if (Query.First().Navn == _uname && Query.First().Kodeord == _pw)
                 {
-                    correctName = true;
-                }
-                else
-                {
-                    correctName = false;
-                }
-
-                if (Pw == _pw)
-                {
-                    correctPw = true;
-                }
-                else
-                {
-                    correctPw = false;
-                }
-
-                if (correctPw == true && correctName == true)
-                {
-                    LoginSuccesfull = true;
+                    return true;
                 }
 
                 else
                 {
-                    LoginSuccesfull = false;
+                    return false;
                 }
-            }
+            
 
-            protected void OnPropertyChanged([CallerMemberName]string name = null)
-            {
-                PropertyChangedEventHandler handler = PropertyChanged;
-                if (handler != null)
-                {
-                    handler(this, new PropertyChangedEventArgs(name));
-                }
+          
             }
 #endregion 
     }

@@ -30,10 +30,9 @@ namespace Client.View
       ViewModel.ViewModel vm = new ViewModel.ViewModel();
           
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            vm.ConfirmLogin();
-            if (vm.LoginObject.LoginSuccesfull == true)
+            if (vm.ConfirmLogin() == true)
             {
                 Frame.Navigate(typeof(View.AdminPage));
             }
@@ -41,8 +40,9 @@ namespace Client.View
             {
                 
             }
-
            
         }
+
+       
     }
 }

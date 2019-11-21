@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 using Client.Model;
 
 
@@ -25,10 +26,18 @@ namespace Client.ViewModel
 
       public Login LoginObject = new Login();
 
-      public async void ConfirmLogin()
+      public bool ConfirmLogin()
       {
-          
-         await LoginObject.LoginAsync(Username, Password);
+          if (LoginObject.LoginAsync(Username, Password) == true)
+          {
+              return true;
+          }
+
+          else
+          {
+              return false;
+          }
+         
 
       }
       
