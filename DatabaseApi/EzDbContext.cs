@@ -8,7 +8,7 @@
     public partial class EzDbContext : DbContext
     {
         public EzDbContext()
-            : base("name=Model1")
+            : base("Model1")
         {
             base.Configuration.LazyLoadingEnabled = false;
             base.Configuration.ProxyCreationEnabled = false;

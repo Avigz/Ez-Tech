@@ -19,14 +19,14 @@ namespace Client.Model
         #region methods
         public bool LoginAsync(string Uname, string Pw)
             {
-                bool correctName;
-                bool correctPw;
+               
 
                 WebAPIAsync<Hjælpere> DbContext = new WebAPIAsync<Hjælpere>("http://localhost:60942/","api","Hjælpere");
                 var lookupList = DbContext.Load();
                 var Query = from n in lookupList.Result where n.Navn == Uname && n.Kodeord == Pw select n;
-                string _uname = Query.First().Navn;
-                string _pw = Query.First().Kodeord;
+                string _uname = Uname;
+                string _pw = Pw;
+
                 if (Query.First().Navn == _uname && Query.First().Kodeord == _pw)
                 {
                     return true;
