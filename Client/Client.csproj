@@ -131,10 +131,10 @@
     <Compile Include="Model\WebApiAsync.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />
-    <Compile Include="View\AdminPage.xaml.cs">
+    <Compile Include="View\Admin\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\MainPageLogin.xaml.cs">
+    <Compile Include="View\Forside\MainPageLogin.xaml.cs">
       <DependentUpon>MainPageLogin.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -163,11 +163,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\AdminPage.xaml">
+    <Page Include="View\Admin\AdminPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\MainPageLogin.xaml">
+    <Page Include="View\Forside\MainPageLogin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -188,6 +188,9 @@
     <PackageReference Include="System.Net.Http">
       <Version>4.3.4</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\Hjælpere\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
