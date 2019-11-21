@@ -20,9 +20,9 @@ namespace Ez_Tech.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class BlankPage2 : Page
+    public sealed partial class AdminPage : Page
     {
-        public BlankPage2()
+        public AdminPage()
         {
             this.InitializeComponent();
         }
@@ -30,6 +30,31 @@ namespace Ez_Tech.View
         private void TextBlock_SelectionChanged()
         {
 
+        }
+
+        private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton2_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton1_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

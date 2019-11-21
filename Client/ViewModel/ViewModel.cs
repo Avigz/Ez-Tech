@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Ez_Tech.Model;
+using Client.Model;
 
-namespace Ez_Tech.ViewModel
+
+
+namespace Client.ViewModel
 {
     public class ViewModel 
     {
