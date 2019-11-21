@@ -21,7 +21,7 @@
                 <StackPanel Background="DarkRed" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
-                        Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_Click"/>
+                        Width="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="MenuButton1_Click" Margin="0,0,0,0.4"/>
                         <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
@@ -30,24 +30,24 @@
                         <TextBlock Text="Aktuelle Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
 
                     </StackPanel>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton4" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEA8D;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_Click"/>
                         <TextBlock Text="Hjælpere" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged" />
                     </StackPanel>
-                
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton5" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE73A;"
                             Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_Click"/>
-                    <TextBlock Text="Afsluttet Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
-                </StackPanel>
+                        <TextBlock Text="Afsluttet Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
+                    </StackPanel>
 
 
 
-                <StackPanel Orientation="Horizontal">
-                        <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets"
-                       Width="50" Height="50" Background="Transparent" Click="MenuButton2_Click"/>
-                       </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Button x:Name="MenuButton2" Foreground="white" FontFamily="Segoe MDL2 Assets"
+                       Width="50" Height="50" Background="Transparent" Click="MenuButton2_Click"/>-->
+                    </StackPanel>
                     <StackPanel Orientation="Horizontal">
 
 
@@ -57,17 +57,19 @@
             </SplitView.Pane>
 
             <!--<SplitView.Content>
-                --><!--<StackPanel>-->
-                <StackPanel>
-                    <TextBlock Text="Admin" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0"/>
-                </StackPanel>
-                    
-                    <!--<TextBlock Text="Brugernavn" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-450"></TextBlock>
+                -->
+            <!--<StackPanel>-->
+            <StackPanel>
+                <TextBlock Text="Admin" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0"/>
+            </StackPanel>
+
+            <!--<TextBlock Text="Brugernavn" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-450"></TextBlock>
                     <TextBox Name="usernameBox" Background="White" Height="35" Width="200" Margin="0,0,0,-500"  PlaceholderText="Brugernavn"></TextBox>
                     <TextBlock Text="Kode" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-650"></TextBlock>
                     <PasswordBox x:Name="passwordBox" PasswordChar="*" Background="White" Height="35" Width="200" Margin="0,0,0,-700" PlaceholderText="Indtast password" ></PasswordBox>
                     <Button Content="Login" FontFamily="Calibri Light" FontSize="20" Height="40" Width="200" Background="White" Foreground="Black" Margin="311,450,311,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="Button_Click" />
-                </StackPanel>--><!--
+                </StackPanel>-->
+            <!--
             </SplitView.Content>-->
         </SplitView>
 
