@@ -12,37 +12,24 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Client.View;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Ez_Tech.View
+namespace Client.View
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPageLogin : Page
+    public sealed partial class AdminPage : Page
     {
-        public MainPageLogin()
+        public AdminPage()
         {
             this.InitializeComponent();
         }
+
+      
         
-        ViewModel.ViewModel vm = new ViewModel.ViewModel();
-          
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            vm.ConfirmLogin();
-            if (vm.LoginObject.LoginSuccesfull == true)
-            {
-                Frame.Navigate(typeof(View.AdminPage));
-            }
-            else
-            {
-                
-            }
-
-           
-        }
     }
 }

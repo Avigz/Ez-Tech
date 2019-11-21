@@ -32,10 +32,11 @@ namespace Ez_Tech
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            ViewModel.ViewModel vm = new ViewModel.ViewModel();
-            Hjælpere Test = new Hjælpere(2, "Christopher", "1234", "123", "123.com", false);
+            //ViewModel.ViewModel vm = new ViewModel.ViewModel();
+            //Hjælpere Test = new Hjælpere(2, "Christopher", "1234", "123", "123.com", false);
 
-            vm.HjælpereWebApi.Create(Test.ID, Test);
+            //vm.HjælpereWebApi.Create(Test.ID, Test);
+            Frame.Navigate(typeof(View.MainPageLogin));
         }
     }
 }

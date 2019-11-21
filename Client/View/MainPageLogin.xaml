@@ -1,16 +1,16 @@
 ﻿<Page
-    x:Class="Ez_Tech.View.MainPageLogin"
+    x:Class="Client.View.MainPageLogin"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Ez_Tech.View"
+    xmlns:local="using:Client.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:vm="using:Ez_Tech.ViewModel"
+    xmlns:viewModel="using:Client.ViewModel"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <Page.DataContext>
-        <vm:ViewModel></vm:ViewModel>
-    </Page.DataContext>
+    <!--<Page.DataContext>
+        <viewModel:ViewModel></viewModel:ViewModel>
+    </Page.DataContext>-->
 
 
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
@@ -26,12 +26,12 @@
                 <StackPanel Background="DarkRed" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
-                        Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_Click"/>
+                        Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" />
                         <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets"
-                       Width="50" Height="50" Background="Transparent" Click="MenuButton2_Click"/>
+                       Width="50" Height="50" Background="Transparent" />
                         <TextBlock Text="Om os" FontSize="18" Foreground="White" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
@@ -49,13 +49,13 @@
                     <TextBox Name="usernameBox" Background="White" Height="35" Width="200" Margin="0,0,0,-500"  PlaceholderText="Brugernavn" Text="{Binding Username, Mode=TwoWay}"></TextBox>
                     <TextBlock Text="Kode" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-650"></TextBlock>
                     <PasswordBox x:Name="passwordBox" PasswordChar="*" Background="White" Height="35" Width="200" Margin="0,0,0,-700" PlaceholderText="Indtast password" Password="{Binding Password, Mode=TwoWay}" ></PasswordBox>
-                    <Button Content="Login" FontFamily="Calibri Light" FontSize="20" Height="40" Width="200" Background="White" Foreground="Black" Margin="311,450,311,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="Button_Click" />
+                    <Button Content="Login" FontFamily="Calibri Light" FontSize="20" Height="40" Width="200" Background="White" Foreground="Black" Margin="311,450,311,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" />
                 </StackPanel>
             </SplitView.Content>
         </SplitView>
 
         <RelativePanel Margin="0,0,0,0">
-            <ToggleButton x:Name="HamburgerButton" Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Checked="Hamburgerbutton_OnChecked" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" />
+            <ToggleButton x:Name="HamburgerButton" Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" />
         </RelativePanel>
 
 
