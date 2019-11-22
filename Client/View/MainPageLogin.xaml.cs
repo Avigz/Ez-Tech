@@ -44,6 +44,19 @@ namespace Client.View
            
         }
 
-       
+
+
+        private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
+        {
+            if (mySplitView.IsPaneOpen == false)
+            {
+                mySplitView.IsPaneOpen = true;
+            }
+            else if (mySplitView.IsPaneOpen == true)
+            {
+                mySplitView.IsPaneOpen = false;
+            }
+
+        }
     }
 }
