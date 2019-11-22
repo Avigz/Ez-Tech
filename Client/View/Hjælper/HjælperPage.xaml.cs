@@ -48,19 +48,23 @@ namespace Client.View.Hjælper
             Frame.Navigate(typeof(HjælperMinProfil));
         }
 
-        private void MenuButton8_OnClick(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPageLogin));
+            if (mySplitView.IsPaneOpen == false)
+            {
+                mySplitView.IsPaneOpen = true;
+
+            }
+
+            else if (mySplitView.IsPaneOpen == true)
+            {
+                mySplitView.IsPaneOpen = false;
+            }
         }
 
         private void TextBlock_OnSelectionChanged(object sender, RoutedEventArgs e)
         {
-           // Frame.Navigate(typeof(HjælperLedigeOpgaver));
+            //Frame.Navigate(typeof(HjælperLedigeOpgaver));
         }
 
         private void MenuButton5_OnClick(object sender, RoutedEventArgs e)

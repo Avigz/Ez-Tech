@@ -22,12 +22,12 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton3" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
                         Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton3_OnClick"/>
-                        <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" />
+                        <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton4" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE77F;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton4_OnClick"/>
-                        <TextBlock Text="Mine opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
+                        <TextBlock Text="Mine opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged_1" />
 
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
@@ -39,21 +39,18 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton6" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE73A;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton6_OnClick"/>
-                        <TextBlock Text="Færdige Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
+                        <TextBlock Text="Færdige Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged_2" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton7" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE77B;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton7_OnClick"/>
-                        <TextBlock Text="Min Profil" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
+                        <TextBlock Text="Min Profil" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged_3" />
                     </StackPanel>
 
 
 
-                    <StackPanel Orientation="Horizontal">
-                        <Button x:Name="MenuButton8" Foreground="White" FontFamily="Segoe MDL2 Assets"
-                       Width="50" Height="50" Background="Transparent" Click="MenuButton8_OnClick"/>
-                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"/>
                     <StackPanel Orientation="Horizontal">
 
 
@@ -66,7 +63,7 @@
                 -->
             <!--<StackPanel>-->
             <StackPanel>
-                <TextBlock Text="Hjælper" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0"/>
+                <TextBlock Text="Hjælper's Opgaver" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0" SelectionChanged="TextBlock_SelectionChanged"/>
             </StackPanel>
 
             <!--<TextBlock Text="Brugernavn" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-450"></TextBlock>
