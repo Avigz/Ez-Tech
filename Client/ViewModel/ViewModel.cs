@@ -32,7 +32,7 @@ namespace Client.ViewModel
     private string _username = "default";
     private string _password = "default";
 
-    string Username
+    public string Username
     {
         get { return _username; }
         set
