@@ -26,13 +26,13 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton4" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE77F;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_Click"/>
+                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton4_OnClick"/>
                         <TextBlock Text="Mine opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
 
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton5" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEA8D;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_Click"/>
+                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton5_OnClick"/>
                         <TextBlock Text="Ledige opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged" HorizontalAlignment="Stretch" Margin="0,0,0.5,0" />
                     </StackPanel>
 
@@ -52,7 +52,7 @@
 
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="MenuButton8" Foreground="White" FontFamily="Segoe MDL2 Assets"
-                       Width="50" Height="50" Background="Transparent" Click="MenuButton2_Click"/>
+                       Width="50" Height="50" Background="Transparent" Click="MenuButton8_OnClick"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
 
