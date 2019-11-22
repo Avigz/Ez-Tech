@@ -29,22 +29,25 @@ namespace Client.ViewModel
     const string OpgaverURI = "Opgaver";
     const string apiPrefix = "api";
 
-    public string Username
+    private string _username = "default";
+    private string _password = "default";
+
+    string Username
     {
-        get { return Username; }
+        get { return _username; }
         set
         {
-            Username = value;
-            OnPropertyChanged("Username");
+            _username = value;
+            OnPropertyChanged(Username);
         }
     }
-
+    
     public string Password
     {
-        get { return Password; }
+        get { return _password; }
         set
         {
-            Password = value;
+            _password = value;
             OnPropertyChanged("Password");
         }
     }

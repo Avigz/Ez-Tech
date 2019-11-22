@@ -27,9 +27,9 @@ namespace Client.View
             this.InitializeComponent();
         }
 
-        private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
+        private void Forside_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminPage));
         }
 
         private void MenuButton4_OnClick(object sender, RoutedEventArgs e)

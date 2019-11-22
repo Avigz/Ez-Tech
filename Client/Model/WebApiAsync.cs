@@ -74,8 +74,10 @@
                 if (response.IsSuccessStatusCode)
                 {
                     product = await response.Content.ReadAsAsync<List<T>>();
-                }
-                return product;
+                    return product;
+            }
+
+                return null;
 
             }
 
