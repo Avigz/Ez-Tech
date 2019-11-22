@@ -134,6 +134,9 @@
     <Compile Include="View\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\HjælperMineOpgaver.xaml.cs">
+      <DependentUpon>HjælperMineOpgaver.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\HjælperMinProfil.xaml.cs">
       <DependentUpon>HjælperMinProfil.xaml</DependentUpon>
     </Compile>
@@ -172,6 +175,10 @@
     <Page Include="View\AdminPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\HjælperMineOpgaver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\HjælperMinProfil.xaml">
       <SubType>Designer</SubType>
