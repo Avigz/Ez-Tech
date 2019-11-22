@@ -28,8 +28,24 @@ namespace Client.View.Admin
             this.InitializeComponent();
         }
 
-      
-        
+        private void MenuButton1_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPageLogin));
+        }
 
+        private void MenuButton3_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(View.Admin.AdminPag));
+        }
+
+        private void MenuButton4_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(HjælperPage));
+        }
+
+        private void MenuButton5_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(FærdigeOpgaver));
+        }
     }
 }
