@@ -28,6 +28,19 @@ namespace Client.View.Admin
             this.InitializeComponent();
         }
 
+        private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
+        {
+            if (mySplitView.IsPaneOpen == false)
+            {
+                mySplitView.IsPaneOpen = true;
+            }
+            else if (mySplitView.IsPaneOpen == true)
+            {
+                mySplitView.IsPaneOpen = false;
+            }
+
+
+        }
         private void MenuButton1_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPageLogin));
@@ -47,5 +60,13 @@ namespace Client.View.Admin
         {
             Frame.Navigate(typeof(View.Admin.AdminFærdigeOpgaver));
         }
+
+        
+
     }
+
+    
+
+   
+
 }

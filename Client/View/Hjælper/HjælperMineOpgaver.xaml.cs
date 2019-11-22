@@ -91,5 +91,10 @@ namespace Client.View.Hjælper
         {
             Frame.Navigate(typeof(HjælperMinProfil));
         }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
