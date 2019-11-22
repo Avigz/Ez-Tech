@@ -35,7 +35,7 @@ namespace Client.View
         {
             if (vm.ConfirmLogin() == true)
             {
-                Frame.Navigate(typeof(View.AdminPage));
+                Frame.Navigate(typeof(View.Admin.AdminPage));
             }
             else
             {

@@ -29,7 +29,7 @@ namespace Client.View
 
         private void Forside_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(AdminPage));
+            Frame.Navigate(typeof(View.Admin.AdminPage));
         }
 
         private void MenuButton4_OnClick(object sender, RoutedEventArgs e)

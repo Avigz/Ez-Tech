@@ -78,7 +78,7 @@
         <RelativePanel Margin="0,0,0,0">
             <ToggleButton x:Name="HamburgerButton" Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White"  />
         </RelativePanel>
-        <ListView x:Name="Opgaveliste" ItemsSource="{Binding }"  SelectedItem="{Binding , Mode=TwoWay}" Background="White" FontFamily="Calibri Light" RenderTransformOrigin="0,0" Margin="170,95,845,220" />
+        <!--<ListView x:Name="Opgaveliste" ItemsSource=""  SelectedItem="" Background="White" FontFamily="Calibri Light" RenderTransformOrigin="0,0" Margin="170,95,845,220" />-->
         <ListViewItem HorizontalAlignment="Stretch" Margin="-5,55,5,-55" VerticalAlignment="Stretch">
             <StackPanel Orientation="Horizontal" Height="35" Width="632" Margin="0,0,0,0" RenderTransformOrigin="0.588,0.531"></StackPanel>
         </ListViewItem>
