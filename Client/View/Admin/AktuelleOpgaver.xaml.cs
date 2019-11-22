@@ -27,6 +27,21 @@ namespace Client.View.Admin
             this.InitializeComponent();
         }
 
+
+        private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
+        {
+            if (mySplitView.IsPaneOpen == false)
+            {
+                mySplitView.IsPaneOpen = true;
+            }
+            else if (mySplitView.IsPaneOpen == true)
+            {
+                mySplitView.IsPaneOpen = false;
+            }
+
+
+        }
+
         private void MenuButton1_OnClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
@@ -57,9 +72,6 @@ namespace Client.View.Admin
             throw new NotImplementedException();
         }
 
-        private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

@@ -32,7 +32,7 @@ namespace Client
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(View.MainPageLogin));
+            Frame.Navigate(typeof(View.Admin.AdminPage));
         }
     }
 }
