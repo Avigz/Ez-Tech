@@ -35,17 +35,17 @@ namespace Client.View.Admin
 
         private void MenuButton3_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(View.Admin.AdminPag));
+            Frame.Navigate(typeof(View.Admin.AdminPage));
         }
 
         private void MenuButton4_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(HjælperPage));
+            Frame.Navigate(typeof(View.Hjælper.HjælperMinProfil));
         }
 
         private void MenuButton5_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(FærdigeOpgaver));
+            Frame.Navigate(typeof(View.Admin.AdminFærdigeOpgaver));
         }
     }
 }
