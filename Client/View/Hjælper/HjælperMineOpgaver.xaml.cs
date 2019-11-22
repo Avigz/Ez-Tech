@@ -68,5 +68,10 @@ namespace Client.View.Hjælper
         {
             throw new NotImplementedException();
         }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
