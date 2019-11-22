@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Client.View.HjælperMineOpgaver"
+    x:Class="Client.View.Hjælper.HjælperMinProfil"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Client.View"
@@ -33,18 +33,18 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton5" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEA8D;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton5_OnClick"/>
-                        <TextBlock Text="Ledige opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_OnSelectionChanged" HorizontalAlignment="Stretch" Margin="0,0,0.5,0" />
+                        <TextBlock Text="Ledige opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged" HorizontalAlignment="Stretch" Margin="0,0,0.5,0" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton6" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE73A;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton6_OnClick"/>
+                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_Click"/>
                         <TextBlock Text="Færdige Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton7" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE77B;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton7_OnClick"/>
+                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_Click"/>
                         <TextBlock Text="Min Profil" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
 
@@ -66,7 +66,17 @@
                 -->
             <!--<StackPanel>-->
             <StackPanel>
-                <TextBlock Text="Hjælper" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0"/>
+                <TextBlock Text="Min Profil" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0" SelectionChanged="TextBlock_SelectionChanged"/>
+                <StackPanel>
+                    <TextBlock Text="Fornavn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,0,0"></TextBlock>
+                    <TextBox></TextBox>
+                    <TextBlock Text="Efternavn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,0,0"></TextBlock>
+                    <TextBox></TextBox>
+                    <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,0,0"></TextBlock>
+                    <TextBox></TextBox>
+                    <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,0,0" SelectionChanged="TextBlock_SelectionChanged_1"></TextBlock>
+                    <TextBox></TextBox>
+                </StackPanel>
             </StackPanel>
 
             <!--<TextBlock Text="Brugernavn" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-450"></TextBlock>
@@ -80,7 +90,7 @@
         </SplitView>
 
         <RelativePanel Margin="0,0,0,0">
-            <ToggleButton x:Name="HamburgerButton" Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Checked="HamburgerButton_OnChecked" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" />
+            <ToggleButton x:Name="HamburgerButton" Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Checked="Hamburgerbutton_OnChecked" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" />
         </RelativePanel>
 
 

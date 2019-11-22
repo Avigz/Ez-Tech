@@ -141,13 +141,13 @@
     <Compile Include="View\Admin\AktuelleOpgaver.xaml.cs">
       <DependentUpon>AktuelleOpgaver.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\HjælperMineOpgaver.xaml.cs">
+    <Compile Include="View\Hjælper\HjælperMineOpgaver.xaml.cs">
       <DependentUpon>HjælperMineOpgaver.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\HjælperMinProfil.xaml.cs">
+    <Compile Include="View\Hjælper\HjælperMinProfil.xaml.cs">
       <DependentUpon>HjælperMinProfil.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\HjælperPage.xaml.cs">
+    <Compile Include="View\Hjælper\HjælperPage.xaml.cs">
       <DependentUpon>HjælperPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainPageLogin.xaml.cs">
@@ -191,15 +191,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\HjælperMineOpgaver.xaml">
+    <Page Include="View\Hjælper\HjælperMineOpgaver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\HjælperMinProfil.xaml">
+    <Page Include="View\Hjælper\HjælperMinProfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\HjælperPage.xaml">
+    <Page Include="View\Hjælper\HjælperPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

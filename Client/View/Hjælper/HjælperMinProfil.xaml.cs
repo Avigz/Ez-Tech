@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Client.View
+namespace Client.View.Hjælper
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -56,5 +56,8 @@ namespace Client.View
         {
             throw new NotImplementedException();
         }
+
+
+
     }
 }
