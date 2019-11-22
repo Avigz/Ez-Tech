@@ -28,8 +28,8 @@ namespace Client.View
         {
             this.InitializeComponent();
         }
-      ViewModel.ViewModel vm = new ViewModel.ViewModel();
-          
+        ViewModel.ViewModel vm = new ViewModel.ViewModel();
+
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
@@ -39,9 +39,9 @@ namespace Client.View
             }
             else
             {
-                
+
             }
-           
+
         }
 
 

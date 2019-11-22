@@ -29,10 +29,13 @@ namespace Client
             
         }
 
+      
+        
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(View.Admin.AdminPage));
+            Frame.Navigate(typeof(View.MainPageLogin));
+       
         }
     }
 }
