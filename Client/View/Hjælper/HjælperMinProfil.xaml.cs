@@ -58,6 +58,19 @@ namespace Client.View.Hjælper
         }
 
 
+        private void MenuButton7_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
+        private void MenuButton6_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

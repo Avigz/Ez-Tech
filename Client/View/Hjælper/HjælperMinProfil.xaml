@@ -38,13 +38,13 @@
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton6" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE73A;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_Click"/>
+                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton6_OnClick"/>
                         <TextBlock Text="Færdige Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton7" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE77B;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_Click"/>
+                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton7_OnClick"/>
                         <TextBlock Text="Min Profil" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
 
@@ -90,7 +90,7 @@
         </SplitView>
 
         <RelativePanel Margin="0,0,0,0">
-            <ToggleButton x:Name="HamburgerButton" Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Checked="Hamburgerbutton_OnChecked" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" />
+            <ToggleButton x:Name="HamburgerButton" Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Checked="HamburgerButton_OnChecked" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" />
         </RelativePanel>
 
 
