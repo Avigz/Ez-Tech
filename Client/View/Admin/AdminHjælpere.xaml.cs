@@ -12,38 +12,20 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Client.ViewModel;
-using Client;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Client.View
+namespace Client.View.Admin
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPageLogin : Page
+    public sealed partial class AdminHjælpere : Page
     {
-        public MainPageLogin()
+        public AdminHjælpere()
         {
             this.InitializeComponent();
         }
-        ViewModel.ViewModel vm = new ViewModel.ViewModel();
-
-
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-        {
-            if (vm.ConfirmLogin() == true)
-            {
-                Frame.Navigate(typeof(View.Admin.AdminPage));
-            }
-            else
-            {
-
-            }
-
-        }
-
 
 
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
@@ -57,6 +39,15 @@ namespace Client.View
                 mySplitView.IsPaneOpen = false;
             }
 
+
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
         }
     }
+
+    
+
 }

@@ -135,6 +135,9 @@
     <Compile Include="View\Admin\AdminFærdigeOpgaver.xaml.cs">
       <DependentUpon>AdminFærdigeOpgaver.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\AdminHjælpere.xaml.cs">
+      <DependentUpon>AdminHjælpere.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Admin\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Client_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +184,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\Admin\AdminFærdigeOpgaver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\AdminHjælpere.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
