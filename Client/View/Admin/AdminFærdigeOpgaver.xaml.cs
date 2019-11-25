@@ -50,6 +50,16 @@ namespace Client.View.Admin
         {
             throw new NotImplementedException();
         }
+
+        private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MFclick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
     
     
