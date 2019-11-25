@@ -50,7 +50,10 @@
 
 
 
-                    
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets"
+                       Width="50" Height="50" Background="Transparent" />
+                    </StackPanel>
                     <StackPanel Orientation="Horizontal">
 
 
