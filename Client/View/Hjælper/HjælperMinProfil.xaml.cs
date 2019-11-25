@@ -64,15 +64,7 @@ namespace Client.View.Hjælper
 
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
-            if (mySplitView.IsPaneOpen == false)
-            {
-                mySplitView.IsPaneOpen = true;
-            }
-
-            else if (mySplitView.IsPaneOpen == true)
-            {
-                mySplitView.IsPaneOpen = false;
-            }
+            throw new NotImplementedException();
         }
 
         private void TextBlock_SelectionChanged_2(object sender, RoutedEventArgs e)
