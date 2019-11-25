@@ -60,6 +60,11 @@ namespace Client.View.Admin
         {
             throw new NotImplementedException();
         }
+
+        private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
     
     

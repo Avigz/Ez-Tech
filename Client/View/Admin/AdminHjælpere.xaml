@@ -80,7 +80,7 @@
                 <TextBox Margin="105,0,0,0"/>
                 <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="100,0,0,0"></TextBlock>
                 <TextBox Margin="105,0,0,0"/>
-                <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="100,0,0,0" SelectionChanged="TextBlock_SelectionChanged_1"></TextBlock>
+                <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="100,0,0,0" SelectionChanged="TextBlock_OnSelectionChanged"></TextBlock>
                 <TextBox Margin="105,0,0,0"/>
                 <TextBlock Text="Kodeord:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="100,0,0,0"></TextBlock>
                 <TextBox Margin="105,0,0,0"/>
