@@ -35,8 +35,8 @@ namespace Client.Model
                 _url = serverURL + "/" + _apiPrefix + "/" + apiID;
             }
 
-
-            public async Task Create(int key, T obj)
+            #endregion
+        public async Task Create(int key, T obj)
             {
                 string UrlNew = _url + "/" + key;
                 string Serialized = JsonConvert.SerializeObject(obj);
@@ -52,7 +52,7 @@ namespace Client.Model
             }
 
 
-            #endregion
+            
 
 
 
