@@ -6,13 +6,15 @@ using System.Net.Sockets;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Store.Preview.InstallControl;
 using Windows.Gaming.Input;
+using Windows.UI.Xaml.Controls;
 using Client.Model;
 
 
 namespace Client.Model
 {
-    public class Login 
+    public class Login
     {
 
 
@@ -22,28 +24,35 @@ namespace Client.Model
                
 
                 WebAPIAsync<Hjælpere> DbContext = new WebAPIAsync<Hjælpere>("http://localhost:60942/","api","Hjælpere");
-                var lookupList = DbContext.Load();
-                var Query = from n in lookupList.Result where n.Navn == Uname && n.Kodeord == Pw select n;
+                List<Hjælpere> lookupList = DbContext.Load().Result;
+                IEnumerable<Hjælpere> Query = from n in lookupList where n.Navn == Uname select n;
+                
                 string _uname = Uname;
                 string _pw = Pw;
 
                 if (Query.FirstOrDefault().Navn == _uname && Query.FirstOrDefault().Kodeord == _pw)
                 {
+                    LoggedInUser = Query.FirstOrDefault();
                     return true;
+                    
                 }
 
                 else
                 {
                     return false;
                 }
-            
 
-          
             }
-#endregion 
+
+        public Hjælpere LoggedInUser { get; set; }
+         
+        }
+
+        #endregion
+
     }
 
 
 
-}
+
 

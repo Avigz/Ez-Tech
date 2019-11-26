@@ -27,29 +27,20 @@ namespace Client.View.Admin
             this.InitializeComponent();
         }
 
-        private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
+        private void HamburgerButton1_OnChecked(object sender, RoutedEventArgs e)
         {
-                if (mySplitView.IsPaneOpen == false)
-                {
-                    mySplitView.IsPaneOpen = true;
-                }
-                else if (mySplitView.IsPaneOpen == true)
-                {
-                    mySplitView.IsPaneOpen = false;
-                }
+            if (mySplitView.IsPaneOpen == false)
+            {
+                mySplitView.IsPaneOpen = true;
+            }
+            else if (mySplitView.IsPaneOpen == true)
+            {
+                mySplitView.IsPaneOpen = false;
+            }
 
-            
+
         }
 
-        private void MenuButton1_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
         private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
         {
@@ -61,7 +52,49 @@ namespace Client.View.Admin
             throw new NotImplementedException();
         }
 
+   
+
+        private void LV_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+
+        private void MenuButton1_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton2_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+       
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+       
+
+        private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }

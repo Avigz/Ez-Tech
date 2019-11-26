@@ -124,10 +124,13 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Hjælpere.cs" />
+    <Compile Include="Model\HjælperSingleton.cs" />
     <Compile Include="Model\IWebApiAsync.cs" />
     <Compile Include="Model\Kunder.cs" />
+    <Compile Include="Model\KunderSingleton.cs" />
     <Compile Include="Model\Login.cs" />
     <Compile Include="Model\Opgaver.cs" />
+    <Compile Include="Model\OpgaverSingleton.cs" />
     <Compile Include="Model\WebApiAsync.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

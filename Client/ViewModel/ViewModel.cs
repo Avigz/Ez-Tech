@@ -18,7 +18,7 @@ namespace Client.ViewModel
     {
 
     [NotifyPropertyChangedInvocator]
-    protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    protected virtual void OnPropertyChanged(string propertyName)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
@@ -29,26 +29,49 @@ namespace Client.ViewModel
     const string OpgaverURI = "Opgaver";
     const string apiPrefix = "api";
 
-    private string _username = "default";
-    private string _password = "default";
+    private string _username { get; set; }
+    private string _password { get; set; }
+
+    public Hjælpere LoggedInHjælper { get; set; }
+    
 
     public string Username
     {
-        get { return _username; }
+        get {
+            if (_username == null)
+            {
+                return "default";
+            }
+            else
+            {
+                return _username;
+            }
+
+            }
         set
         {
             _username = value;
-            OnPropertyChanged("Username");
+            OnPropertyChanged(nameof(Username));
         }
     }
     
     public string Password
     {
-        get { return _password; }
+        get {
+            if (_password == null)
+            {
+                return "default";
+            }
+            else
+            {
+                return _password;
+                }
+
+             }
         set
         {
             _password = value;
-            OnPropertyChanged("Password");
+            OnPropertyChanged(nameof(Password));
         }
     }
 
@@ -58,7 +81,9 @@ namespace Client.ViewModel
     {
         if (LoginObject.LoginAsync(Username, Password) == true)
         {
-            return true;
+                LoggedInHjælper = LoginObject.LoggedInUser;
+                return true;
+            
         }
 
         else
