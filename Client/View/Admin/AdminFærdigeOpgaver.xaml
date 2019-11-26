@@ -34,13 +34,13 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton4" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEA8D;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton4_OnClick" />
-                        <TextBlock Text="Hjælpere" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center"/>
+                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                        <TextBlock Text="Hjælpere" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton5" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE73A;"
-                            Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton5_OnClick"/>
+                            Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                         <TextBlock Text="Færdige Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" Height="22" Margin="-0.4,0,152.4,0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Stretch" >
                             <TextBlock.RenderTransform>
                                 <CompositeTransform ScaleY="1"/>
@@ -72,45 +72,47 @@
 
 
         </SplitView>
+        <StackPanel>
+            
+                <StackPanel Orientation="vertical" RenderTransformOrigin="0,0" Margin="0,110,813.8,0" Height="633" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <ListView x:Name="LV" ItemsSource="{Binding }" SelectedItem="{Binding SelectedDisplay, Mode=TwoWay}" Background="Brown" FontFamily="Calibri Light" Height="580" RenderTransformOrigin="0,0" Margin="0,0,0,0" HorizontalAlignment="Center" Width="669" VerticalAlignment="Stretch" SelectionChanged="LV_SelectionChanged" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Height="35" Width="632" Margin="0,0,0,0" RenderTransformOrigin="0.588,0.531">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="35" Margin="0,0,-13,0" VerticalAlignment="Stretch">
+                                        <TextBlock Margin="0,0,2,0" Text=" Id:" Foreground="White" Height="30" Width="25" FontFamily="Calibri Light" FontSize="18"/>
+                                        <TextBox Margin="10,0,2,0" IsReadOnly="True" Background="White" Text="{Binding ID, Mode=TwoWay}" FontFamily="Calibri Light" Height="35" Foreground="Black" />
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal" Height="35" Margin="30.4,0,0.2,0">
+                                        <TextBlock Margin="2,0,0,0" Text=" Name:" Height="35" Width="55" Foreground="White" FontFamily="Calibri Light" FontSize="18" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                        <TextBox  Margin="10,0,2,0" Background="White" Text="{Binding Name, Mode=TwoWay}" FontFamily="Calibri Light" Height="35" Width="250" Foreground="Black" />
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal" Height="35" Margin="14,0,-105,0" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                                        <TextBlock Margin="15,0,-180,0" Text="Lokation:" FontFamily="Calibri Light" Height="35" FontSize="18" Foreground="white" VerticalAlignment="Stretch" />
+                                        <TextBox Margin="96,0,-158,0" Text="{Binding Location, Mode=TwoWay}" Height="35" FontFamily="Calibri Light" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackPanel>
+
+            <StackPanel></StackPanel>
+                </StackPanel>
+                
+                
+                              
+
 
         <RelativePanel Margin="0,0,0,0">
             <ToggleButton x:Name="HamburgerButton" Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" Checked="HamburgerButton_OnChecked" />
         </RelativePanel>
-        <!--<ListView x:Name="Opgaveliste" Background ="White" FontFamily="Calibri Light" RenderTransformOrigin="0,0" Margin="170,95,845,220" />-->
-        <!--<ListView Margin="145,85,170,180" RenderTransformOrigin="0.549,0.51"/>-->
-        <StackPanel Orientation="Horizontal" Margin="70,115,700,55" RenderTransformOrigin="0.588,0.531"/>
-        <ListView HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="1920">
-            <StackPanel Orientation="vertical" RenderTransformOrigin="0,0" Margin="0,0,813.8,0" Height="633" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <ListView x:Name="ListView2" Background="Black" FontFamily="Calibri Light" Height="620" RenderTransformOrigin="0,0" Margin="200,200,0,-200" HorizontalAlignment="Center" Width="613" SelectionChanged="LV_SelectionChanged" VerticalAlignment="Stretch" >
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Orientation="Horizontal" Height="35" Width="632" Margin="0,0,0,0" RenderTransformOrigin="0.588,0.531">
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="35" Margin="0,0,-13,0" VerticalAlignment="Stretch">
-                                    <TextBlock Margin="0,0,2,0" Text=" Id:" Foreground="White" Height="30" Width="25" FontFamily="Calibri Light" FontSize="18"/>
-                                    <TextBox Margin="10,0,2,0" IsReadOnly="True" Background="White" Text="{Binding ID, Mode=TwoWay}" FontFamily="Calibri Light" Height="35" Foreground="Black" />
-                                </StackPanel>
-
-                                <StackPanel Orientation="Horizontal" Height="35" Margin="30.4,0,0.2,0">
-                                    <TextBlock Margin="2,0,0,0" Text=" Name:" Height="35" Width="55" Foreground="White" FontFamily="Calibri Light" FontSize="18" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                                    <TextBox  Margin="10,0,2,0" Background="White" Text="{Binding Name, Mode=TwoWay}" FontFamily="Calibri Light" Height="35" Width="250" Foreground="Black" />
-                                </StackPanel>
-
-                                <StackPanel Orientation="Horizontal" Height="35" Margin="14,0,-105,0" VerticalAlignment="Center" HorizontalAlignment="Stretch">
-                                    <TextBlock Margin="15,0,-180,0" Text="Lokation:" FontFamily="Calibri Light" Height="35" FontSize="18" Foreground="white" VerticalAlignment="Stretch" />
-                                    <TextBox Margin="96,0,-158,0" Text="{Binding Location, Mode=TwoWay}" Height="35" FontFamily="Calibri Light" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                                </StackPanel>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-
-            </StackPanel>
-        </ListView>
-
-
 
 
 
 
     </Grid>
+
 </Page>

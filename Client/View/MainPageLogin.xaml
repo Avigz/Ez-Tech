@@ -8,8 +8,8 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.DataContext>
-        <viewModel:ViewModel></viewModel:ViewModel>
         
+        <viewModel:ViewModel></viewModel:ViewModel>
         </Page.DataContext>
 
 
