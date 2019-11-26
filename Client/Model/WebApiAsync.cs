@@ -1,15 +1,13 @@
-﻿namespace Client.Model
+﻿using System.Net.Http.Headers;
+
+namespace Client.Model
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Net.Http;
-    using System.Net.Http.Headers;
     using System.Text;
     using System.Threading.Tasks;
-    using Client.Model;
-
-    using Newtonsoft.Json;
 
     public class WebAPIAsync<T> : IWebAPIAsync<T> where T : class
         {
@@ -69,8 +67,12 @@
 
             public async Task<List<T>> Load()
             {
+                string UrlNew = _serverURL + "/"+ _apiPrefix + "/" + _apiID;
                 List<T> product = null;
-                HttpResponseMessage response = await _httpClient.GetAsync(_url);
+                _httpClient.DefaultRequestHeaders.Clear();
+                _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                HttpResponseMessage response = _httpClient.GetAsync(UrlNew).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     product = await response.Content.ReadAsAsync<List<T>>();
@@ -83,9 +85,9 @@
 
             public async Task<T> Read(int key)
             {
-                string UrlNew = _url + "/" + key;
-                T product = null;
-                HttpResponseMessage response = await _httpClient.GetAsync(UrlNew);
+            string UrlNew = _serverURL +"/"+ _apiPrefix + "/" + _apiID +"/" + key;
+            T product = null;
+                HttpResponseMessage response = _httpClient.GetAsync(UrlNew).Result;
                 if (response.IsSuccessStatusCode)
                 {
                     product = await response.Content.ReadAsAsync<T>();

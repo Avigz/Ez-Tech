@@ -27,7 +27,7 @@ namespace Client.Model
                 string _uname = Uname;
                 string _pw = Pw;
 
-                if (Query.First().Navn == _uname && Query.First().Kodeord == _pw)
+                if (Query.FirstOrDefault().Navn == _uname && Query.FirstOrDefault().Kodeord == _pw)
                 {
                     return true;
                 }

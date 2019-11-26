@@ -74,16 +74,16 @@
         </SplitView>
         <StackPanel>
             <StackPanel>
-                <TextBlock Text="HjælperID:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="160,100,0,0" SelectionChanged="TextBlock_SelectionChanged" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></TextBlock>
-                <TextBox Margin="165,0,0,0"/>
-                <TextBlock Text="Navn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="160,0,0,0" SelectionChanged="TextBlock_SelectionChanged" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></TextBlock>
-                <TextBox Margin="165,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="165,0,0,0"/>
-                <TextBox Margin="165,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="165,0,0,0" SelectionChanged="TextBlock_SelectionChanged_1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                <TextBox Margin="165,0,0,0"/>
-                <TextBlock Text="Kodeord:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="155,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></TextBlock>
-                <TextBox Margin="165,0,0,0"/>
+                <TextBlock Text="HjælperID:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="100,100,0,0" SelectionChanged="TextBlock_SelectionChanged"></TextBlock>
+                <TextBox HorizontalAlignment="Stretch" Margin="105,0,0,0" VerticalAlignment="Stretch"></TextBox>
+                <TextBlock Text="Navn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="100,0,0,0" SelectionChanged="TextBlock_SelectionChanged"></TextBlock>
+                <TextBox Margin="105,0,0,0"/>
+                <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="100,0,0,0"></TextBlock>
+                <TextBox Margin="105,0,0,0"/>
+                <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="100,0,0,0" SelectionChanged="TextBlock_OnSelectionChanged"></TextBlock>
+                <TextBox Margin="105,0,0,0"/>
+                <TextBlock Text="Kodeord:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="100,0,0,0"></TextBlock>
+                <TextBox Margin="105,0,0,0"/>
             </StackPanel>
         </StackPanel>
         <RelativePanel Margin="0,0,0,0">

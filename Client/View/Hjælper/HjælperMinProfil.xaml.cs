@@ -29,7 +29,7 @@ namespace Client.View.Hjælper
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
-           // Frame.Navigate(typeof(HjælperLedigeOpgaver));
+            //Frame.Navigate(typeof(HjælperLedigeOpgaver));
         }
 
         private void TextBlock_SelectionChanged_1(object sender, RoutedEventArgs e)
@@ -59,7 +59,7 @@ namespace Client.View.Hjælper
 
         private void MenuButton6_OnClick(object sender, RoutedEventArgs e)
         {
-           // Frame.Navigate(typeof(HjælperFærdigeOpgaver));
+            //Frame.Navigate(typeof(HjælperFærdigeOpgaver));
         }
 
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
@@ -79,7 +79,7 @@ namespace Client.View.Hjælper
 
         private void TextBlock_SelectionChanged_4(object sender, RoutedEventArgs e)
         {
-           // Frame.Navigate(typeof(HjælperFærdigeOpgaver));
+            //Frame.Navigate(typeof(HjælperFærdigeOpgaver));
         }
 
         private void TextBlock_SelectionChanged_5(object sender, RoutedEventArgs e)

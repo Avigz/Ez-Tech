@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Client.Model;
 using Client.View;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -29,13 +30,19 @@ namespace Client
             
         }
 
-      
+      ViewModel.ViewModel vm = new ViewModel.ViewModel();
         
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(View.Admin.AdminFærdigeOpgaver));
-       
+         
+            
+                Frame.Navigate(typeof(View.MainPageLogin));
+            
+
+
+
+
         }
     }
 }

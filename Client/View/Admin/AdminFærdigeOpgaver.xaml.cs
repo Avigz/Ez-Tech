@@ -51,9 +51,19 @@ namespace Client.View.Admin
             throw new NotImplementedException();
         }
 
-        private void LV_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
         {
+            throw new NotImplementedException();
+        }
 
+        private void MFclick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
     

@@ -23,7 +23,7 @@ namespace Client.ViewModel
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
-    const string serverURL = "http://localhost:60942/";
+    const string serverURL = "http://localhost:60942";
     const string HjælpereURI = "Hjælpere";
     const string KunderURI = "Kunder";
     const string OpgaverURI = "Opgaver";
@@ -38,7 +38,7 @@ namespace Client.ViewModel
         set
         {
             _username = value;
-            OnPropertyChanged(Username);
+            OnPropertyChanged("Username");
         }
     }
     
