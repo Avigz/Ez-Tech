@@ -50,6 +50,11 @@ namespace Client.View.Admin
         {
             throw new NotImplementedException();
         }
+
+        private void LV_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
     
     

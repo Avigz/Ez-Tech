@@ -41,17 +41,17 @@ namespace Client.View.Hjælper
 
         private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(HjælperLedigeOpgaver));
+            //Frame.Navigate(typeof(HjælperLedigeOpgaver));
         }
 
         private void TextBlock_OnSelectionChanged(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(HjælperLedigeOpgaver));
+           // Frame.Navigate(typeof(HjælperLedigeOpgaver));
         }
 
         private void MenuButton6_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(HjælperFærdigeOpgaver));
+           // Frame.Navigate(typeof(HjælperFærdigeOpgaver));
         }
 
         private void MenuButton7_OnClick(object sender, RoutedEventArgs e)
@@ -84,7 +84,7 @@ namespace Client.View.Hjælper
 
         private void TextBlock_SelectionChanged_2(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(HjælperLedigeOpgaver));
+            //Frame.Navigate(typeof(HjælperLedigeOpgaver));
         }
 
         private void TextBlock_SelectionChanged_3(object sender, RoutedEventArgs e)
@@ -92,9 +92,9 @@ namespace Client.View.Hjælper
             Frame.Navigate(typeof(HjælperMinProfil));
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
+        //private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        //{
 
-        }
+        //}
     }
 }
