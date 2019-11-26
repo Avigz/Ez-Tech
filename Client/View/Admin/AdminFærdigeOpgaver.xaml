@@ -81,7 +81,7 @@
         <StackPanel Orientation="Horizontal" Margin="70,115,700,55" RenderTransformOrigin="0.588,0.531"/>
         <ListView HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="1920">
             <StackPanel Orientation="vertical" RenderTransformOrigin="0,0" Margin="0,0,813.8,0" Height="633" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                <ListView x:Name="ListView2" Background="Black" FontFamily="Calibri Light" Height="620" RenderTransformOrigin="0,0" Margin="200,200,0,-200" HorizontalAlignment="Center" Width="613" SelectionChanged="LV_SelectionChanged" VerticalAlignment="Stretch" >
+                <ListView x:Name="ListView2" Background="Black" FontFamily="Calibri Light" Height="620" RenderTransformOrigin="0,0" Margin="200,200,0,-200" HorizontalAlignment="Center" Width="613" SelectionChanged="ListView2_OnSelectionChanged" VerticalAlignment="Stretch" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" Height="35" Width="632" Margin="0,0,0,0" RenderTransformOrigin="0.588,0.531">
