@@ -27,6 +27,8 @@ namespace Client.View
         public MainPageLogin()
         {
             this.InitializeComponent();
+            this.DataContext = vm;
+
         }
         ViewModel.ViewModel vm = new ViewModel.ViewModel();
 
@@ -35,7 +37,14 @@ namespace Client.View
         {
             if (vm.ConfirmLogin() == true)
             {
-                Frame.Navigate(typeof(View.Admin.AdminFærdigeOpgaver));
+                if (vm.LoggedInHjælper.IsAdmin == true)
+                {
+                    Frame.Navigate(typeof(View.Admin.AdminPage));
+                }
+                else
+                {
+                    Frame.Navigate(typeof(View.Hjælper.HjælperPage));
+                }
             }
             else
             {

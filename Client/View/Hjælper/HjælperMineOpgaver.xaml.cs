@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks.Dataflow;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -12,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Client.Model;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,12 +25,13 @@ namespace Client.View.Hjælper
     /// </summary>
     public sealed partial class HjælperMineOpgaver : Page
     {
+        private List<Opgaver> Opgaver;
         public HjælperMineOpgaver()
         {
             this.InitializeComponent();
+            Opgaver = OpgaverSingleton.Instance.GetOpgaver;
         }
 
-       
 
         private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
         {
@@ -91,6 +95,8 @@ namespace Client.View.Hjælper
         {
             Frame.Navigate(typeof(HjælperMinProfil));
         }
+
+        
 
         //private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         //{

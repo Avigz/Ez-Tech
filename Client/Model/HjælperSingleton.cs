@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Client.Model
+{
+    public class HjælperSingleton
+    {
+        private List<Hjælpere> _hjælperList;
+        ViewModel.ViewModel vm = new ViewModel.ViewModel();
+
+        private HjælperSingleton()
+        {
+            _hjælperList = new List<Hjælpere>();
+        }
+
+        private static HjælperSingleton _instance;
+
+        public static HjælperSingleton Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new HjælperSingleton();
+                    return _instance;
+                }
+                else
+                {
+                    return _instance;
+                }
+            }
+        }
+
+
+        public List<Hjælpere> GetHjælper
+        {
+            get { return _hjælperList; }
+        }
+
+        public void AddHjælper(Hjælpere h)
+        {
+            vm.HjælpereWebApi.Create(vm.HjælpereWebApi.Load().Result.Count + 1, h);
+            UpdateHjælperList();
+        }
+
+        public void RemoveHjælper(Hjælpere h)
+        {
+            vm.HjælpereWebApi.Delete(h.ID);
+            UpdateHjælperList();
+        }
+
+        public void UpdateHjælperList()
+        {
+            _hjælperList = vm.HjælpereWebApi.Load().Result;
+        }
+
+    }
+}
