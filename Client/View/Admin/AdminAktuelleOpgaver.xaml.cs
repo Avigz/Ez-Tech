@@ -20,9 +20,9 @@ namespace Client.View.Admin
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AktuelleOpgaver : Page
+    public sealed partial class AdminAktuelleOpgaver : Page
     {
-        public AktuelleOpgaver()
+        public AdminAktuelleOpgaver()
         {
             this.InitializeComponent();
         }

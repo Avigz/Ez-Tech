@@ -10,10 +10,10 @@
 
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
         <Grid.RowDefinitions>
-            <RowDefinition   Height="131*"></RowDefinition>
+            <RowDefinition Height="131*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition  Width="218*"></ColumnDefinition>
+            <ColumnDefinition Width="218*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
 
@@ -22,8 +22,8 @@
 
                 <StackPanel Background="DarkRed" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
-                        <Button x:Name="MenuButton1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_OnClick" />
+                        <Button x:Name="Button2" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
+                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="" />
                         <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
@@ -34,7 +34,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton4" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEA8D;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton4_OnClick" />
+                                Width="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="MenuButton4_OnClick" Margin="0,0,0,0" />
                         <TextBlock Text="Hjælpere" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center"/>
                     </StackPanel>
 
@@ -46,18 +46,6 @@
                                 <CompositeTransform ScaleY="1"/>
                             </TextBlock.RenderTransform>
                         </TextBlock>
-                    </StackPanel>
-
-
-
-                    <StackPanel Orientation="Horizontal">
-                        <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets"
-                       Width="50" Height="50" Background="Transparent" />
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-
-
-
                     </StackPanel>
                 </StackPanel>
             </SplitView.Pane>
