@@ -33,7 +33,7 @@ namespace Client.ViewModel
     private string _username { get; set; }
     private string _password { get; set; }
 
-     private Hjælpere _LoggedInHjælper { get; set; }
+
 
      private Opgaver _selectedOpgave { get; set; }
 
@@ -80,13 +80,13 @@ namespace Client.ViewModel
         }
     }
 
-    public Login LoginObject = new Login();
+    
 
     public bool ConfirmLogin()
     {
-        if (LoginObject.LoginAsync(Username, Password) == true)
+        if (Login.LoginAsync(Username, Password) == true)
         {
-                _LoggedInHjælper = LoginObject.LoggedInUser;
+                _LoggedInHjælper = Login.LoggedInUser;
                 return true;
             
         }
@@ -126,8 +126,8 @@ namespace Client.ViewModel
         }
         public Hjælpere LoggedIndHjælper
         {
-            get { return _LoggedInHjælper; }
-            set { _LoggedInHjælper = value; OnPropertyChanged((nameof(LoggedIndHjælper))); }
+            get { return Login.LoggedInUser; }
+            set { Login.LoggedInUser = value; OnPropertyChanged((nameof(LoggedIndHjælper))); }
         }
 
         public Kunder SelectedKunde
