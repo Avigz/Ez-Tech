@@ -21,7 +21,7 @@
                 <StackPanel Background="DarkRed" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
-                        Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_OnClick"/>
+                        Width="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="MenuButton1_OnClick" Margin="0,0,0,0.4"/>
                         <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
@@ -32,7 +32,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton4" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEA8D;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton4_OnClick"/>
+                                Width="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="MenuButton4_OnClick" Margin="0,0,0,0.4"/>
                         <TextBlock Text="Hjælpere" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_OnSelectionChanged" />
                     </StackPanel>
 
@@ -56,6 +56,7 @@
                 </StackPanel>
             </SplitView.Pane>
 
+
             <!--<SplitView.Content>
                 -->
             <!--<StackPanel>-->
@@ -75,7 +76,7 @@
 
         <RelativePanel Margin="0,0,0,0">
             <ToggleButton x:Name="HamburgerButton" Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Checked="HamburgerButton_OnChecked" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" />
-           </RelativePanel>
+        </RelativePanel>
 
 
 
