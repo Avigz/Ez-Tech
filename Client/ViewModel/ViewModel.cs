@@ -86,7 +86,7 @@ namespace Client.ViewModel
     {
         if (Login.LoginAsync(Username, Password) == true)
         {
-                _LoggedInHjælper = Login.LoggedInUser;
+               LoggedIndHjælper = Login.LoggedInUser;
                 return true;
             
         }
