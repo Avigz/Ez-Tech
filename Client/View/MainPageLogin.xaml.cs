@@ -37,11 +37,11 @@ namespace Client.View
         {
             if (vm.ConfirmLogin() == true)
             {
-                if (vm.LoggedInHjælper.IsAdmin == true)
+                if (vm.LoggedInHjælper.IsAdmin)
                 {
                     Frame.Navigate(typeof(View.Admin.AdminPage));
                 }
-                else
+                else if (vm.LoggedInHjælper.IsAdmin == false)
                 {
                     Frame.Navigate(typeof(View.Hjælper.HjælperPage));
                 }

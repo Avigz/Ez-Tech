@@ -98,6 +98,11 @@ namespace Client.View.Admin
         {
             throw new NotImplementedException();
         }
+
+        private void Button2_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
     
     
