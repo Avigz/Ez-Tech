@@ -139,11 +139,17 @@
     <Compile Include="View\Admin\AdminFærdigeOpgaver.xaml.cs">
       <DependentUpon>AdminFærdigeOpgaver.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\AdminFærdigeOpgaver1.xaml.cs">
+      <DependentUpon>AdminFærdigeOpgaver1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Admin\AdminHjælpere.xaml.cs">
+      <DependentUpon>AdminHjælpere.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Admin\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Admin\AktuelleOpgaver.xaml.cs">
-      <DependentUpon>AktuelleOpgaver.xaml</DependentUpon>
+    <Compile Include="View\Admin\AdminAktuelleOpgaver.xaml.cs">
+      <DependentUpon>AdminAktuelleOpgaver.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Hjælper\HjælperMineOpgaver.xaml.cs">
       <DependentUpon>HjælperMineOpgaver.xaml</DependentUpon>
@@ -188,11 +194,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Admin\AdminFærdigeOpgaver1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\AdminHjælpere.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Admin\AdminPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="View\Admin\AktuelleOpgaver.xaml">
+    <Page Include="View\Admin\AdminAktuelleOpgaver.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
