@@ -65,11 +65,12 @@ namespace Client.View.Admin
         {
             throw new NotImplementedException();
         }
+
+        private void ListView2_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
     
     
 }
-
-
-
-

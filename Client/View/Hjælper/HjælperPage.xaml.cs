@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Client.ViewModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,6 +27,8 @@ namespace Client.View.Hjælper
         public HjælperPage()
         {
             this.InitializeComponent();
+            HjælperPageCollection hpc = new HjælperPageCollection();
+            this.DataContext = hpc;
         }
 
         private void Forside_OnClick(object sender, RoutedEventArgs e)
@@ -95,6 +98,11 @@ namespace Client.View.Hjælper
         private void TextBlock_SelectionChanged_4(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPageLogin));
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
