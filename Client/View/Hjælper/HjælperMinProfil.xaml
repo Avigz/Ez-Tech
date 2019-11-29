@@ -65,14 +65,14 @@
             <StackPanel>
                 <TextBlock Text="Min Profil" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0" SelectionChanged="TextBlock_SelectionChanged"/>
                 <StackPanel>
-                    <TextBlock Text="Fornavn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,0,0"></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock Text="Efternavn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,0,0"></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,0,0"></TextBlock>
-                    <TextBox></TextBox>
-                    <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,0,0" SelectionChanged="TextBlock_SelectionChanged_1"></TextBlock>
-                    <TextBox></TextBox>
+                    <TextBlock Text="Fornavn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,1140,0" SelectionChanged="TextBlock_SelectionChanged_6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></TextBlock>
+                    <TextBox Height="40" Margin="0,0,1140,0"/>
+                    <TextBlock Text="Efternavn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,1140,0"></TextBlock>
+                    <TextBox Height="40" Margin="0,0,1140,0"></TextBox>
+                    <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,1140,0"></TextBlock>
+                    <TextBox Height="40" Margin="0,0,1140,0"></TextBox>
+                    <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,1140,0" SelectionChanged="TextBlock_SelectionChanged_1"></TextBlock>
+                    <TextBox Height="40" Margin="0,0,1140,0"></TextBox>
                 </StackPanel>
             </StackPanel>
 

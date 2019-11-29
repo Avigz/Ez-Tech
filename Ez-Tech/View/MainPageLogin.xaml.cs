@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,12 +15,12 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Ez_Tech.View
+/*namespace Ez_Tech.View
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPageLogin : Page
+   /* public sealed partial class MainPageLogin : Page
     {
         public MainPageLogin()
         {
@@ -30,12 +30,12 @@ namespace Ez_Tech.View
         ViewModel.ViewModel vm = new ViewModel.ViewModel();
           
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        /*private void Button_Click(object sender, RoutedEventArgs e)
         {
             vm.ConfirmLogin();
             if (vm.LoginObject.LoginSuccesfull == true)
             {
-                Frame.Navigate(typeof(View.AdminPage));
+                Frame.Navigate(typeof(AdminPage));
             }
             else
             {
@@ -44,5 +44,5 @@ namespace Ez_Tech.View
 
            
         }
-    }
-}
+    } 
+} */
