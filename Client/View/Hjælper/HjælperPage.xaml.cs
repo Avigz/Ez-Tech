@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -24,6 +25,9 @@ namespace Client.View.Hjælper
     /// </summary>
     public sealed partial class HjælperPage : Page
     {
+
+        
+
         public HjælperPage()
         {
             this.InitializeComponent();
@@ -100,7 +104,7 @@ namespace Client.View.Hjælper
             Frame.Navigate(typeof(MainPageLogin));
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void LedigeOpgaver(object sender, SelectionChangedEventArgs e)
         {
 
         }
