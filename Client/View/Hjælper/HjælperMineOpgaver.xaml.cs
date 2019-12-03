@@ -25,11 +25,11 @@ namespace Client.View.Hjælper
     /// </summary>
     public sealed partial class HjælperMineOpgaver : Page
     {
-        private List<Opgaver> Opgaver;
+       
         public HjælperMineOpgaver()
         {
             this.InitializeComponent();
-            Opgaver = OpgaverSingleton.Instance.GetOpgaver;
+            
         }
 
 
