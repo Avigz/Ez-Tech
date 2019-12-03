@@ -10,12 +10,12 @@ namespace Client.Model
 {
     public class KunderSingleton
     {
-        private ObservableCollection<Kunder> _kunderList;
+        private ObservableCollection<Kunder> _kundeList;
         DBPersistency DbContext = new DBPersistency();
 
         private KunderSingleton()
         {
-            _kunderList = new ObservableCollection<Kunder>();
+            _kundeList = new ObservableCollection<Kunder>();
         }
 
         private static KunderSingleton _instance;
@@ -39,16 +39,16 @@ namespace Client.Model
 
         public ObservableCollection<Kunder> GetKunder
         {
-            get { return _kunderList; }
+            get { return _kundeList; }
         }
 
-        public void AddKunder(Kunder k)
+        public void AddKunde(Kunder k)
         {
             DbContext.KunderWebApi.Create(DbContext.KunderWebApi.Load().Result.Count + 1, k);
             UpdateKunderList();
         }
 
-        public void RemoveHjælper(Kunder k)
+        public void RemoveKunde(Kunder k)
         {
             DbContext.HjælpereWebApi.Delete(k.KundeID);
             UpdateKunderList();
@@ -63,7 +63,7 @@ namespace Client.Model
                _UpdateList.Add(b);
            }
 
-           _kunderList = _UpdateList;
+           _kundeList = _UpdateList;
            _UpdateList.Clear();
 
         }
