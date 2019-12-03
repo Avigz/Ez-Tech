@@ -71,7 +71,4 @@
   <ItemGroup>
     <PostDeploy Include="Script.DummyData.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Ez-TechDB.publish.xml" />
-  </ItemGroup>
 </Project>
