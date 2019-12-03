@@ -9,7 +9,7 @@ namespace Client.ViewModel
 {
     public class HjælperPageCollection
     {
-        List<HjælperMineOpgaver> ComboBoxOpgaver = new List<HjælperMineOpgaver>();
+        private List<HjælperMineOpgaver> ComboBoxOpgaver = new List<HjælperMineOpgaver>();
 
     }
 }
