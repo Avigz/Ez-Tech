@@ -55,7 +55,7 @@ namespace Client.View.Admin
 
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(MainPageLogin));
         }
     }
 }
