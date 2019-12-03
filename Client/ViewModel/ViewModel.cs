@@ -103,12 +103,7 @@ namespace Client.ViewModel
     {
         get
         {
-            foreach (var v in OpgaverSingleton.Instance.GetOpgaver)
-            {
-                OpgaveList.Add(v);
-            }
-
-            return OpgaveList;
+            return OpgaverSingleton.Instance.GetOpgaver;
         }
     }
 
