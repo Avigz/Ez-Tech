@@ -28,11 +28,6 @@ namespace Client.View.Admin
             this.InitializeComponent();
         }
 
-        private void HamburgerMenu_OnChecked(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPageLogin));
-        }
-
         private void AdminLogin_OnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPageLogin));
@@ -53,36 +48,14 @@ namespace Client.View.Admin
             Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
 
-        private void Button2_OnClick(object sender, RoutedEventArgs e)
+        private void HamburgerButton_Checked(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(MainPageLogin));
         }
-
-        private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-       
 
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
-        }
 
-        private void LV_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Lv_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            throw new NotImplementedException();
         }
     }
 }
