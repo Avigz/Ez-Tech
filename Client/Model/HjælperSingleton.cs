@@ -10,7 +10,7 @@ namespace Client.Model
     public class HjælperSingleton
     {
         private List<Hjælpere> _hjælperList;
-        ViewModel.ViewModel vm = new ViewModel.ViewModel();
+        DBPersistency  DbContext = new DBPersistency();
 
         private HjælperSingleton()
         {
@@ -43,19 +43,19 @@ namespace Client.Model
 
         public void AddHjælper(Hjælpere h)
         {
-            vm.HjælpereWebApi.Create(vm.HjælpereWebApi.Load().Result.Count + 1, h);
+            DbContext.HjælpereWebApi.Create(DbContext.HjælpereWebApi.Load().Result.Count + 1, h);
             UpdateHjælperList();
         }
 
         public void RemoveHjælper(Hjælpere h)
         {
-            vm.HjælpereWebApi.Delete(h.ID);
+            DbContext.HjælpereWebApi.Delete(h.ID);
             UpdateHjælperList();
         }
 
         public void UpdateHjælperList()
         {
-            _hjælperList = vm.HjælpereWebApi.Load().Result;
+            _hjælperList = DbContext.HjælpereWebApi.Load().Result;
         }
 
     }

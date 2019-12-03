@@ -24,11 +24,6 @@ namespace Client.ViewModel
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
-    const string serverURL = "http://localhost:60942";
-    const string HjælpereURI = "Hjælpere";
-    const string KunderURI = "Kunder";
-    const string OpgaverURI = "Opgaver";
-    const string apiPrefix = "api";
 
     private string _username { get; set; }
     private string _password { get; set; }
@@ -99,9 +94,7 @@ namespace Client.ViewModel
 
     }
 
-    public WebAPIAsync<Hjælpere> HjælpereWebApi = new WebAPIAsync<Hjælpere>(serverURL, apiPrefix, HjælpereURI);
-    public WebAPIAsync<Kunder> KunderWebApi = new WebAPIAsync<Kunder>(serverURL, apiPrefix, KunderURI);
-    public WebAPIAsync<Opgaver> OpgaverWebApi = new WebAPIAsync<Opgaver>(serverURL, apiPrefix, OpgaverURI);
+   
 
     public event PropertyChangedEventHandler PropertyChanged;
 

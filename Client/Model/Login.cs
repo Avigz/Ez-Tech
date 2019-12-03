@@ -23,8 +23,8 @@ namespace Client.Model
             {
                
 
-                WebAPIAsync<Hjælpere> DbContext = new WebAPIAsync<Hjælpere>("http://localhost:60942/","api","Hjælpere");
-                List<Hjælpere> lookupList = DbContext.Load().Result;
+                DBPersistency DbContext = new DBPersistency();
+                List<Hjælpere> lookupList = DbContext.HjælpereWebApi.Load().Result;
                 IEnumerable<Hjælpere> Query = from n in lookupList where n.Navn == Uname select n;
                 
                 string _uname = Uname;

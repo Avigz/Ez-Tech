@@ -10,7 +10,7 @@ namespace Client.Model
     public class OpgaverSingleton
     {
         private List<Opgaver> _opgaveList;
-        ViewModel.ViewModel vm = new ViewModel.ViewModel();
+        DBPersistency DbContext = new DBPersistency();
 
         private OpgaverSingleton()
         {
@@ -42,19 +42,19 @@ namespace Client.Model
 
         public void AddOpgaver(Opgaver o)
         {
-            vm.OpgaverWebApi.Create(vm.OpgaverWebApi.Load().Result.Count + 1, o);
+            DbContext.OpgaverWebApi.Create(DbContext.OpgaverWebApi.Load().Result.Count + 1, o);
             UpdateOpgaverList();
         }
 
         public void RemoveOpgaver(Opgaver o)
         {
-            vm.OpgaverWebApi.Delete(o.ID);
+            DbContext.OpgaverWebApi.Delete(o.ID);
             UpdateOpgaverList();
         }
 
         public void UpdateOpgaverList()
         {
-            _opgaveList = vm.OpgaverWebApi.Load().Result;
+            _opgaveList = DbContext.OpgaverWebApi.Load().Result;
         }
 
     }

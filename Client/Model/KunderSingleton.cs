@@ -10,7 +10,7 @@ namespace Client.Model
     public class KunderSingleton
     {
         private List<Kunder> _kunderList;
-        ViewModel.ViewModel vm = new ViewModel.ViewModel();
+        DBPersistency DbContext = new DBPersistency();
 
         private KunderSingleton()
         {
@@ -43,19 +43,19 @@ namespace Client.Model
 
         public void AddKunder(Kunder k)
         {
-            vm.KunderWebApi.Create(vm.KunderWebApi.Load().Result.Count + 1, k);
+            DbContext.KunderWebApi.Create(DbContext.KunderWebApi.Load().Result.Count + 1, k);
             UpdateKunderList();
         }
 
         public void RemoveHjælper(Kunder k)
         {
-            vm.HjælpereWebApi.Delete(k.KundeID);
+            DbContext.HjælpereWebApi.Delete(k.KundeID);
             UpdateKunderList();
         }
 
         public void UpdateKunderList()
         {
-            _kunderList = vm.KunderWebApi.Load().Result;
+            _kunderList = DbContext.KunderWebApi.Load().Result;
         }
 
     }
