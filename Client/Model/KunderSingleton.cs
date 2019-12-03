@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,12 +10,12 @@ namespace Client.Model
 {
     public class KunderSingleton
     {
-        private List<Kunder> _kunderList;
+        private ObservableCollection<Kunder> _kunderList;
         DBPersistency DbContext = new DBPersistency();
 
         private KunderSingleton()
         {
-            _kunderList = new List<Kunder>();
+            _kunderList = new ObservableCollection<Kunder>();
         }
 
         private static KunderSingleton _instance;
@@ -36,7 +37,7 @@ namespace Client.Model
         }
 
 
-        public List<Kunder> GetKunder
+        public ObservableCollection<Kunder> GetKunder
         {
             get { return _kunderList; }
         }
@@ -55,8 +56,18 @@ namespace Client.Model
 
         public void UpdateKunderList()
         {
-            _kunderList = DbContext.KunderWebApi.Load().Result;
+           ObservableCollection<Kunder> _UpdateList = new ObservableCollection<Kunder>();
+
+           foreach (Kunder b in DbContext.KunderWebApi.Load().Result)
+           {
+               _UpdateList.Add(b);
+           }
+
+           _kunderList = _UpdateList;
+           _UpdateList.Clear();
+
         }
+
 
     }
 }
