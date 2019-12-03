@@ -14,7 +14,7 @@ using Client.Model;
 
 namespace Client.ViewModel
 {
-    public class AdminViewModel: INotifyPropertyChanged
+    public class ViewModel: INotifyPropertyChanged
 
     {
 
