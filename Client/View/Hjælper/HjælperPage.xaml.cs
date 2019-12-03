@@ -26,13 +26,12 @@ namespace Client.View.Hjælper
     public sealed partial class HjælperPage : Page
     {
 
-        
+
 
         public HjælperPage()
         {
             this.InitializeComponent();
-            HjælperPageCollection hpc = new HjælperPageCollection();
-            this.DataContext = hpc;
+        
         }
 
         private void Forside_OnClick(object sender, RoutedEventArgs e)
@@ -104,9 +103,17 @@ namespace Client.View.Hjælper
             Frame.Navigate(typeof(MainPageLogin));
         }
 
-        private void LedigeOpgaver(object sender, SelectionChangedEventArgs e)
+        private void LedigeOpgaverCombo_SelectionChanged(Object sender, SelectionChangedEventArgs e)
         {
-
+            
+            if (LedigeOpgaverCombo.IsDropDownOpen == false)
+            {
+                LedigeOpgaverCombo.IsDropDownOpen = true;
+            }
+            else if (LedigeOpgaverCombo.IsDropDownOpen == true)
+            {
+                LedigeOpgaverCombo.IsDropDownOpen = false;
+            }
         }
     }
 }
