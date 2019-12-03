@@ -58,7 +58,7 @@ namespace Client.View.Admin
 
         private void MenuButton5_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(View.Admin.AdminFærdigeOpgaver));
+            Frame.Navigate(typeof(View.Admin.AdminFærdigeOpgaver1));
         }
 
         
