@@ -12,7 +12,18 @@ namespace Client.ViewModel
 {
     public class HjælperPageCollection
     {
-        private List<HjælperMineOpgaver> ComboBoxOpgaver = new List<HjælperMineOpgaver>();
+
+        public HjælperPageCollection()
+        {
+
+        }
+
+        public ObservableCollection<Opgaver> _ledigeOpgaver
+        {
+            get { return _ledigeOpgaver; }
+        }
+
+
 
     }
 }

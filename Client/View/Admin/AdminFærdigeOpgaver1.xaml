@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Client.View.Admin.AdminFærdigeOpgaver"
+    x:Class="Client.View.Admin.AdminFærdigeOpgaver1"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Client.View.Admin"
@@ -8,13 +8,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-
-
-    <!--<Page.DataContext>
-        
-    </Page.DataContext>-->
-
+<Page.DataContext>
+<vm:ViewModel></vm:ViewModel>
+</Page.DataContext>
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
         <Grid.RowDefinitions>
             <RowDefinition Height="131*"></RowDefinition>

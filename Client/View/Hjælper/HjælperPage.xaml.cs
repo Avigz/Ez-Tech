@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Client.Model;
 using Client.ViewModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -31,7 +32,10 @@ namespace Client.View.Hjælper
         public HjælperPage()
         {
             this.InitializeComponent();
-        
+          
+
+            
+
         }
 
         private void Forside_OnClick(object sender, RoutedEventArgs e)

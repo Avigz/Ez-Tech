@@ -101,15 +101,8 @@ namespace Client.ViewModel
 
     public ObservableCollection<Opgaver> OpgaveList
     {
-        get
-        {
-            foreach (var v in OpgaverSingleton.Instance.GetOpgaver)
-            {
-                OpgaveList.Add(v);
-            }
-
-            return OpgaveList;
-        }
+        get { OpgaverSingleton.Instance.UpdateOpgaverList();
+            return OpgaverSingleton.Instance.GetOpgaver; }
     }
 
 
