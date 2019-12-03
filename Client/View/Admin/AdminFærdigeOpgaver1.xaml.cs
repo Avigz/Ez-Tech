@@ -50,11 +50,6 @@ namespace Client.View.Admin
             Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
 
-        private void HamburgerButton_Checked(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPageLogin));
-        }
-
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPageLogin));
