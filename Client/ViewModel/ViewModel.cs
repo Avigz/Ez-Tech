@@ -23,7 +23,7 @@ namespace Client.ViewModel
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
-      
+
      
     private string _username { get; set; }
     private string _password { get; set; }
@@ -101,10 +101,8 @@ namespace Client.ViewModel
 
     public ObservableCollection<Opgaver> OpgaveList
     {
-        get
-        {
-            return OpgaverSingleton.Instance.GetOpgaver;
-        }
+        get { OpgaverSingleton.Instance.UpdateOpgaverList();
+            return OpgaverSingleton.Instance.GetOpgaver; }
     }
 
 
