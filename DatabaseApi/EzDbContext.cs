@@ -8,7 +8,7 @@
     public partial class EzDbContext : DbContext
     {
         public EzDbContext()
-            : base("Model1")
+            : base(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Ez-TechDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
         {
             base.Configuration.LazyLoadingEnabled = false;
             base.Configuration.ProxyCreationEnabled = false;

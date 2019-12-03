@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,12 +10,12 @@ namespace Client.Model
 {
     public class HjælperSingleton
     {
-        private List<Hjælpere> _hjælperList;
-        ViewModel.ViewModel vm = new ViewModel.ViewModel();
+        private ObservableCollection<Hjælpere> _hjælperList;
+        DBPersistency  DbContext = new DBPersistency();
 
         private HjælperSingleton()
         {
-            _hjælperList = new List<Hjælpere>();
+            _hjælperList = new ObservableCollection<Hjælpere>();
         }
 
         private static HjælperSingleton _instance;
@@ -36,26 +37,35 @@ namespace Client.Model
         }
 
 
-        public List<Hjælpere> GetHjælper
+        public ObservableCollection<Hjælpere> GetHjælper
         {
             get { return _hjælperList; }
         }
 
         public void AddHjælper(Hjælpere h)
         {
-            vm.HjælpereWebApi.Create(vm.HjælpereWebApi.Load().Result.Count + 1, h);
+            DbContext.HjælpereWebApi.Create(DbContext.HjælpereWebApi.Load().Result.Count + 1, h);
             UpdateHjælperList();
         }
 
         public void RemoveHjælper(Hjælpere h)
         {
-            vm.HjælpereWebApi.Delete(h.ID);
+            DbContext.HjælpereWebApi.Delete(h.ID);
             UpdateHjælperList();
         }
 
         public void UpdateHjælperList()
         {
-            _hjælperList = vm.HjælpereWebApi.Load().Result;
+            ObservableCollection<Hjælpere> _UpdateList = new ObservableCollection<Hjælpere>();
+
+            foreach (Hjælpere v in DbContext.HjælpereWebApi.Load().Result)
+            {
+                _UpdateList.Add(v);
+            }
+
+            _hjælperList = _UpdateList;
+            _UpdateList.Clear();
+
         }
 
     }

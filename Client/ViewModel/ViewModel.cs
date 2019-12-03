@@ -24,16 +24,11 @@ namespace Client.ViewModel
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
-    const string serverURL = "http://localhost:60942";
-    const string HjælpereURI = "Hjælpere";
-    const string KunderURI = "Kunder";
-    const string OpgaverURI = "Opgaver";
-    const string apiPrefix = "api";
 
     private string _username { get; set; }
     private string _password { get; set; }
 
-     private Hjælpere _LoggedInHjælper { get; set; }
+
 
      private Opgaver _selectedOpgave { get; set; }
 
@@ -81,13 +76,13 @@ namespace Client.ViewModel
         }
     }
 
-    public Login LoginObject = new Login();
+    
 
     public bool ConfirmLogin()
     {
-        if (LoginObject.LoginAsync(Username, Password) == true)
+        if (Login.LoginAsync(Username, Password) == true)
         {
-                _LoggedInHjælper = LoginObject.LoggedInUser;
+               LoggedIndHjælper = Login.LoggedInUser;
                 return true;
             
         }
@@ -100,9 +95,7 @@ namespace Client.ViewModel
 
     }
 
-    public WebAPIAsync<Hjælpere> HjælpereWebApi = new WebAPIAsync<Hjælpere>(serverURL, apiPrefix, HjælpereURI);
-    public WebAPIAsync<Kunder> KunderWebApi = new WebAPIAsync<Kunder>(serverURL, apiPrefix, KunderURI);
-    public WebAPIAsync<Opgaver> OpgaverWebApi = new WebAPIAsync<Opgaver>(serverURL, apiPrefix, OpgaverURI);
+   
 
     public event PropertyChangedEventHandler PropertyChanged;
 
@@ -127,8 +120,8 @@ namespace Client.ViewModel
         }
         public Hjælpere LoggedIndHjælper
         {
-            get { return _LoggedInHjælper; }
-            set { _LoggedInHjælper = value; OnPropertyChanged((nameof(LoggedIndHjælper))); }
+            get { return Login.LoggedInUser; }
+            set { Login.LoggedInUser = value; OnPropertyChanged((nameof(LoggedIndHjælper))); }
         }
 
         public Kunder SelectedKunde

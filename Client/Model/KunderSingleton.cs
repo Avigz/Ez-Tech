@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,12 +10,12 @@ namespace Client.Model
 {
     public class KunderSingleton
     {
-        private List<Kunder> _kunderList;
-        ViewModel.ViewModel vm = new ViewModel.ViewModel();
+        private ObservableCollection<Kunder> _kundeList;
+        DBPersistency DbContext = new DBPersistency();
 
         private KunderSingleton()
         {
-            _kunderList = new List<Kunder>();
+            _kundeList = new ObservableCollection<Kunder>();
         }
 
         private static KunderSingleton _instance;
@@ -36,27 +37,37 @@ namespace Client.Model
         }
 
 
-        public List<Kunder> GetKunder
+        public ObservableCollection<Kunder> GetKunder
         {
-            get { return _kunderList; }
+            get { return _kundeList; }
         }
 
-        public void AddKunder(Kunder k)
+        public void AddKunde(Kunder k)
         {
-            vm.KunderWebApi.Create(vm.KunderWebApi.Load().Result.Count + 1, k);
+            DbContext.KunderWebApi.Create(DbContext.KunderWebApi.Load().Result.Count + 1, k);
             UpdateKunderList();
         }
 
-        public void RemoveHjælper(Kunder k)
+        public void RemoveKunde(Kunder k)
         {
-            vm.HjælpereWebApi.Delete(k.KundeID);
+            DbContext.HjælpereWebApi.Delete(k.KundeID);
             UpdateKunderList();
         }
 
         public void UpdateKunderList()
         {
-            _kunderList = vm.KunderWebApi.Load().Result;
+           ObservableCollection<Kunder> _UpdateList = new ObservableCollection<Kunder>();
+
+           foreach (Kunder b in DbContext.KunderWebApi.Load().Result)
+           {
+               _UpdateList.Add(b);
+           }
+
+           _kundeList = _UpdateList;
+           _UpdateList.Clear();
+
         }
+
 
     }
 }

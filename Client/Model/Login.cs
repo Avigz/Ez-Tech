@@ -14,17 +14,17 @@ using Client.Model;
 
 namespace Client.Model
 {
-    public class Login
+    public static class Login
     {
 
 
         #region methods
-        public bool LoginAsync(string Uname, string Pw)
+        public static bool LoginAsync(string Uname, string Pw)
             {
                
 
-                WebAPIAsync<Hjælpere> DbContext = new WebAPIAsync<Hjælpere>("http://localhost:60942/","api","Hjælpere");
-                List<Hjælpere> lookupList = DbContext.Load().Result;
+                DBPersistency DbContext = new DBPersistency();
+                List<Hjælpere> lookupList = DbContext.HjælpereWebApi.Load().Result;
                 IEnumerable<Hjælpere> Query = from n in lookupList where n.Navn == Uname select n;
                 
                 string _uname = Uname;
@@ -44,7 +44,7 @@ namespace Client.Model
 
             }
 
-        public Hjælpere LoggedInUser { get; set; }
+        public static Hjælpere LoggedInUser { get; set; }
          
         }
 
