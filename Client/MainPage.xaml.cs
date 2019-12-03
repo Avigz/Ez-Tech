@@ -33,12 +33,11 @@ namespace Client
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
 
-               
-            Frame.Navigate(typeof(View.Admin.AdminFærdigeOpgaver));
 
-                
+            //Frame.Navigate(typeof(View.Admin.AdminFærdigeOpgaver));
 
 
+            Frame.Navigate(typeof(View.MainPageLogin));
 
         }
     }

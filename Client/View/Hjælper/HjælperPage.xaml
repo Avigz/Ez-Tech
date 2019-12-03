@@ -8,14 +8,16 @@
     xmlns:viewModel="using:Client.ViewModel"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <!--<Page.DataContext>
-        <viewModel:HjælperPageCollection></viewModel:HjælperPageCollection>
-    </Page.DataContext>-->
+    <Page.DataContext>
+        <viewModel:HjælperPageCollection>
+
+        </viewModel:HjælperPageCollection>
+    </Page.DataContext>
 
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
         <Grid.RowDefinitions>
-            <RowDefinition   Height="493*"></RowDefinition>
-            <RowDefinition Height="507*"/>
+            <RowDefinition   Height="493"></RowDefinition>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="218*"></ColumnDefinition>
@@ -69,14 +71,11 @@
             <!--<StackPanel>-->
             <StackPanel>
 
-                <TextBlock Text="Find Opgaver" FontFamily="Calibri Light" 
-                           FontSize="65" Foreground="White" Height="83" 
-                           Margin="10,0,76,0" 
-                           SelectionChanged="TextBlock_SelectionChanged_4"/>
 
-                <ComboBox x:Name="LedigeOpgaverCombo" Header="Ledige Opgaver" Height="44" Width="296"
-                          ItemsSource="{x:Bind }" DisplayMemberPath="Source">
-                </ComboBox>
+
+
+                <ComboBox x:Name="LedigeOpgaverCombo" Header="Ledige Opgaver" Height="56" Width="296" 
+          ItemsSource="{Binding Path=_ledigeOpgaver}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.75"/>
 
             </StackPanel>
 
