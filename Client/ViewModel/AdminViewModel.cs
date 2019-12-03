@@ -14,7 +14,7 @@ using Client.Model;
 
 namespace Client.ViewModel
 {
-    public class ViewModel: INotifyPropertyChanged
+    public class AdminViewModel: INotifyPropertyChanged
 
     {
 
@@ -24,7 +24,7 @@ namespace Client.ViewModel
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
-
+     
     private string _username { get; set; }
     private string _password { get; set; }
 

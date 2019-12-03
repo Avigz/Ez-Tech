@@ -30,7 +30,7 @@ namespace Client.View
             this.DataContext = vm;
 
         }
-        ViewModel.ViewModel vm = new ViewModel.ViewModel();
+        ViewModel.AdminViewModel vm = new ViewModel.AdminViewModel();
 
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
