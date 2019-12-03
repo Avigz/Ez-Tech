@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -32,10 +33,14 @@ namespace Client.ViewModel
     private string _username { get; set; }
     private string _password { get; set; }
 
-    public Hjælpere LoggedInHjælper { get; set; }
-    
 
-    public string Username
+
+     private Opgaver _selectedOpgave { get; set; }
+
+     private Kunder _selectedKunde { get; set; }
+
+
+        public string Username
     {
         get {
             if (_username == null)
@@ -75,13 +80,13 @@ namespace Client.ViewModel
         }
     }
 
-    public Login LoginObject = new Login();
+    
 
     public bool ConfirmLogin()
     {
-        if (LoginObject.LoginAsync(Username, Password) == true)
+        if (Login.LoginAsync(Username, Password) == true)
         {
-                LoggedInHjælper = LoginObject.LoggedInUser;
+               LoggedIndHjælper = Login.LoggedInUser;
                 return true;
             
         }
@@ -100,7 +105,37 @@ namespace Client.ViewModel
 
     public event PropertyChangedEventHandler PropertyChanged;
 
+    public ObservableCollection<Opgaver> OpgaveList
+    {
+        get
+        {
+            foreach (var v in OpgaverSingleton.Instance.GetOpgaver)
+            {
+                    OpgaveList.Add(v);
+            }
 
-
+            return OpgaveList;
+        }
     }
+
+
+        public Opgaver SelectedOpgave
+        {
+            get { return _selectedOpgave; }
+            set { _selectedOpgave = value; OnPropertyChanged((nameof(SelectedOpgave))); }
+        }
+        public Hjælpere LoggedIndHjælper
+        {
+            get { return Login.LoggedInUser; }
+            set { Login.LoggedInUser = value; OnPropertyChanged((nameof(LoggedIndHjælper))); }
+        }
+
+        public Kunder SelectedKunde
+        {
+            get { return _selectedKunde; }
+            set { _selectedKunde = value; OnPropertyChanged((nameof(SelectedKunde))); }
+        }
+    }
+   
+
 }

@@ -134,6 +134,7 @@
     <Compile Include="Model\WebApiAsync.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\HjælperPageCollection.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />
     <Compile Include="View\Admin\AdminFærdigeOpgaver1.xaml.cs">
       <DependentUpon>AdminFærdigeOpgaver1.xaml</DependentUpon>

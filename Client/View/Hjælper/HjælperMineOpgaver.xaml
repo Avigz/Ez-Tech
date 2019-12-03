@@ -66,7 +66,8 @@
             <!--<StackPanel>-->
             <StackPanel>
                 <TextBlock Text="Hjælper's Opgaver" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0" SelectionChanged="TextBlock_SelectionChanged"/>
-<GridView ItemsSource="{x:Bind Opgaver}">
+<!--<StackPanel>
+                        <GridView ItemsSource="{x:Bind Opgaver}">
     <GridView.ItemTemplate>
         <DataTemplate x:DataType="data:Opgaver">
             <StackPanel>
@@ -79,7 +80,24 @@
          </DataTemplate>
     </GridView.ItemTemplate>
 </GridView>
-                
+</StackPanel>-->
+
+                <ListView>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Border Background="IndianRed" Height="600" Width="500">
+                                    <TextBlock Text="{Binding }" 
+                                               FontSize="48" Foreground="WhiteSmoke"/>
+                                </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.Items>
+                        <x:String>One</x:String>
+                        <ListViewItem>Two</ListViewItem>
+                    </ListView.Items>
+                </ListView>
 
             </StackPanel>
 

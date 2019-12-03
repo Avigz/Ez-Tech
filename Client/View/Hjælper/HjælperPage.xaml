@@ -5,8 +5,12 @@
     xmlns:local="using:Client.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:Client.ViewModel"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <!--<Page.DataContext>
+        <viewModel:HjælperPageCollection></viewModel:HjælperPageCollection>
+    </Page.DataContext>-->
 
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
         <Grid.RowDefinitions>
@@ -64,7 +68,16 @@
                 -->
             <!--<StackPanel>-->
             <StackPanel>
-                <TextBlock Text="Hjælper" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0" SelectionChanged="TextBlock_SelectionChanged_4"/>
+
+                <TextBlock Text="Find Opgaver" FontFamily="Calibri Light" 
+                           FontSize="65" Foreground="White" Height="83" 
+                           Margin="10,0,76,0" 
+                           SelectionChanged="TextBlock_SelectionChanged_4"/>
+
+                <ComboBox x:Name="LedigeOpgaverCombo" Header="Ledige Opgaver" Height="44" Width="296"
+                          ItemsSource="{x:Bind }" DisplayMemberPath="Source">
+                </ComboBox>
+
             </StackPanel>
 
             <!--<TextBlock Text="Brugernavn" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-450"></TextBlock>

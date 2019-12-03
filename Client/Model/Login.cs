@@ -14,12 +14,12 @@ using Client.Model;
 
 namespace Client.Model
 {
-    public class Login
+    public static class Login
     {
 
 
         #region methods
-        public bool LoginAsync(string Uname, string Pw)
+        public static bool LoginAsync(string Uname, string Pw)
             {
                
 
@@ -44,7 +44,7 @@ namespace Client.Model
 
             }
 
-        public Hjælpere LoggedInUser { get; set; }
+        public static Hjælpere LoggedInUser { get; set; }
          
         }
 
