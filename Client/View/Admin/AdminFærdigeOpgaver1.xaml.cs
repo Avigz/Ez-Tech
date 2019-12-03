@@ -26,6 +26,8 @@ namespace Client.View.Admin
         public AdminFærdigeOpgaver1()
         {
             this.InitializeComponent();
+            ViewModel.ViewModel vm= new ViewModel.ViewModel();
+            this.DataContext = vm;
         }
 
         private void HamburgerMenu_OnChecked(object sender, RoutedEventArgs e)

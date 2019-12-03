@@ -23,7 +23,7 @@ namespace Client.ViewModel
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
-
+        ViewModel vmViewModel= new ViewModel();
      
     private string _username { get; set; }
     private string _password { get; set; }
