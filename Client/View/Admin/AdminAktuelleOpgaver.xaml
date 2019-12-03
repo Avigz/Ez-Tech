@@ -64,14 +64,7 @@
                 <TextBlock Text="Aktuelle Opgaver" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0"/>
             </StackPanel>
 
-            <!--<TextBlock Text="Brugernavn" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-450"></TextBlock>
-                    <TextBox Name="usernameBox" Background="White" Height="35" Width="200" Margin="0,0,0,-500"  PlaceholderText="Brugernavn"></TextBox>
-                    <TextBlock Text="Kode" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-650"></TextBlock>
-                    <PasswordBox x:Name="passwordBox" PasswordChar="*" Background="White" Height="35" Width="200" Margin="0,0,0,-700" PlaceholderText="Indtast password" ></PasswordBox>
-                    <Button Content="Login" FontFamily="Calibri Light" FontSize="20" Height="40" Width="200" Background="White" Foreground="Black" Margin="311,450,311,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="Button_Click" />
-                </StackPanel>-->
-            <!--
-            </SplitView.Content>-->
+           
         </SplitView>
 
         <RelativePanel Margin="0,0,0,0">

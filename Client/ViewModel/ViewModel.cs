@@ -15,7 +15,7 @@ using Client.Model;
 namespace Client.ViewModel
 {
     public class ViewModel: INotifyPropertyChanged
-
+       
     {
 
     [NotifyPropertyChangedInvocator]
@@ -24,7 +24,7 @@ namespace Client.ViewModel
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
 
-
+     
     private string _username { get; set; }
     private string _password { get; set; }
 
@@ -33,6 +33,7 @@ namespace Client.ViewModel
      private Opgaver _selectedOpgave { get; set; }
 
      private Kunder _selectedKunde { get; set; }
+
 
 
         public string Username
@@ -104,7 +105,7 @@ namespace Client.ViewModel
         {
             foreach (var v in OpgaverSingleton.Instance.GetOpgaver)
             {
-                    OpgaveList.Add(v);
+                OpgaveList.Add(v);
             }
 
             return OpgaveList;
@@ -112,7 +113,7 @@ namespace Client.ViewModel
     }
 
 
-        public Opgaver SelectedOpgave
+    public Opgaver SelectedOpgave
         {
             get { return _selectedOpgave; }
             set { _selectedOpgave = value; OnPropertyChanged((nameof(SelectedOpgave))); }
@@ -128,6 +129,7 @@ namespace Client.ViewModel
             get { return _selectedKunde; }
             set { _selectedKunde = value; OnPropertyChanged((nameof(SelectedKunde))); }
         }
+
     }
    
 
