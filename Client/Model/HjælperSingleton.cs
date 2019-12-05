@@ -13,7 +13,7 @@ namespace Client.Model
         private ObservableCollection<Hjælpere> _hjælperList;
         DBPersistency  DbContext = new DBPersistency();
 
-        private HjælperSingleton()
+        public HjælperSingleton()
         {
             _hjælperList = new ObservableCollection<Hjælpere>();
         }

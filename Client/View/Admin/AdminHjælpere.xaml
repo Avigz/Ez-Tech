@@ -5,6 +5,7 @@
     xmlns:local="using:Client.View.Admin"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="using:Client.Model"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -73,7 +74,7 @@
 
         </SplitView>
         <StackPanel>
-            <StackPanel>
+            <StackPanel HorizontalAlignment="Left">
                 <TextBlock Text="HjælperID:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,100,0,0" SelectionChanged="TextBlock_SelectionChanged"></TextBlock>
                 <TextBox Margin="175,0,0,0"/>
                 <TextBlock Text="Navn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" SelectionChanged="TextBlock_SelectionChanged"></TextBlock>
@@ -90,6 +91,17 @@
             <ToggleButton x:Name="HamburgerButton" Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" Checked="HamburgerButton_OnChecked" />
         </RelativePanel>
 
+        <StackPanel HorizontalAlignment="right" VerticalAlignment="Center">
+            <ListView x:Name="hjælperListView" ItemsSource="{Binding Source=Hj}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text=" {Binding Path=} "></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
 
 
 

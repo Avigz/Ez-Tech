@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Client.Model;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,8 +26,12 @@ namespace Client.View.Admin
         public AdminHjælpere()
         {
             this.InitializeComponent();
+            this.DataContext = vm;
+
         }
 
+        ViewModel.ViewModel vm = new ViewModel.ViewModel();
+        
 
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
