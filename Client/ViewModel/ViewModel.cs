@@ -110,23 +110,79 @@ namespace Client.ViewModel
 
     public ObservableCollection<Hjælpere> HjælperList
     {
-
         get
         {          
             return HjælperSingleton.Instance.GetHjælper;
         }
-        
+      
+    }
+
+    public void AddHjælper(Hjælpere h)
+    {
+        if (HjælperSingleton.Instance.GetHjælper.Contains(h))
+        {
+            return;
+        }
+        else
+        {
+            HjælperSingleton.Instance.AddHjælper(h);
+
+        }
+
+        }
+
+    public void UpdateHjælper(Hjælpere h)
+    {
+        if (HjælperSingleton.Instance.GetHjælper.Contains(h))
+        {
+            HjælperSingleton.Instance.RemoveHjælper(h);
+            HjælperSingleton.Instance.AddHjælper(h);
+        }
+        else
+        {
+            HjælperSingleton.Instance.AddHjælper(h);
+        }
+        }
+
+    public void RemoveHjælper(Hjælpere h)
+    {
+        HjælperSingleton.Instance.RemoveHjælper(h);
     }
 
     public ObservableCollection<Opgaver> OpgaveList
     {
         get { 
             return OpgaverSingleton.Instance.GetOpgaver; }
+        
+    }
+
+    public void AddOpgave(Opgaver O)
+    {
+        OpgaverSingleton.Instance.AddOpgaver(O);
+    }
+
+    public void UpdateOpgave(Opgaver O)
+    {
+        if (OpgaverSingleton.Instance.GetOpgaver.Contains(O))
+        {
+            OpgaverSingleton.Instance.RemoveOpgaver(O);
+            OpgaverSingleton.Instance.AddOpgaver(O);
+        }
+        else
+        {
+            OpgaverSingleton.Instance.AddOpgaver(O);
+        }
+        }
+
+    public void RemoveOpgaver(Opgaver o)
+    {
+        OpgaverSingleton.Instance.RemoveOpgaver(o);
     }
 
     public ObservableCollection<Kunder> KunderList
     {
         get { return KunderSingleton.Instance.GetKunder;}
+          
     }
 
     public Hjælpere LoggedIndHjælper
@@ -151,7 +207,11 @@ namespace Client.ViewModel
         public Hjælpere SelectedHjælper
         {
             get { return _selectedHjælper; }
-            set { _selectedHjælper = SelectedHjælper; }
+            set
+            {
+                _selectedHjælper = SelectedHjælper;
+                OnPropertyChanged(nameof(SelectedHjælper));
+            }
         }
     }
    

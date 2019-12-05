@@ -8,7 +8,9 @@
     mc:Ignorable="d"
     xmlns:Vm="using:Client.ViewModel"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <Page.DataContext><Vm:ViewModel></Vm:ViewModel></Page.DataContext>
+    <Page.DataContext>
+        <Vm:ViewModel></Vm:ViewModel>
+    </Page.DataContext>
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
         <Grid.RowDefinitions>
             <RowDefinition   Height="131*"></RowDefinition>
@@ -73,7 +75,7 @@
 
 
         </SplitView>
-        <StackPanel>
+        <StackPanel HorizontalAlignment="Stretch" Margin="0,0,960,0" VerticalAlignment="Stretch">
             <StackPanel Orientation="Vertical">
                 <TextBlock Text="HjælperID:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,100,0,0" ></TextBlock>
                 <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.ID, Mode=TwoWay}"/>
@@ -85,12 +87,18 @@
                 <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.TelefonNummer, Mode=TwoWay}"/>
                 <TextBlock Text="Kodeord:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
                 <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Kodeord, Mode=TwoWay}"/>
+                <StackPanel Orientation="Horizontal" Height="68" Margin="51,0,0,0">
+                    <Button Name="Opdater" Click="Opdater_OnClick" Margin="20" Content="Opdater"></Button>
+                    <Button Name="Slet" Click="Slet_OnClick" Margin="20" Content="Slet"></Button>
+                    <Button x:Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+
             </StackPanel>
         </StackPanel>
 
-        <StackPanel Orientation="Vertical" Margin="241,72,610,559">
+        <StackPanel Orientation="Vertical" Margin="965,72,1,200">
             <TextBlock  Text="Alle hjælpere" Margin="0,-38,0,0"></TextBlock>
-            <ListView ItemsSource="{Binding HjælperList}" SelectedItem="{Binding SelectedHjælper, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="321" RenderTransformOrigin="0.507,0.684" Margin="0,44,0,29">
+            <ListView x:Name="ListViewHjælpere" ItemsSource="{Binding Source=HjælperList}"  Width="321" RenderTransformOrigin="0.507,0.684" Margin="0,44,0,29" SelectionChanged="Selector_OnSelectionChanged">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,10">
