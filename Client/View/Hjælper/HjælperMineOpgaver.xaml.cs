@@ -25,11 +25,11 @@ namespace Client.View.Hjælper
     /// </summary>
     public sealed partial class HjælperMineOpgaver : Page
     {
-       
+        
         public HjælperMineOpgaver()
         {
             this.InitializeComponent();
-            
+   
         }
 
 

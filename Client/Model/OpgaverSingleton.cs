@@ -37,6 +37,7 @@ namespace Client.Model
         {
             get
             {
+                UpdateOpgaverList();
                 return _opgaveList;
             }
         }

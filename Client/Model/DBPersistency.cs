@@ -11,9 +11,9 @@ namespace Client.Model
 
 
         const string serverURL = "http://localhost:60942";
-        const string HjælpereURI = "Hjælpere";
-        const string KunderURI = "Kunder";
-        const string OpgaverURI = "Opgaver";
+        const string HjælpereURI = "Hjælperes";
+        const string KunderURI = "Kunders";
+        const string OpgaverURI = "Opgavers";
         const string apiPrefix = "api";
 
         public WebAPIAsync<Hjælpere> HjælpereWebApi = new WebAPIAsync<Hjælpere>(serverURL, apiPrefix, HjælpereURI);
