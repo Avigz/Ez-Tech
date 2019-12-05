@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Client.Model;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,7 +27,7 @@ namespace Client.View.Admin
         {
             this.InitializeComponent();
         }
-
+        ViewModel.ViewModel vm = new ViewModel.ViewModel();
 
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
@@ -60,6 +61,26 @@ namespace Client.View.Admin
         private void TextBlock_OnSelectionChanged(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void Opdater_OnClick(object sender, RoutedEventArgs e)
+        {
+           vm.AddHjælper(vm.SelectedHjælper);
+        }
+
+        private void Slet_OnClick(object sender, RoutedEventArgs e)
+        {
+            vm.RemoveHjælper(vm.SelectedHjælper);
+        }
+
+        private void Opret_OnClick(object sender, RoutedEventArgs e)
+        {
+            vm.AddHjælper(vm.SelectedHjælper);
+        }
+
+        private void Selector_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            vm.SelectedHjælper = (Hjælpere)ListViewHjælpere.SelectedItem;
         }
     }
 

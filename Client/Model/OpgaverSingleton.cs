@@ -10,19 +10,14 @@ namespace Client.Model
 {
     public class OpgaverSingleton
     {
-        private ObservableCollection<Opgaver> _opgaveList;
+
         DBPersistency DbContext = new DBPersistency();
-        
 
         private OpgaverSingleton()
         {
-            _opgaveList = new ObservableCollection<Opgaver>();
-           // _opgaveList.Add(new Opgaver(1, 1, "have", 1, true));
-           // _opgaveList.Add(new Opgaver(4, 2, "have1", 2, true));
-
+         
         }
 
-        
         private static OpgaverSingleton _instance;
 
         public static OpgaverSingleton Instance
@@ -42,35 +37,22 @@ namespace Client.Model
         {
             get
             {
-                UpdateOpgaverList();
-                return _opgaveList;
+
+                return new ObservableCollection<Opgaver>(DbContext.OpgaverWebApi.Load().Result);
             }
         }
 
         public void AddOpgaver(Opgaver o)
         {
             DbContext.OpgaverWebApi.Create(DbContext.OpgaverWebApi.Load().Result.Count + 1, o);
-            UpdateOpgaverList();
+
         }
 
         public void RemoveOpgaver(Opgaver o)
         {
             DbContext.OpgaverWebApi.Delete(o.ID);
-            UpdateOpgaverList();
         }
 
-        public void UpdateOpgaverList()
-        {
-            ObservableCollection<Opgaver> _UpdateList = new ObservableCollection<Opgaver>();
-
-            foreach (Opgaver h in DbContext.OpgaverWebApi.Load().Result)
-            {
-                _UpdateList.Add(h);
-            }
-
-            _opgaveList = _UpdateList;
-            _UpdateList.Clear();
-        }
-     
+        
     }
 }
