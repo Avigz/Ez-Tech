@@ -12,12 +12,17 @@ namespace Client.Model
     {
         private ObservableCollection<Opgaver> _opgaveList;
         DBPersistency DbContext = new DBPersistency();
+        
 
         private OpgaverSingleton()
         {
             _opgaveList = new ObservableCollection<Opgaver>();
+           // _opgaveList.Add(new Opgaver(1, 1, "have", 1, true));
+           // _opgaveList.Add(new Opgaver(4, 2, "have1", 2, true));
+
         }
 
+        
         private static OpgaverSingleton _instance;
 
         public static OpgaverSingleton Instance
@@ -66,5 +71,6 @@ namespace Client.Model
             _opgaveList = _UpdateList;
             _UpdateList.Clear();
         }
+     
     }
 }

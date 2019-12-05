@@ -34,7 +34,7 @@ namespace Client
         {
 
                
-            Frame.Navigate(typeof(View.Hjælper.HjælperPage));
+            Frame.Navigate(typeof(View.Admin.AdminFærdigeOpgaver1));
 
                 
 

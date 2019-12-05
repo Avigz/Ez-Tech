@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,10 +27,15 @@ namespace Client.View.Admin
         public AdminFærdigeOpgaver1()
         {
             this.InitializeComponent();
-            ViewModel.ViewModel vm= new ViewModel.ViewModel();
-            this.DataContext = vm;
+          ViewModel.ViewModel vm= new ViewModel.ViewModel();
+           this.DataContext = vm;
         }
+        public class User
+        {
+            public string Name { get; set; }
 
+            public int Age { get; set; }
+        }
         private void AdminLogin_OnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPageLogin));
@@ -58,6 +64,11 @@ namespace Client.View.Admin
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPageLogin));
+        }
+
+        private void Lv_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

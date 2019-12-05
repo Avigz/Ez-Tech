@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 using Client.Annotations;
 using Client.Model;
-
+using Client.View.Hjælper;
 
 
 namespace Client.ViewModel
@@ -28,12 +28,12 @@ namespace Client.ViewModel
     private string _username { get; set; }
     private string _password { get; set; }
 
-
-
+        
      private Opgaver _selectedOpgave { get; set; }
 
      private Kunder _selectedKunde { get; set; }
 
+     
 
 
         public string Username
@@ -122,8 +122,9 @@ namespace Client.ViewModel
             get { return _selectedKunde; }
             set { _selectedKunde = value; OnPropertyChanged((nameof(SelectedKunde))); }
         }
+        
 
     }
-   
+
 
 }
