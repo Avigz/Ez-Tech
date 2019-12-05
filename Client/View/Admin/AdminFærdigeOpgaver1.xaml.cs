@@ -26,6 +26,8 @@ namespace Client.View.Admin
         public AdminFærdigeOpgaver1()
         {
             this.InitializeComponent();
+            ViewModel.ViewModel vm= new ViewModel.ViewModel();
+            this.DataContext = vm;
         }
 
         private void AdminLogin_OnClick(object sender, RoutedEventArgs e)
@@ -55,7 +57,7 @@ namespace Client.View.Admin
 
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(MainPageLogin));
         }
     }
 }
