@@ -21,33 +21,27 @@
                 <StackPanel Background="DarkRed" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
-                        Width="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="MenuButton1_OnClick" Margin="0,0,0,0.4"/>
+                        Width="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="AdminAktuelleSiderForside_OnClick" Margin="0,0,0,0.4"/>
                         <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
-                        <Button x:Name="MenuButton3" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE77F;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton3_OnClick"/>
+                        <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE77F;"
+                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="AdminAktuelleOpgaver_OnClick"/>
                         <TextBlock Text="Aktuelle Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
 
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
-                        <Button x:Name="MenuButton4" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEA8D;"
-                                Width="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="MenuButton4_OnClick" Margin="0,0,0,0.4"/>
+                        <Button x:Name="MenuButton3" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEA8D;"
+                                Width="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="AdminAktuelleOpgaverHjælpere_OnClick" Margin="0,0,0,0.4"/>
                         <TextBlock Text="Hjælpere" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_OnSelectionChanged" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
-                        <Button x:Name="MenuButton5" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE73A;"
-                            Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton5_OnClick"/>
+                        <Button x:Name="MenuButton4" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE73A;"
+                            Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="AdminAktuelleOpgaverAfsluttet_OnClick_OnClick"/>
                         <TextBlock Text="Afsluttet Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
 
-
-
-                    <StackPanel Orientation="Horizontal">
-                        <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets"
-                       Width="50" Height="50" Background="Transparent" Click="MenuButton2_OnClick"/>
-                    </StackPanel>
                     <StackPanel Orientation="Horizontal">
 
 

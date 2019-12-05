@@ -42,19 +42,19 @@ namespace Client.View.Admin
 
         }
 
-        private void MenuButton1_OnClick(object sender, RoutedEventArgs e)
+        private void AdminAktuelleSiderForside_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminLogin));
         }
 
-        private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
+        private void AdminAktuelleOpgaver_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminAktuelleOpgaver));
         }
 
-        private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
+        private void AdminAktuelleOpgaverHjælpere_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminHjælpere));
         }
 
         private void TextBlock_OnSelectionChanged(object sender, RoutedEventArgs e)
@@ -62,9 +62,9 @@ namespace Client.View.Admin
             throw new NotImplementedException();
         }
 
-        private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
+        private void AdminAktuelleOpgaverAfsluttet_OnClick_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
 
         private void MenuButton2_OnClick(object sender, RoutedEventArgs e)
