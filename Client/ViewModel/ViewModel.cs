@@ -99,6 +99,15 @@ namespace Client.ViewModel
 
     public event PropertyChangedEventHandler PropertyChanged;
 
+    public ObservableCollection<Hjælpere> HjælperList
+    {
+        get
+        {
+            HjælperSingleton.Instance.UpdateHjælperList();
+            return HjælperSingleton.Instance.GetHjælper;
+        }
+    }
+
     public ObservableCollection<Opgaver> OpgaveList
     {
         get { OpgaverSingleton.Instance.UpdateOpgaverList();
