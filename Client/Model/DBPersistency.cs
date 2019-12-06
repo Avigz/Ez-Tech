@@ -11,7 +11,7 @@ namespace Client.Model
 
 
         const string serverURL = "http://localhost:60942";
-        const string HjælpereURI = "Hjælperes";
+        const string HjælpereURI = "Hjælpere";
         const string KunderURI = "Kunders";
         const string OpgaverURI = "Opgavers";
         const string apiPrefix = "api";

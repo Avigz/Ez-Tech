@@ -26,12 +26,8 @@ namespace Client.View.Admin
         public AdminHjælpere()
         {
             this.InitializeComponent();
-            this.DataContext = vm;
-
         }
-
         ViewModel.ViewModel vm = new ViewModel.ViewModel();
-        
 
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
@@ -65,6 +61,26 @@ namespace Client.View.Admin
         private void TextBlock_OnSelectionChanged(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void Opdater_OnClick(object sender, RoutedEventArgs e)
+        {
+           vm.AddHjælper(vm.SelectedHjælper);
+        }
+
+        private void Slet_OnClick(object sender, RoutedEventArgs e)
+        {
+            vm.RemoveHjælper(vm.SelectedHjælper);
+        }
+
+        private void Opret_OnClick(object sender, RoutedEventArgs e)
+        {
+            vm.AddHjælper(vm.SelectedHjælper);
+        }
+
+        private void Selector_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            vm.SelectedHjælper = (Hjælpere)ListViewHjælpere.SelectedItem;
         }
     }
 

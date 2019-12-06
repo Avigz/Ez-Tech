@@ -23,11 +23,12 @@ namespace Client.View.Admin
     /// </summary>
     public sealed partial class AdminFærdigeOpgaver1 : Page
     {
+        ViewModel.ViewModel vm = new ViewModel.ViewModel();
+
         public AdminFærdigeOpgaver1()
         {
             this.InitializeComponent();
-            ViewModel.ViewModel vm= new ViewModel.ViewModel();
-            this.DataContext = vm;
+           
         }
 
         private void AdminLogin_OnClick(object sender, RoutedEventArgs e)
@@ -50,14 +51,14 @@ namespace Client.View.Admin
             Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
 
-        private void HamburgerButton_Checked(object sender, RoutedEventArgs e)
+        private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPageLogin));
         }
 
-        private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
+        private void Lv_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPageLogin));
+            return ;
         }
     }
 }
