@@ -13,7 +13,7 @@ namespace Client.Model
         
         DBPersistency  DbContext = new DBPersistency();
 
-        private HjælperSingleton()
+        public HjælperSingleton()
         {
            
         }
