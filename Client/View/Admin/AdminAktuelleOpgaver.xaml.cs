@@ -67,13 +67,13 @@ namespace Client.View.Admin
             Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
 
-        private void MenuButton2_OnClick(object sender, RoutedEventArgs e)
+        private void Hjælpere_OnClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
 
 
-        private void Button1_OnClick(object sender, RoutedEventArgs e)
+        private void Forside_OnClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
@@ -83,7 +83,7 @@ namespace Client.View.Admin
             throw new NotImplementedException();
         }
 
-        private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
+        private void FærdigeOpgaver_OnClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
@@ -91,6 +91,11 @@ namespace Client.View.Admin
         private void Lv_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void _OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
     }
 }
