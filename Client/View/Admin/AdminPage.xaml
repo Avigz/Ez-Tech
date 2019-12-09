@@ -62,7 +62,7 @@
                 -->
             <!--<StackPanel>-->
             <StackPanel>
-                <TextBlock Text="Admin" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0"/>
+                <TextBlock Text="Admin" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="10,0,76,0"/>
             </StackPanel>
 
             <!--<TextBlock Text="Brugernavn" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-450"></TextBlock>
