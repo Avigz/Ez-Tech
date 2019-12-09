@@ -69,7 +69,7 @@
                 -->
             <!--<StackPanel>-->
             <StackPanel>
-                <TextBlock Text="Hjælpere" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="10,0,76,0"/>
+                <TextBlock Text="Hjælpere" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0"/>
             </StackPanel>
 
 
@@ -78,9 +78,9 @@
         <StackPanel HorizontalAlignment="Stretch" Margin="0,0,960,0" VerticalAlignment="Stretch">
             <StackPanel Orientation="Vertical">
                 <TextBlock Text="HjælperID:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,100,0,0" ></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.ID, Mode=TwoWay}"/>
-                <TextBlock Text="Navn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" SelectionChanged="TextBlock_SelectionChanged"></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Navn, Mode=TwoWay}"/>
+                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBlock Text="Navn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" ></TextBlock>
+                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Navn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
                 <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Email, Mode=TwoWay}"/>
                 <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" SelectionChanged="TextBlock_OnSelectionChanged"></TextBlock>
@@ -90,7 +90,7 @@
                 <StackPanel Orientation="Horizontal" Height="68" Margin="51,0,0,0">
                     <Button Name="Opdater" Click="Opdater_OnClick" Margin="20" Content="Opdater"></Button>
                     <Button Name="Slet" Click="Slet_OnClick" Margin="20" Content="Slet"></Button>
-                    <Button Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Button x:Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
 
             </StackPanel>
@@ -98,7 +98,7 @@
 
         <StackPanel Orientation="Vertical" Margin="965,72,1,200">
             <TextBlock  Text="Alle hjælpere" Margin="0,-38,0,0"></TextBlock>
-            <ListView x:Name="ListViewHjælpere" ItemsSource="{Binding HjælperList}"  Width="321" RenderTransformOrigin="0.507,0.684" Margin="0,44,0,29" SelectionChanged="Selector_OnSelectionChanged">
+            <ListView x:Name="ListViewHjælpere" ItemsSource="{Binding HjælperList}" SelectedItem="{Binding SelectedHjælper, Mode=TwoWay}" SelectionChanged="ListViewHjælpere_OnSelectionChanged"  SelectionMode="Single" Width="321" RenderTransformOrigin="0.507,0.684" Margin="0,44,0,29" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,10">

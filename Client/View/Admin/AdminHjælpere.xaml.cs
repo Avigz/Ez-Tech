@@ -28,7 +28,8 @@ namespace Client.View.Admin
             this.InitializeComponent();
         }
         ViewModel.ViewModel vm = new ViewModel.ViewModel();
-
+        
+	
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
             if (mySplitView.IsPaneOpen == false)
@@ -78,7 +79,8 @@ namespace Client.View.Admin
             vm.AddHjælper(vm.SelectedHjælper);
         }
 
-        private void Selector_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+
+        private void ListViewHjælpere_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             vm.SelectedHjælper = (Hjælpere)ListViewHjælpere.SelectedItem;
         }
