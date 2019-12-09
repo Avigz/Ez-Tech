@@ -90,7 +90,7 @@
                 <StackPanel Orientation="Horizontal" Height="68" Margin="51,0,0,0">
                     <Button Name="Opdater" Click="Opdater_OnClick" Margin="20" Content="Opdater"></Button>
                     <Button Name="Slet" Click="Slet_OnClick" Margin="20" Content="Slet"></Button>
-                    <Button x:Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Button Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
 
             </StackPanel>
@@ -98,7 +98,7 @@
 
         <StackPanel Orientation="Vertical" Margin="965,72,1,200">
             <TextBlock  Text="Alle hjælpere" Margin="0,-38,0,0"></TextBlock>
-            <ListView x:Name="ListViewHjælpere" ItemsSource="{Binding Source=HjælperList}"  Width="321" RenderTransformOrigin="0.507,0.684" Margin="0,44,0,29" SelectionChanged="Selector_OnSelectionChanged">
+            <ListView x:Name="ListViewHjælpere" ItemsSource="{Binding HjælperList}"  Width="321" RenderTransformOrigin="0.507,0.684" Margin="0,44,0,29" SelectionChanged="Selector_OnSelectionChanged">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,10">

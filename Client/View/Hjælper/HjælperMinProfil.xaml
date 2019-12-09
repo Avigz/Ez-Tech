@@ -3,11 +3,14 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Client.View"
+    xmlns:vm="using:Client.ViewModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Page.DataContext>
+        <vm:ViewModel></vm:ViewModel>
+    </Page.DataContext>
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
         <Grid.RowDefinitions>
             <RowDefinition   Height="131*"></RowDefinition>
@@ -66,13 +69,13 @@
                 <TextBlock Text="Min Profil" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0" SelectionChanged="TextBlock_SelectionChanged"/>
                 <StackPanel>
                     <TextBlock Text="Fornavn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,1140,0" SelectionChanged="TextBlock_SelectionChanged_6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></TextBlock>
-                    <TextBox Height="40" Margin="0,0,1140,0" Text="{Binding}"/>
+                    <TextBox Height="40" Margin="0,0,1140,0" Text="{Binding LoggedIndHjælper.Navn }"/>
                     <TextBlock Text="Efternavn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,1140,0"></TextBlock>
                     <TextBox Height="40" Margin="0,0,1140,0"></TextBox>
                     <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,1140,0"></TextBlock>
-                    <TextBox Height="40" Margin="0,0,1140,0"></TextBox>
+                    <TextBox Height="40" Margin="0,0,1140,0" Text="{Binding LoggedIndHjælper.Email}"></TextBox>
                     <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,1140,0" SelectionChanged="TextBlock_SelectionChanged_1"></TextBlock>
-                    <TextBox Height="40" Margin="0,0,1140,0"></TextBox>
+                    <TextBox Height="40" Margin="0,0,1140,0" Text="{Binding LoggedIndHjælper.TelefonNummer }"></TextBox>
                 </StackPanel>
             </StackPanel>
 
