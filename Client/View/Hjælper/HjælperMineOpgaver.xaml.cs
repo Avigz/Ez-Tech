@@ -31,19 +31,19 @@ namespace Client.View.Hjælper
             this.InitializeComponent();
    
         }
+        ViewModel.ViewModel vm = new ViewModel.ViewModel();
 
-
-        private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
+        private void Forside_OnClick (object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPageLogin));
         }
 
-        private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
+        private void HjælperMineOpgaver_OnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(HjælperMineOpgaver));
         }
 
-        private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
+        private void HjælperLedigeOpgaver_OnClick(object sender, RoutedEventArgs e)
         {
             //Frame.Navigate(typeof(HjælperLedigeOpgaver));
         }
@@ -53,12 +53,12 @@ namespace Client.View.Hjælper
             //Frame.Navigate(typeof(HjælperLedigeOpgaver));
         }
 
-        private void MenuButton6_OnClick(object sender, RoutedEventArgs e)
+        private void HjælperFærdigeOpgaver_OnClick(object sender, RoutedEventArgs e)
         {
             /*Frame.Navigate(typeof(HjælperFærdigeOpgaver))*/;
         }
 
-        private void MenuButton7_OnClick(object sender, RoutedEventArgs e)
+        private void HjælperMinProfil_OnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(HjælperMinProfil));
         }
@@ -102,5 +102,34 @@ namespace Client.View.Hjælper
         //{
 
         //}
+        private void Lv_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton6_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton7_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

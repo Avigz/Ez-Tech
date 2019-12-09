@@ -8,7 +8,7 @@
     xmlns:vm="using:Client.ViewModel"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-<Page.DataContext><vm:ViewModel></vm:ViewModel></Page.DataContext>
+<!--<Page.DataContext><vm:ViewModel></vm:ViewModel></Page.DataContext>-->
 
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
         <Grid.RowDefinitions>
@@ -70,7 +70,7 @@
 
 
 
-                <ComboBox x:Name="LedigeOpgaverCombo" Header="Ledige Opgaver" Height="56" Width="296" 
+                <ComboBox x:Name="LedigeOpgaverCombo" Header="Ledige Opgaver" Height="65" Width="296"  Foreground="DarkRed"
           ItemsSource="{Binding  OpgaveList, Mode=OneWay  }" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.75"/>
 
             </StackPanel>

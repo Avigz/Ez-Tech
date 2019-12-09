@@ -65,7 +65,7 @@
                 -->
             <!--<StackPanel>-->
             <StackPanel>
-                <TextBlock Text="Hjælper's Opgaver" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0" SelectionChanged="TextBlock_SelectionChanged"/>
+                <TextBlock Text="Hjælper's Opgaver" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="10,0,76,0" SelectionChanged="TextBlock_SelectionChanged"/>
 <!--<StackPanel>
                         <GridView ItemsSource="{x:Bind Opgaver}">
     <GridView.ItemTemplate>
