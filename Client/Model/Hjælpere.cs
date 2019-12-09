@@ -16,6 +16,8 @@ namespace Client.Model
             IsAdmin = false;
         }
 
+      public Hjælpere() { }
+
         public int ID { get; set; }
         public string Navn { get; set; }
         public string TelefonNummer { get; set; }

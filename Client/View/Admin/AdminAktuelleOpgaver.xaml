@@ -14,112 +14,114 @@
     </Page.DataContext>
 
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="131*"></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="218*"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="131*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="218*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
 
-            <SplitView x:Name="mySplitView" Margin="0,0,0,0" Background="DarkGray" Grid.Row="0" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="150" CompactPaneLength="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2" RenderTransformOrigin="0.586,0.764">
-                <SplitView.Pane>
+        <SplitView x:Name="mySplitView" Margin="0,0,0,0" Background="DarkGray" Grid.Row="0" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="150" CompactPaneLength="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2" RenderTransformOrigin="0.586,0.764">
+            <SplitView.Pane>
 
-                    <StackPanel Background="DarkRed" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
-                            <Button x:Name="Button1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
+                <StackPanel Background="DarkRed" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
+                        <Button x:Name="Button1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button1_OnClick"/>
-                            <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" />
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
-                            <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE77F;"
+                        <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
+                        <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE77F;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="AdminAktuelleOpgaver_OnClick"/>
-                            <TextBlock Text="Aktuelle Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
-
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
-                            <Button x:Name="MenuButton3" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEA8D;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton3_OnClick" />
-                            <TextBlock Text="Hjælpere" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
-                        </StackPanel>
-
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
-                            <Button x:Name="MenuButton4" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE73A;"
-                            Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton4_OnClick"/>
-                            <TextBlock Text="Færdige Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" Height="22" Margin="-0.4,0,152.4,0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Stretch" >
-                                <TextBlock.RenderTransform>
-                                    <CompositeTransform ScaleY="1"/>
-                                </TextBlock.RenderTransform>
-                            </TextBlock>
-                        </StackPanel>
+                        <TextBlock Text="Aktuelle Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
 
                     </StackPanel>
-                </SplitView.Pane>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
+                        <Button x:Name="MenuButton3" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEA8D;"
+                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton3_OnClick" />
+                        <TextBlock Text="Hjælpere" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
+                    </StackPanel>
 
-                <!--<SplitView.Content>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
+                        <Button x:Name="MenuButton4" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE73A;"
+                            Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton4_OnClick"/>
+                        <TextBlock Text="Færdige Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" Height="22" Margin="-0.4,0,152.4,0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Stretch" >
+                            <TextBlock.RenderTransform>
+                                <CompositeTransform ScaleY="1"/>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                    </StackPanel>
+
+                </StackPanel>
+            </SplitView.Pane>
+
+            <!--<SplitView.Content>
                 -->
-                <!--<StackPanel>-->
-                <StackPanel>
-                    <TextBlock Text="Aktuelle Opgaver" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="10,0,76,0"/>
-                </StackPanel>
-
-
-
-            </SplitView>
+            <!--<StackPanel>-->
             <StackPanel>
-
-                <StackPanel Orientation="Vertical" Margin="200,200,0,0" Height="633" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1255" >
-                    <TextBlock Text="Alle Aktuelle Opgaver" Height="70" FontSize="50" Foreground="DarkRed" Margin="315,0,288.2,0"/>
-                    <ListView x:Name="Lv" ItemsSource="{Binding OpgaveList}" SelectedItem="{Binding  SelectedOpgave, Mode=TwoWay}" RenderTransformOrigin="0.507,0.684" Margin="117,0,25.2,0" SelectionChanged="Lv_OnSelectionChanged" Height="464" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Height="108" Width="810" Margin="0,0,0,0" RenderTransformOrigin="0.588,0.531">
-                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="35" Margin="0,0,-13,0" VerticalAlignment="Stretch">
-                                        <TextBlock Margin="0,0,2,0" Text=" Id:" Foreground="White" Height="30" Width="25" FontFamily="Calibri Light" FontSize="18"/>
-                                        <TextBox Margin="9.6,0,2.4,0" IsReadOnly="True" Background="White" Text="{Binding ID, Mode=TwoWay}" FontFamily="Calibri Light" Height="31" Foreground="Black" />
-                                    </StackPanel>
-
-                                    <StackPanel Orientation="Horizontal" Height="35" Margin="30.4,0,0.2,0">
-                                        <TextBlock Margin="2,0,0,0" Text="beskrivelse:" Height="35" Width="55" Foreground="White" FontFamily="Calibri Light" FontSize="18" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                                        <TextBox  Margin="10.4,0,8.8,0" Background="White" Text="{Binding Beskrivelse, Mode=TwoWay}" FontFamily="Calibri Light" Foreground="Black" Height="33" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                                    </StackPanel>
-
-                                    <StackPanel Orientation="Horizontal" Height="35" Margin="0,0,0,0">
-                                        <TextBlock Margin="301,0,-566,0" Text="hjælperTilknyttet:" FontFamily="Calibri Light" Height="26" FontSize="18" Foreground="white" HorizontalAlignment="Stretch" />
-                                        <TextBox Margin="441,0,-448,0" Text="{Binding HjælperTilknyttet, Mode=TwoWay}" Height="35" FontFamily="Calibri Light" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                                    </StackPanel>
-                                    <StackPanel Orientation="Horizontal" Height="39" Margin="14.6,0,-187.4,0" VerticalAlignment="Center">
-                                        <TextBlock Margin="93,0,-180,0" Text="isDone:" FontFamily="Calibri Light" Height="35" FontSize="18" Foreground="white" HorizontalAlignment="Stretch" />
-                                        <TextBox Margin="153,0,-210.6,0" Text="{Binding IsDone, Mode=TwoWay}" Height="34" FontFamily="Calibri Light" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                                    </StackPanel>
-                                    <StackPanel>
-                                        <TextBlock Margin="-80,40,0,0" Text=" KundeID:" Height="35" Width="55" Foreground="White" FontFamily="Calibri Light" FontSize="18" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                                        <TextBox  Margin="22,-40,-30,4" Background="White" Text="{Binding KundeID, Mode=TwoWay}" FontFamily="Calibri Light" Height="32" Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                                    </StackPanel>
-
-                                    <!--<StackPanel Orientation="Horizontal" Height="35" Margin="14,0,-105,0" VerticalAlignment="Center" HorizontalAlignment="Stretch">
-                                    <TextBlock Margin="15,0,-180,0" Text="Beskrivelse:" FontFamily="Calibri Light" Height="35" FontSize="18" Foreground="white" VerticalAlignment="Stretch" />
-                                    <TextBox Margin="96,0,-158,0" Text="{Binding Beskrivelse, Mode=TwoWay}" Height="35" FontFamily="Calibri Light" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                                </StackPanel>-->
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </StackPanel>
-
-
+                <TextBlock Text="Aktuelle Opgaver" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="10,0,76,0"/>
             </StackPanel>
 
 
 
+        </SplitView>
 
-            <RelativePanel Margin="0,0,0,0">
-                <ToggleButton Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" Checked="HamburgerButton_OnChecked" />
-            </RelativePanel>
+        <StackPanel Orientation="Vertical" Margin="20,200,0,0" Height="655" HorizontalAlignment="Center" VerticalAlignment="Top" Width="993" >
+            <TextBlock Text="Alle Aktuelle Opgaver" Height="70" FontSize="50" Foreground="DarkRed" Margin="0,0,2.333,0" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+            <ListView x:Name="Lv" ItemsSource="{Binding OpgaveNotDone}" SelectedItem="{Binding SelectedOpgave, Mode=TwoWay}" RenderTransformOrigin="0.507,0.684" Margin="118,0,121.333,0" SelectionChanged="Lv_OnSelectionChanged" Height="464" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Height="108" Width="810" Margin="0,0,0,0" RenderTransformOrigin="0.588,0.531">
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="35" Margin="0,0,-13,0" VerticalAlignment="Stretch">
+                                <TextBlock Margin="0,0,2,0" Text=" Id:" Foreground="White" Height="30" Width="25" FontFamily="Calibri Light" FontSize="18"/>
+                                <TextBox Margin="9.6,0,2.4,0" IsReadOnly="True" Background="White" Text="{Binding ID, Mode=TwoWay}" FontFamily="Calibri Light" Height="31" Foreground="Black" />
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Height="35" Margin="30.4,0,0.2,0">
+                                <TextBlock Margin="2,0,0,0" Text="beskrivelse:" Height="35" Width="55" Foreground="White" FontFamily="Calibri Light" FontSize="18" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                <TextBox  Margin="10.4,0,8.8,0" Background="White" Text="{Binding Beskrivelse, Mode=TwoWay}" FontFamily="Calibri Light" Foreground="Black" Height="33" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Height="35" Margin="0,0,0,0">
+                                <TextBlock Margin="301,0,-566,0" Text="hjælperTilknyttet:" FontFamily="Calibri Light" Height="26" FontSize="18" Foreground="white" HorizontalAlignment="Stretch" />
+                                <TextBox Margin="441,0,-448,0" Text="{Binding HjælperTilknyttet, Mode=TwoWay}" Height="35" FontFamily="Calibri Light" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Height="39" Margin="14.6,0,-187.4,0" VerticalAlignment="Center">
+                                <TextBlock Margin="93,0,-180,0" Text="isDone:" FontFamily="Calibri Light" Height="35" FontSize="18" Foreground="white" HorizontalAlignment="Stretch" />
+                                <TextBox Margin="153,0,-210.6,0" Text="{Binding IsDone, Mode=TwoWay}" Height="34" FontFamily="Calibri Light" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                            </StackPanel>
+                            <StackPanel>
+                                <TextBlock Margin="-80,40,0,0" Text=" KundeID:" Height="35" Width="55" Foreground="White" FontFamily="Calibri Light" FontSize="18" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                <TextBox  Margin="22,-40,-30,4" Background="White" Text="{Binding KundeID, Mode=TwoWay}" FontFamily="Calibri Light" Height="32" Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                            </StackPanel>
+
+                            <!--<StackPanel Orientation="Horizontal" Height="35" Margin="14,0,-105,0" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                                    <TextBlock Margin="15,0,-180,0" Text="Beskrivelse:" FontFamily="Calibri Light" Height="35" FontSize="18" Foreground="white" VerticalAlignment="Stretch" />
+                                    <TextBox Margin="96,0,-158,0" Text="{Binding Beskrivelse, Mode=TwoWay}" Height="35" FontFamily="Calibri Light" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                                </StackPanel>-->
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Done" Click="DoneClick" Margin="20"/>
+                <Button Content="Opdater" Click="OpdaterClick" Margin="20"/>
+                <Button Content="Slet" Click="SletClick" Margin="20"/>
+
+            </StackPanel>
+        </StackPanel>
 
 
 
 
-        </Grid>
-    
+        <RelativePanel Margin="0,0,0,0">
+            <ToggleButton Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" Checked="HamburgerButton_OnChecked" />
+        </RelativePanel>
+
+
+
+
+    </Grid>
+
 </Page>

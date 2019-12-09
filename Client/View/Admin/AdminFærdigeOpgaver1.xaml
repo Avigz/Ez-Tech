@@ -72,7 +72,7 @@
 
             <StackPanel Orientation="Vertical" Margin="200,200,0,0" Height="633" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1255" >
                 <TextBlock Text="Alle Færdige Opgaver" Height="70" FontSize="50" Foreground="DarkRed" Margin="315,0,288.2,0"/>
-                <ListView x:Name="Lv" ItemsSource="{Binding OpgaveList}" SelectedItem="{Binding  SelectedOpgave, Mode=TwoWay}" RenderTransformOrigin="0.507,0.684" Margin="117,0,25.2,0" SelectionChanged="Lv_OnSelectionChanged" Height="464" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <ListView x:Name="Lv" ItemsSource="{Binding OpgaveListDone}" RenderTransformOrigin="0.507,0.684" Margin="117,0,25.2,0" SelectionChanged="Lv_OnSelectionChanged" Height="464" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Height="108" Width="810" Margin="0,0,0,0" RenderTransformOrigin="0.588,0.531">

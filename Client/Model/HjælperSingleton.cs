@@ -41,7 +41,6 @@ namespace Client.Model
         {
             get { return new ObservableCollection<Hjælpere>(DbContext.HjælpereWebApi.Load().Result); }
 
-
         }
 
         public void AddHjælper(Hjælpere h)

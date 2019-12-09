@@ -17,6 +17,10 @@ namespace Client.Model
     public static class Login
     {
 
+        static Login()
+        {
+            LoggedInUser = new Hjælpere();
+        }
 
         #region methods
         public static bool LoginAsync(string Uname, string Pw)
