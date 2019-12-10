@@ -38,6 +38,8 @@ namespace Client.View.Hjælper
 
         }
 
+        ViewModel.ViewModel vm = new ViewModel.ViewModel();
+
         private void Forside_OnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPageLogin));
@@ -107,17 +109,15 @@ namespace Client.View.Hjælper
             Frame.Navigate(typeof(MainPageLogin));
         }
 
-        private void LedigeOpgaverCombo_SelectionChanged(Object sender, SelectionChangedEventArgs e)
+        private void LedigeOpgaverCombo_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-            if (LedigeOpgaverCombo.IsDropDownOpen == false)
-            {
-                LedigeOpgaverCombo.IsDropDownOpen = true;
-            }
-            else if (LedigeOpgaverCombo.IsDropDownOpen == true)
-            {
-                LedigeOpgaverCombo.IsDropDownOpen = false;
-            }
+            vm.SelectedOpgave = (Opgaver) LedigeOpgaverCombo.SelectedItem;
+        }
+
+        private void Tilknyt(object sender, RoutedEventArgs e)
+        {
+            vm.SelectedOpgave.HjælperTilknyttet = vm.LoggedIndHjælper.ID;
+            vm.UpdateOpgave(vm.SelectedOpgave);
         }
     }
 }

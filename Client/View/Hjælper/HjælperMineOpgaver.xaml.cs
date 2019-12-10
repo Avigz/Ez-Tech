@@ -96,21 +96,20 @@ namespace Client.View.Hjælper
             Frame.Navigate(typeof(HjælperMinProfil));
         }
 
-        
-
-        //private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        //{
-
-        //}
-        private void Lv_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            vm.SelectedOpgave = (Opgaver)ListView.SelectedItem;
-        }
+     
+      
 
         private void AfslutOpgave_OnClick(object sender, RoutedEventArgs e)
         {
             vm.SelectedOpgave.IsDone = true;
             vm.UpdateOpgave(vm.SelectedOpgave);
         }
+
+        private void ListView_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            vm.SelectedOpgave = (Opgaver)ListView.SelectedItem;
+        }
+        
+        
     }
 }
