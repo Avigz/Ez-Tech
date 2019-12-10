@@ -104,7 +104,7 @@ namespace Client.View.Hjælper
         //}
         private void Lv_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            vm.SelectedOpgave = (Opgaver)ListView.SelectedItem;
         }
 
         private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
@@ -119,7 +119,7 @@ namespace Client.View.Hjælper
 
         private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(HjælperPage));
         }
 
         private void MenuButton6_OnClick(object sender, RoutedEventArgs e)
@@ -130,6 +130,12 @@ namespace Client.View.Hjælper
         private void MenuButton7_OnClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
+        }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            vm.SelectedOpgave.IsDone = true;
+            vm.UpdateOpgave(vm.SelectedOpgave);
         }
     }
 }

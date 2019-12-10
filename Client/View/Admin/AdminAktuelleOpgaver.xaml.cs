@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Client.Model;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,9 +26,10 @@ namespace Client.View.Admin
         public AdminAktuelleOpgaver()
         {
             this.InitializeComponent();
+        
         }
 
-
+        public ViewModel.ViewModel vm = new ViewModel.ViewModel();
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
             if (mySplitView.IsPaneOpen == false)
@@ -67,13 +69,13 @@ namespace Client.View.Admin
             Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
 
-        private void MenuButton2_OnClick(object sender, RoutedEventArgs e)
+        private void Hjælpere_OnClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
 
 
-        private void Button1_OnClick(object sender, RoutedEventArgs e)
+        private void Forside_OnClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
@@ -83,14 +85,35 @@ namespace Client.View.Admin
             throw new NotImplementedException();
         }
 
-        private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
+        private void FærdigeOpgaver_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
 
         private void Lv_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            vm.SelectedOpgave = (Opgaver)Lv.SelectedItem;
+        }
+
+        private void DoneClick(object sender, RoutedEventArgs e)
+        {
+            vm.SelectedOpgave.IsDone = true;
+            vm.UpdateOpgave(vm.SelectedOpgave);
+        
+        }
+
+        private void OpdaterClick(object sender, RoutedEventArgs e)
+        {
+           vm.UpdateOpgave(vm.SelectedOpgave);
+        }
+        private void SletClick(object sender, RoutedEventArgs e)
+        {
+            vm.RemoveOpgaver(vm.SelectedOpgave);
+        }
+
+        private void _OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)

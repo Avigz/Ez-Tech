@@ -25,6 +25,8 @@ namespace Client.Model
     _isDone = IsDone;
 }
 
+        public Opgaver() { }
+
 #endregion
 
         #region Properties

@@ -16,10 +16,17 @@ namespace Client.Model
 
         #region Constructor
 
-        public Kunder()
+        public Kunder(int id, string kundenavn, string kundenummer, string kundeadresse)
         {
+            _kundeId = id;
+            _kundeNavn = kundenavn;
+            _kundeNummer = kundenummer;
+            _kundeAdresse = kundeadresse;
+
             Opgaver = new HashSet<Opgaver>();
         }
+
+        public Kunder() {}
 
         #endregion
 

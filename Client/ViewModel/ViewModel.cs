@@ -23,6 +23,12 @@ namespace Client.ViewModel
             ObservableCollection<Hjælpere> HjælperList = new ObservableCollection<Hjælpere>();
             ObservableCollection<Opgaver> OpgaveList = new ObservableCollection<Opgaver>();
             ObservableCollection<Kunder> KunderList = new ObservableCollection<Kunder>();
+
+            _selectedHjælper = new Hjælpere();
+            _selectedKunde = new Kunder();
+            _selectedOpgave = new Opgaver();
+            
+           
         }
 
 
@@ -36,13 +42,6 @@ namespace Client.ViewModel
     private string _username { get; set; }
     private string _password { get; set; }
 
-
-
-     private Opgaver _selectedOpgave { get; set; }
-
-     private Kunder _selectedKunde { get; set; }
-
-     private Hjælpere _selectedHjælper { get; set; }
 
 
         public string Username
@@ -108,78 +107,157 @@ namespace Client.ViewModel
 
     public event PropertyChangedEventHandler PropertyChanged;
 
-    public ObservableCollection<Hjælpere> HjælperList
-    {
-        get
-        {          
-            return HjælperSingleton.Instance.GetHjælper;
-        }
-      
-    }
-
-    public void AddHjælper(Hjælpere h)
-    {
-        if (HjælperSingleton.Instance.GetHjælper.Contains(h))
+        #region HjælperProps
+        public ObservableCollection<Hjælpere> HjælperList
         {
-            return;
+            get
+            {
+                return HjælperSingleton.Instance.GetHjælper;
+            }
+
         }
-        else
+
+        public void AddHjælper(Hjælpere h)
         {
-            HjælperSingleton.Instance.AddHjælper(h);
+            if (HjælperSingleton.Instance.GetHjælper.Contains(h))
+            {
+                return;
+            }
+            else
+            {
+                HjælperSingleton.Instance.AddHjælper(h);
+
+            }
 
         }
 
+        public void UpdateHjælper(Hjælpere h)
+        {
+            if (HjælperSingleton.Instance.GetHjælper.Contains(h))
+            {
+                HjælperSingleton.Instance.RemoveHjælper(h);
+                HjælperSingleton.Instance.AddHjælper(h);
+            }
+            else
+            {
+                HjælperSingleton.Instance.AddHjælper(h);
+            }
         }
 
-    public void UpdateHjælper(Hjælpere h)
-    {
-        if (HjælperSingleton.Instance.GetHjælper.Contains(h))
+        public void RemoveHjælper(Hjælpere h)
         {
             HjælperSingleton.Instance.RemoveHjælper(h);
-            HjælperSingleton.Instance.AddHjælper(h);
         }
-        else
+
+
+        #endregion
+
+        #region OpgaveProps
+        public ObservableCollection<Opgaver> OpgaveList
         {
-            HjælperSingleton.Instance.AddHjælper(h);
+            get
+            {
+                return OpgaverSingleton.Instance.GetOpgaver;
+            }
+
         }
-        }
 
-    public void RemoveHjælper(Hjælpere h)
-    {
-        HjælperSingleton.Instance.RemoveHjælper(h);
-    }
-
-    public ObservableCollection<Opgaver> OpgaveList
-    {
-        get { 
-            return OpgaverSingleton.Instance.GetOpgaver; }
-        
-    }
-
-    public void AddOpgave(Opgaver O)
-    {
-        OpgaverSingleton.Instance.AddOpgaver(O);
-    }
-
-    public void UpdateOpgave(Opgaver O)
-    {
-        if (OpgaverSingleton.Instance.GetOpgaver.Contains(O))
+        public ObservableCollection<Opgaver> LoggedInHjælperOpgaver
         {
-            OpgaverSingleton.Instance.RemoveOpgaver(O);
+            get
+            {
+                var LoggedInHjælperOpgQuery =
+                    from n in OpgaveList where n.HjælperTilknyttet == LoggedIndHjælper.ID select n;
+                ObservableCollection<Opgaver> HjælpersOpgaver = new ObservableCollection<Opgaver>();
+
+                foreach (var v in LoggedInHjælperOpgQuery)
+                {
+                    HjælpersOpgaver.Add(v);
+                }
+
+                return HjælpersOpgaver;
+            }
+        }
+
+        public ObservableCollection<Opgaver> OpgaveListMissingHjælper
+        {
+            get
+            {
+                var MissingHjælperQuery = from n in OpgaveList where n.HjælperTilknyttet == null select n;
+                ObservableCollection<Opgaver> MissingHjælper = new ObservableCollection<Opgaver>();
+
+                foreach (var v in MissingHjælperQuery)
+                {
+                    MissingHjælper.Add(v);
+                }
+
+                return MissingHjælper;
+            }
+
+        }
+
+       
+
+        public ObservableCollection<Opgaver> OpgaveListDone
+        {
+            get
+            {
+
+                var DoneQuery = from n in OpgaveList where n.IsDone == true select n;
+                ObservableCollection<Opgaver> DoneList = new ObservableCollection<Opgaver>();
+
+                foreach (var v in DoneQuery)
+                {
+                    DoneList.Add(v);
+                }
+                return DoneList;
+            }
+        }
+
+        public ObservableCollection<Opgaver> OpgaveNotDone
+        {
+            get
+            {
+                var NotDoneQuery = from n in OpgaveList where n.IsDone == false select n;
+                ObservableCollection<Opgaver> NotDoneList = new ObservableCollection<Opgaver>();
+
+                foreach (var v in NotDoneQuery)
+                {
+                    NotDoneList.Add(v);
+                }
+
+                return NotDoneList;
+            }
+        }
+
+        public void AddOpgave(Opgaver O)
+        {
             OpgaverSingleton.Instance.AddOpgaver(O);
         }
-        else
+
+        public void UpdateOpgave(Opgaver O)
         {
-            OpgaverSingleton.Instance.AddOpgaver(O);
-        }
+            if (OpgaverSingleton.Instance.GetOpgaver.Contains(O))
+            {
+                OpgaverSingleton.Instance.RemoveOpgaver(O);
+                OpgaverSingleton.Instance.AddOpgaver(O);
+            }
+            else
+            {
+                OpgaverSingleton.Instance.AddOpgaver(O);
+            }
         }
 
-    public void RemoveOpgaver(Opgaver o)
-    {
-        OpgaverSingleton.Instance.RemoveOpgaver(o);
-    }
+        public void RemoveOpgaver(Opgaver o)
+        {
+            OpgaverSingleton.Instance.RemoveOpgaver(o);
+        }
 
-    public ObservableCollection<Kunder> KunderList
+
+        #endregion
+
+
+        public ObservableCollection<Kunder> KunderList
     {
         get { return KunderSingleton.Instance.GetKunder;}
           
@@ -191,12 +269,15 @@ namespace Client.ViewModel
         set { Login.LoggedInUser = value; OnPropertyChanged((nameof(LoggedIndHjælper))); }
     }
 
+    private Opgaver _selectedOpgave;
+
         public Opgaver SelectedOpgave
         {
             get { return _selectedOpgave; }
             set { _selectedOpgave = value; OnPropertyChanged((nameof(SelectedOpgave))); }
         }
-       
+
+        private Kunder _selectedKunde;
 
         public Kunder SelectedKunde
         {
@@ -204,12 +285,14 @@ namespace Client.ViewModel
             set { _selectedKunde = value; OnPropertyChanged((nameof(SelectedKunde))); }
         }
 
+        private Hjælpere _selectedHjælper;
+
         public Hjælpere SelectedHjælper
         {
             get { return _selectedHjælper; }
             set
             {
-                _selectedHjælper = SelectedHjælper;
+                _selectedHjælper = value;
                 OnPropertyChanged(nameof(SelectedHjælper));
             }
         }

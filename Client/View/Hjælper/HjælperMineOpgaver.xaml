@@ -3,11 +3,16 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Client.View"
+    xmlns:vm="using:Client.ViewModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:data="using:Client.Model"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.DataContext>
+        <vm:ViewModel></vm:ViewModel>
+    </Page.DataContext>
     
 
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
@@ -49,69 +54,41 @@
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton7_OnClick"/>
                         <TextBlock Text="Min Profil" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged_3" />
                     </StackPanel>
-
-
-
-                    <StackPanel Orientation="Horizontal"/>
-                    <StackPanel Orientation="Horizontal">
-
-
-
-                    </StackPanel>
                 </StackPanel>
+
             </SplitView.Pane>
-
-            <!--<SplitView.Content>
-                -->
-            <!--<StackPanel>-->
-            <StackPanel>
-                <TextBlock Text="Hjælper's Opgaver" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="10,0,76,0" SelectionChanged="TextBlock_SelectionChanged"/>
-<!--<StackPanel>
-                        <GridView ItemsSource="{x:Bind Opgaver}">
-    <GridView.ItemTemplate>
-        <DataTemplate x:DataType="data:Opgaver">
-            <StackPanel>
-                <TextBlock FontSize="16" Text="{x:Bind ID }"></TextBlock>
-                <TextBlock FontSize="16" Text="{x:Bind KundeID }"></TextBlock>
-                <TextBlock FontSize="16" Text="{x:Bind Beskrivelse }"></TextBlock>
-                <TextBlock FontSize="16" Text="{x:Bind  }"></TextBlock>
-                <TextBlock FontSize="16" Text="{x:Bind IsDone }"></TextBlock>
-            </StackPanel>
-         </DataTemplate>
-    </GridView.ItemTemplate>
-</GridView>
-</StackPanel>-->
-
-                <ListView>
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <Border Background="IndianRed" Height="600" Width="500">
-                                    <TextBlock Text="{Binding }" 
-                                               FontSize="48" Foreground="WhiteSmoke"/>
-                                </Border>
-                            </Grid>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                    <ListView.Items>
-                        <x:String>One</x:String>
-                        <ListViewItem>Two</ListViewItem>
-                    </ListView.Items>
-                </ListView>
-
-            </StackPanel>
-
-
-
-            <!--<TextBlock Text="Brugernavn" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-450"></TextBlock>
-                    <TextBox Name="usernameBox" Background="White" Height="35" Width="200" Margin="0,0,0,-500"  PlaceholderText="Brugernavn"></TextBox>
-                    <TextBlock Text="Kode" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-650"></TextBlock>
-                    <PasswordBox x:Name="passwordBox" PasswordChar="*" Background="White" Height="35" Width="200" Margin="0,0,0,-700" PlaceholderText="Indtast password" ></PasswordBox>
-                    <Button Content="Login" FontFamily="Calibri Light" FontSize="20" Height="40" Width="200" Background="White" Foreground="Black" Margin="311,450,311,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="Button_Click" />
-                </StackPanel>-->
-            <!--
-            </SplitView.Content>-->
         </SplitView>
+
+
+        <StackPanel>
+            <TextBlock Text="Hjælper's Opgaver" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="80,0,76,0" />
+        </StackPanel>
+              
+                <StackPanel Orientation="Vertical" Margin="100">
+                <ListView x:Name="ListView" ItemsSource="{Binding LoggedInHjælperOpgaver}"  SelectedItem="{Binding SelectedOpgave, Mode=TwoWay}" >
+                    <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Name="Opgave ID" Text="Opgave ID" Foreground="WhiteSmoke"/>
+                                    <TextBlock Text="{Binding ID}" Foreground="White"/>
+                                </StackPanel>
+                             <StackPanel Orientation="Horizontal">
+                                 <TextBlock Text="beskrivelse" Foreground="WhiteSmoke" ></TextBlock>
+                                 <TextBlock Text="{Binding Beskrivelse}"  Foreground="White"></TextBlock>
+                              </StackPanel>
+                                 
+
+                        </StackPanel>
+                    </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                    <StackPanel>
+                <Button Content="Afslut Opgave" Margin="20" Click="ButtonBase_OnClick"></Button>
+                    </StackPanel>
+            </StackPanel>
+         
+     
 
         <RelativePanel Margin="0,0,0,0">
             <ToggleButton x:Name="HamburgerButton" Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Checked="HamburgerButton_OnChecked" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" />
