@@ -67,7 +67,7 @@ namespace Client.View.Admin
 
         private void Opdater_OnClick(object sender, RoutedEventArgs e)
         {
-           vm.AddHjælper(vm.SelectedHjælper);
+           vm.UpdateHjælper(vm.SelectedHjælper);
         }
 
         private void Slet_OnClick(object sender, RoutedEventArgs e)

@@ -67,7 +67,7 @@
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Margin="100,100,100,100" Grid.RowSpan="3">
-            <ListView x:Name="ListView" ItemsSource="{Binding LoggedInHjælperOpgaver}"  SelectedItem="{Binding SelectedOpgave, Mode=TwoWay}" >
+            <ListView x:Name="ListView" ItemsSource="{Binding LoggedInHjælperOpgaverNotDone}"  SelectedItem="{Binding SelectedOpgave, Mode=TwoWay}" SelectionChanged="ListView_OnSelectionChanged" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>

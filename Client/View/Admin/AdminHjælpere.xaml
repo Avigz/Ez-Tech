@@ -87,7 +87,7 @@
                 <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.TelefonNummer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock Text="Kodeord:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
                 <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Kodeord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                <StackPanel Orientation="Horizontal" Height="68" Margin="51,0,0,0">
+                <StackPanel Orientation="Horizontal" Height="96" Margin="51,0,-13,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Button Name="Opdater" Click="Opdater_OnClick" Margin="20" Content="Gem"></Button>
                     <Button Name="Slet" Click="Slet_OnClick" Margin="20" Content="Slet"></Button>
                     <Button x:Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret Ny" HorizontalAlignment="Center" VerticalAlignment="Center"/>
