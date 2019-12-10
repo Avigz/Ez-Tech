@@ -13,17 +13,19 @@
     <Page.DataContext>
         <vm:ViewModel></vm:ViewModel>
     </Page.DataContext>
-    
+
 
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
         <Grid.RowDefinitions>
-            <RowDefinition   Height="131*"></RowDefinition>
+            <RowDefinition   Height="153*"></RowDefinition>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="847*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="218*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <SplitView x:Name="mySplitView" Margin="0,0,0,0" Background="DarkGray" Grid.Row="0" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="150" CompactPaneLength="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2">
+        <SplitView x:Name="mySplitView" Margin="0,0,0,0" Background="DarkGray" Grid.Row="0" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="150" CompactPaneLength="50" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <SplitView.Pane>
                 <StackPanel Background="DarkRed" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
@@ -60,37 +62,37 @@
         </SplitView>
 
 
-        <StackPanel>
-            <TextBlock Text="Hjælper's Opgaver" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="80,0,76,0" />
+        <StackPanel Margin="0,0,0,0" Grid.RowSpan="3">
+            <TextBlock Text="Hjælpers Opgaver" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="300,0,100,0" />
         </StackPanel>
-              
-                <StackPanel Orientation="Vertical" Margin="100">
-                <ListView x:Name="ListView" ItemsSource="{Binding LoggedInHjælperOpgaver}"  SelectedItem="{Binding SelectedOpgave, Mode=TwoWay}" >
-                    <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Name="Opgave ID" Text="Opgave ID" Foreground="WhiteSmoke"/>
-                                    <TextBlock Text="{Binding ID}" Foreground="White"/>
-                                </StackPanel>
-                             <StackPanel Orientation="Horizontal">
-                                 <TextBlock Text="beskrivelse" Foreground="WhiteSmoke" ></TextBlock>
-                                 <TextBlock Text="{Binding Beskrivelse}"  Foreground="White"></TextBlock>
-                              </StackPanel>
-                                 
+
+        <StackPanel Orientation="Vertical" Margin="100,100,100,100" Grid.RowSpan="3">
+            <ListView x:Name="ListView" ItemsSource="{Binding LoggedInHjælperOpgaver}"  SelectedItem="{Binding SelectedOpgave, Mode=TwoWay}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Name="Opgave ID" Text="Opgave ID" Foreground="WhiteSmoke"/>
+                                <TextBlock Text="{Binding ID}" Foreground="White"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="beskrivelse" Foreground="WhiteSmoke" ></TextBlock>
+                                <TextBlock Text="{Binding Beskrivelse}"  Foreground="White"></TextBlock>
+                            </StackPanel>
+
 
                         </StackPanel>
                     </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-                    <StackPanel>
-                <Button Content="Afslut Opgave" Margin="20" Click="ButtonBase_OnClick"></Button>
-                    </StackPanel>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackPanel>
+                <Button Content="Afslut Opgave" Margin="200,300,20,0" Click="ButtonBase_OnClick"></Button>
             </StackPanel>
-         
-     
+        </StackPanel>
 
-        <RelativePanel Margin="0,0,0,0">
+
+
+        <RelativePanel Margin="0,0,0,0" Grid.RowSpan="3">
             <ToggleButton x:Name="HamburgerButton" Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Checked="HamburgerButton_OnChecked" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" />
         </RelativePanel>
 

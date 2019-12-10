@@ -30,5 +30,7 @@ namespace Client.Model
                 }
             }
         }
+
+        public Opgaver SelectedOpgaver { get; set; }
     }
 }
