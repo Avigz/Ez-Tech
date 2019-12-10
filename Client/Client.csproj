@@ -155,8 +155,8 @@
     <Compile Include="View\Forside\Forsiden.xaml.cs">
       <DependentUpon>Forsiden.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Hjælper\HjælpereFærdigeOpgaver.xaml.cs">
-      <DependentUpon>HjælpereFærdigeOpgaver.xaml</DependentUpon>
+    <Compile Include="View\Hjælper\HjælperFærdigeOpgaver.xaml.cs">
+      <DependentUpon>HjælperFærdigeOpgaver.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Hjælper\HjælperMineOpgaver.xaml.cs">
       <DependentUpon>HjælperMineOpgaver.xaml</DependentUpon>
@@ -217,7 +217,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Hjælper\HjælpereFærdigeOpgaver.xaml">
+    <Page Include="View\Hjælper\HjælperFærdigeOpgaver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
