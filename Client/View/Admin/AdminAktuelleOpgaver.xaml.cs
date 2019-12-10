@@ -115,5 +115,15 @@ namespace Client.View.Admin
         {
             Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
+
+        private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Button1_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
