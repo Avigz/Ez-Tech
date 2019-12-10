@@ -30,5 +30,8 @@ namespace Client.Model
                 }
             }
         }
+
+        public Kunder SelectedKunder { get; set; }
+
     }
 }

@@ -32,5 +32,7 @@ namespace Client.Model
 
 
         }
+
+        public Hjælpere SelectedHjælpere { get; set; }
     }
 }
