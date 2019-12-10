@@ -146,6 +146,9 @@
     <Compile Include="View\Admin\AdminHjælpere.xaml.cs">
       <DependentUpon>AdminHjælpere.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\AdminOpretOpgave.xaml.cs">
+      <DependentUpon>AdminOpretOpgave.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Admin\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
@@ -154,6 +157,9 @@
     </Compile>
     <Compile Include="View\Forside\Forsiden.xaml.cs">
       <DependentUpon>Forsiden.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Hjælper\HjælpereFærdigeOpgaver.xaml.cs">
+      <DependentUpon>HjælpereFærdigeOpgaver.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Hjælper\HjælperMineOpgaver.xaml.cs">
       <DependentUpon>HjælperMineOpgaver.xaml</DependentUpon>
@@ -176,6 +182,7 @@
     <None Include="Client_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Assets\EZ-t.JPG" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -202,6 +209,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Admin\AdminOpretOpgave.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Admin\AdminPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -211,6 +222,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\Forside\Forsiden.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Hjælper\HjælpereFærdigeOpgaver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

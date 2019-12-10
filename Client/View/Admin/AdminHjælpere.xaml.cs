@@ -87,6 +87,21 @@ namespace Client.View.Admin
         {
             vm.SelectedHjælper = (Hjælpere)ListViewHjælpere.SelectedItem;
         }
+
+        private void MenuButton6_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     
