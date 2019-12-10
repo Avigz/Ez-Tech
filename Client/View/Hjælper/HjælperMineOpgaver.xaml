@@ -73,12 +73,10 @@
                                     <TextBlock Name="Opgave ID" Text="Opgave ID" Foreground="WhiteSmoke"/>
                                     <TextBlock Text="{Binding ID}" Foreground="White"/>
                                 </StackPanel>
-                             <StackPanel Orientation="Horizontal">
-                                 <TextBlock Text="beskrivelse" Foreground="WhiteSmoke" ></TextBlock>
-                                 <TextBlock Text="{Binding Beskrivelse}"  Foreground="White"></TextBlock>
-                              </StackPanel>
-                                 
-
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="beskrivelse" Foreground="WhiteSmoke" ></TextBlock>
+                                <TextBlock Text="{Binding Beskrivelse}"  Foreground="White"></TextBlock>
+                            </StackPanel>
                         </StackPanel>
                     </DataTemplate>
                     </ListView.ItemTemplate>

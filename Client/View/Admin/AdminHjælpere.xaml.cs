@@ -76,7 +76,8 @@ namespace Client.View.Admin
 
         private void Opret_OnClick(object sender, RoutedEventArgs e)
         {
-            vm.AddHjælper(vm.SelectedHjælper);
+            vm.SelectedHjælper = new Hjælpere(0,"Indtast Navn","Indtast Nummer", "indtask kodeord","indtast email", false );
+            
         }
 
 

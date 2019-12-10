@@ -82,15 +82,15 @@
                 <TextBlock Text="Navn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" ></TextBlock>
                 <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Navn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Email, Mode=TwoWay}"/>
+                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" SelectionChanged="TextBlock_OnSelectionChanged"></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.TelefonNummer, Mode=TwoWay}"/>
+                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.TelefonNummer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock Text="Kodeord:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Kodeord, Mode=TwoWay}"/>
+                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Kodeord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <StackPanel Orientation="Horizontal" Height="68" Margin="51,0,0,0">
-                    <Button Name="Opdater" Click="Opdater_OnClick" Margin="20" Content="Opdater"></Button>
+                    <Button Name="Opdater" Click="Opdater_OnClick" Margin="20" Content="Gem"></Button>
                     <Button Name="Slet" Click="Slet_OnClick" Margin="20" Content="Slet"></Button>
-                    <Button x:Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Button x:Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret Ny" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
 
             </StackPanel>
