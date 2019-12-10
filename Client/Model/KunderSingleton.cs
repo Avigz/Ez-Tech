@@ -54,6 +54,10 @@ namespace Client.Model
          
         }
 
+        public void UpdateKunde(Kunder k)
+        {
+            DbContext.KunderWebApi.Update(k.KundeID, k);
+        }
  
 
 

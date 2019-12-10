@@ -55,6 +55,10 @@ namespace Client.Model
             
         }
 
+        public void UpdateHjælper(Hjælpere h)
+        {
+            DbContext.HjælpereWebApi.Update(h.ID, h);
+        }
       
 
     }

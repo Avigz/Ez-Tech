@@ -71,10 +71,8 @@
 
         <StackPanel  HorizontalAlignment="Stretch" Margin="0,0,960,0" VerticalAlignment="Stretch">
             <StackPanel  Orientation="Vertical">
-                <TextBlock Text="ID:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,100,0,0" SelectionChanged="TextBlock_OnSelectionChanged" ></TextBlock>
-                <TextBox Margin="175,0,0,0"/>
-                <TextBlock Text="Beskrivelse:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" SelectionChanged="TextBlock_OnSelectionChanged"></TextBlock>
-                <TextBox Margin="175,0,0,0"/>
+                <TextBlock Text="Beskrivelse:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,180,0,0" SelectionChanged="TextBlock_OnSelectionChanged"></TextBlock>
+                <TextBox Margin="175,0,0,0" Text="{Binding SelectedOpgave.Beskrivelse, Mode=TwoWay}"/>
                 <StackPanel Orientation="Horizontal" Height="68" Margin="180,0,260,0">
                     <Button x:Name="Opret" Click="Opret_OnClick" Margin="0,0,0,0" Content="Opret" HorizontalAlignment="Center" VerticalAlignment="Center" Height="37" Width="95"/>
 
@@ -83,13 +81,13 @@
                     <StackPanel.RenderTransform>
                         <CompositeTransform ScaleY="-1"/>
                     </StackPanel.RenderTransform>
-                    <ComboBox x:Name="TilknytHjælper" Header="Medhjælper"  Height="70" Width="215"  Foreground="DarkRed"
-                              ItemsSource="{Binding  HjælperList, Mode=TwoWay  }" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="153,0.75" Margin="1,115,0,0">
+                    <ComboBox x:Name="TilknytKunde" Header="Kunde"  Height="70" Width="215"  Foreground="DarkRed"
+                              ItemsSource="{Binding KunderList, Mode=OneWay}" SelectionChanged="TilknytKunde_OnSelectionChanged" SelectedItem="{Binding SelectedKunde, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="153,0.75" Margin="1,115,0,0">
                         <ComboBox.RenderTransform>
                             <CompositeTransform ScaleY="-1"/>
                         </ComboBox.RenderTransform>
                     </ComboBox>
-                    <Button x:Name="Tilknyt" Click="Opret_OnClick" Margin="35,-170,0,0" Content="Tilknyt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="95" RenderTransformOrigin="0.5,0.5">
+                    <Button x:Name="Tilknyt" Click="Tilknyt_OnClick" Margin="35,-170,0,0" Content="Tilknyt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="95" RenderTransformOrigin="0.5,0.5">
                         <Button.RenderTransform>
                             <CompositeTransform ScaleY="-1"/>
                         </Button.RenderTransform>

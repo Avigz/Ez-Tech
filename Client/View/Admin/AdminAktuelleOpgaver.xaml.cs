@@ -82,7 +82,7 @@ namespace Client.View.Admin
 
         private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminHjælpere));
         }
 
         private void FærdigeOpgaver_OnClick(object sender, RoutedEventArgs e)
@@ -135,6 +135,11 @@ namespace Client.View.Admin
         {
             vm.SelectedOpgave.HjælperTilknyttet = vm.SelectedHjælper.ID;
             vm.UpdateOpgave(vm.SelectedOpgave);
+        }
+
+        private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

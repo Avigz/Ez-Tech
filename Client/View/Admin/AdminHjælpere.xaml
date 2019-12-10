@@ -71,7 +71,7 @@
                 <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Navn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
                 <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" SelectionChanged="TextBlock_OnSelectionChanged"></TextBlock>
+                <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
                 <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.TelefonNummer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock Text="Kodeord:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
                 <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Kodeord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>

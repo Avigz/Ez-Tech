@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Client.Model;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -75,9 +76,19 @@ namespace Client.View.Admin
 
         private void Opret_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+          vm.AddOpgave(vm.SelectedOpgave);
         }
 
 
+        private void TilknytKunde_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            vm.SelectedKunde = (Kunder) TilknytKunde.SelectedItem;
+        }
+
+        private void Tilknyt_OnClick(object sender, RoutedEventArgs e)
+        {
+            vm.SelectedOpgave.KundeID = vm.SelectedKunde.KundeID;
+            vm.AddOpgave(vm.SelectedOpgave);
+        }
     }
 }
