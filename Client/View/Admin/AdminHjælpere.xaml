@@ -74,15 +74,15 @@
                 <TextBlock Text="Navn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" ></TextBlock>
                 <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Navn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Email, Mode=TwoWay}"/>
+                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" SelectionChanged="TextBlock_OnSelectionChanged"></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.TelefonNummer, Mode=TwoWay}"/>
+                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.TelefonNummer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <TextBlock Text="Kodeord:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Kodeord, Mode=TwoWay}"/>
-                <StackPanel Orientation="Horizontal" Height="68" Margin="51,0,0,0">
-                    <Button Name="Opdater" Click="Opdater_OnClick" Margin="20" Content="Opdater"></Button>
+                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Kodeord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <StackPanel Orientation="Horizontal" Height="96" Margin="51,0,-13,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <Button Name="Opdater" Click="Opdater_OnClick" Margin="20" Content="Gem"></Button>
                     <Button Name="Slet" Click="Slet_OnClick" Margin="20" Content="Slet"></Button>
-                    <Button x:Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Button x:Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret Ny" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
 
             </StackPanel>
@@ -90,17 +90,17 @@
 
         <StackPanel Orientation="Vertical" Margin="965,72,1,200">
             <TextBlock  Text="Alle hjælpere" Margin="0,-38,0,0"></TextBlock>
-            <ListView x:Name="ListViewHjælpere" ItemsSource="{Binding HjælperList}" SelectedItem="{Binding SelectedHjælper, Mode=TwoWay}" SelectionChanged="ListViewHjælpere_OnSelectionChanged"  SelectionMode="Single" Width="321" RenderTransformOrigin="0.507,0.684" Margin="0,44,0,29" >
+            <ListView x:Name="ListViewHjælpere" ItemsSource="{Binding HjælperList, Mode=OneWay}" SelectedItem="{Binding SelectedHjælper, Mode=TwoWay}" SelectionChanged="ListViewHjælpere_OnSelectionChanged"  SelectionMode="Single" Width="321" RenderTransformOrigin="0.507,0.684" Margin="0,44,0,29" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,10">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Margin="0,0,70,0" Text=" ID"></TextBlock>
-                                <TextBox Width="130" Margin="10,10,0,0" Text="{Binding ID}"></TextBox>
+                                <TextBox Width="130" Margin="10,10,0,0" Text="{Binding ID, Mode=OneWay}"></TextBox>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Margin="0,0,70,0" Text=" Name"></TextBlock>
-                                <TextBox Width="130"  Margin="0,10,0,0" Text="{Binding Navn}"></TextBox>
+                                <TextBox Width="130"  Margin="0,10,0,0" Text="{Binding Navn, Mode=OneWay}"></TextBox>
                             </StackPanel>
                         </StackPanel>
                     </DataTemplate>

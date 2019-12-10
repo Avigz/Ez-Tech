@@ -162,12 +162,29 @@ namespace Client.ViewModel
 
         }
 
-        public ObservableCollection<Opgaver> LoggedInHjælperOpgaver
+        public ObservableCollection<Opgaver> LoggedInHjælperOpgaverNotDone
         {
             get
             {
                 var LoggedInHjælperOpgQuery =
-                    from n in OpgaveList where n.HjælperTilknyttet == LoggedIndHjælper.ID select n;
+                    from n in OpgaveList where n.HjælperTilknyttet == LoggedIndHjælper.ID && n.IsDone==false select n;
+                ObservableCollection<Opgaver> HjælpersOpgaver = new ObservableCollection<Opgaver>();
+
+                foreach (var v in LoggedInHjælperOpgQuery)
+                {
+                    HjælpersOpgaver.Add(v);
+                }
+
+                return HjælpersOpgaver;
+            }
+        }
+
+        public ObservableCollection<Opgaver> LoggedInHjælperOpgaverDone
+        {
+            get
+            {
+                var LoggedInHjælperOpgQuery =
+                    from n in OpgaveList where n.HjælperTilknyttet == LoggedIndHjælper.ID && n.IsDone == true select n;
                 ObservableCollection<Opgaver> HjælpersOpgaver = new ObservableCollection<Opgaver>();
 
                 foreach (var v in LoggedInHjælperOpgQuery)
@@ -233,24 +250,29 @@ namespace Client.ViewModel
         public void AddOpgave(Opgaver O)
         {
             OpgaverSingleton.Instance.AddOpgaver(O);
+            OnPropertyChanged(nameof(OpgaveList));
         }
 
         public void UpdateOpgave(Opgaver O)
         {
-            if (OpgaverSingleton.Instance.GetOpgaver.Contains(O))
-            {
-                OpgaverSingleton.Instance.RemoveOpgaver(O);
-                OpgaverSingleton.Instance.AddOpgaver(O);
-            }
-            else
-            {
-                OpgaverSingleton.Instance.AddOpgaver(O);
-            }
+            OpgaverSingleton.Instance.UpdateOpgave(O);
+            OnPropertyChanged(nameof(OpgaveList));
+
+            //if (OpgaverSingleton.Instance.GetOpgaver.Contains(O))
+            //{
+            //    OpgaverSingleton.Instance.RemoveOpgaver(O);
+            //    OpgaverSingleton.Instance.AddOpgaver(O);
+            //}
+            //else
+            //{
+            //    OpgaverSingleton.Instance.AddOpgaver(O);
+            //}
         }
 
         public void RemoveOpgaver(Opgaver o)
         {
             OpgaverSingleton.Instance.RemoveOpgaver(o);
+            OnPropertyChanged(nameof(OpgaveList));
         }
 
 

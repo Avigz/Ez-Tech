@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Client.View.Admin;
+using Client.View.Hjælper;
 
 namespace Client
 {

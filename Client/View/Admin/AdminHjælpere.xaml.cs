@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Client.Model;
+using Client.View.Hjælper;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -56,7 +57,7 @@ namespace Client.View.Admin
 
         private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(HjælperPage));
         }
 
         private void TextBlock_OnSelectionChanged(object sender, RoutedEventArgs e)
@@ -66,7 +67,7 @@ namespace Client.View.Admin
 
         private void Opdater_OnClick(object sender, RoutedEventArgs e)
         {
-           vm.AddHjælper(vm.SelectedHjælper);
+           vm.UpdateHjælper(vm.SelectedHjælper);
         }
 
         private void Slet_OnClick(object sender, RoutedEventArgs e)
@@ -76,7 +77,9 @@ namespace Client.View.Admin
 
         private void Opret_OnClick(object sender, RoutedEventArgs e)
         {
-            vm.AddHjælper(vm.SelectedHjælper);
+            Hjælpere Default = new Hjælpere(0, "Indtast Navn", "Indtast Nummer", "indtask kodeord", "indtast email", false);
+            vm.SelectedHjælper = Default;
+
         }
 
 

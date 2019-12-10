@@ -53,6 +53,11 @@ namespace Client.Model
             DbContext.OpgaverWebApi.Delete(o.ID);
         }
 
+        public void UpdateOpgave(Opgaver o)
+        {
+            DbContext.OpgaverWebApi.Update(o.ID, o);
+
+        }
         
     }
 }
