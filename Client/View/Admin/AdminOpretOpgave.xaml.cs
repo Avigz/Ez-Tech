@@ -12,7 +12,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Client.Model;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -21,15 +20,13 @@ namespace Client.View.Admin
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AdminHjælpere : Page
+    public sealed partial class AdminOpretOpgave : Page
     {
-        public AdminHjælpere()
+        public AdminOpretOpgave()
         {
             this.InitializeComponent();
         }
-        ViewModel.ViewModel vm = new ViewModel.ViewModel();
-        
-	
+        public ViewModel.ViewModel vm = new ViewModel.ViewModel();
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
             if (mySplitView.IsPaneOpen == false)
@@ -44,48 +41,18 @@ namespace Client.View.Admin
 
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
 
+        private void Button1_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
-        private void MenuButton1_OnClick(object sender, RoutedEventArgs e)
+        private void MenuButton2_OnClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
 
         private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void TextBlock_OnSelectionChanged(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Opdater_OnClick(object sender, RoutedEventArgs e)
-        {
-           vm.AddHjælper(vm.SelectedHjælper);
-        }
-
-        private void Slet_OnClick(object sender, RoutedEventArgs e)
-        {
-            vm.RemoveHjælper(vm.SelectedHjælper);
-        }
-
-        private void Opret_OnClick(object sender, RoutedEventArgs e)
-        {
-            vm.AddHjælper(vm.SelectedHjælper);
-        }
-
-
-        private void ListViewHjælpere_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            vm.SelectedHjælper = (Hjælpere)ListViewHjælpere.SelectedItem;
-        }
-
-        private void MenuButton6_OnClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
         }
@@ -99,8 +66,18 @@ namespace Client.View.Admin
         {
             throw new NotImplementedException();
         }
+
+        private void TextBlock_OnSelectionChanged(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        private void Opret_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+
     }
-
-    
-
 }

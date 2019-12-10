@@ -146,6 +146,9 @@
     <Compile Include="View\Admin\AdminHjælpere.xaml.cs">
       <DependentUpon>AdminHjælpere.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\AdminOpretOpgave.xaml.cs">
+      <DependentUpon>AdminOpretOpgave.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Admin\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
@@ -200,6 +203,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Admin\AdminHjælpere.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Admin\AdminOpretOpgave.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
