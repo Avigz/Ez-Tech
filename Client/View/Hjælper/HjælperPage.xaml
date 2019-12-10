@@ -8,7 +8,7 @@
     xmlns:vm="using:Client.ViewModel"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-<!--<Page.DataContext><vm:ViewModel></vm:ViewModel></Page.DataContext>-->
+<Page.DataContext><vm:ViewModel></vm:ViewModel></Page.DataContext>
 
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
         <Grid.RowDefinitions>
@@ -62,27 +62,29 @@
                 </StackPanel>
             </SplitView.Pane>
 
-            <!--<SplitView.Content>
-                -->
-            <!--<StackPanel>-->
-            <StackPanel>
 
+<StackPanel>
+            <StackPanel Margin="50">
+                <TextBlock Text="Ledige opgaver" Margin="20"></TextBlock>
+                <ComboBox x:Name="LedigeOpgaverCombo" Header="Ledige Opgaver" Height="65" Width="296"  Foreground="DarkRed" ItemsSource="{Binding OpgaveListMissingHjælper, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.75" SelectedItem="{Binding SelectedOpgave, Mode=TwoWay}" SelectionChanged="LedigeOpgaverCombo_OnSelectionChanged"> <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding ID}"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                    </ComboBox.ItemTemplate></ComboBox>
 
-
-
-                <ComboBox x:Name="LedigeOpgaverCombo" Header="Ledige Opgaver" Height="65" Width="296"  Foreground="DarkRed"
-          ItemsSource="{Binding  OpgaveList, Mode=OneWay  }" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.75"/>
-
+                </StackPanel>
+                <StackPanel>
+        <TextBlock Text="ID" Margin="20"></TextBlock>
+        <TextBox Text="{Binding SelectedOpgave.ID, Mode=OneWay}" ></TextBox>
+        <TextBlock Text="Beskrivelse" Margin="20"></TextBlock>
+        <TextBox Text="{Binding SelectedOpgave.Beskrivelse}"></TextBox>
+         <Button Click="Tilknyt" Content="Tilknyt mig" Margin="20" Width="120" Height="40" ></Button>
+                </StackPanel>
             </StackPanel>
 
-            <!--<TextBlock Text="Brugernavn" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-450"></TextBlock>
-                    <TextBox Name="usernameBox" Background="White" Height="35" Width="200" Margin="0,0,0,-500"  PlaceholderText="Brugernavn"></TextBox>
-                    <TextBlock Text="Kode" FontFamily="Calibri Light" FontSize="20" Foreground="White" Height="30" Width="200" Margin="0,0,0,-650"></TextBlock>
-                    <PasswordBox x:Name="passwordBox" PasswordChar="*" Background="White" Height="35" Width="200" Margin="0,0,0,-700" PlaceholderText="Indtast password" ></PasswordBox>
-                    <Button Content="Login" FontFamily="Calibri Light" FontSize="20" Height="40" Width="200" Background="White" Foreground="Black" Margin="311,450,311,0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="Button_Click" />
-                </StackPanel>-->
-            <!--
-            </SplitView.Content>-->
+
         </SplitView>
 
         <RelativePanel Margin="0,0,0,0" HorizontalAlignment="Stretch" Grid.RowSpan="2" VerticalAlignment="Stretch">

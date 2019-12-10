@@ -21,11 +21,39 @@ namespace Client.Model
 
       public Hjælpere() { }
 
-        public int ID { get; set; }
-        public string Navn { get; set; }
-        public string TelefonNummer { get; set; }
-        public string Kodeord { get; set; }
-        public string Email { get; set; }
+      private int _id { get; set; }
+      private string _navn { get; set; }
+      private string _telefonNummer { get; set; }
+      private string _kodeord { get; set; }
+      private string _email { get; set; }
+
+        public int ID
+        {
+            get { return _id;}
+            set { _id = value;
+                OnPropertyChanged(nameof(ID));
+            }
+        }
+        public string Navn
+        {
+            get { return _navn;}
+            set { _navn = value; OnPropertyChanged(nameof(Navn)); }
+        }
+        public string TelefonNummer
+        {
+            get { return _telefonNummer;}
+            set { _telefonNummer = value; OnPropertyChanged(nameof(TelefonNummer)); }
+        }
+        public string Kodeord
+        {
+            get { return _kodeord;}
+            set { _kodeord = value; OnPropertyChanged(nameof(Kodeord)); }
+        }
+        public string Email
+        {
+            get { return _email;}
+            set { _email = value; OnPropertyChanged(nameof(Email)); }
+        }
         public bool IsAdmin { get; set; }
 
         public override string ToString()
