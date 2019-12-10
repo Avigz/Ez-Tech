@@ -111,11 +111,25 @@
 
             </StackPanel>
         </StackPanel>
+        <StackPanel>
+            <StackPanel Margin="50">
+                <ComboBox x:Name="LedigeHjælpereCombo" Header="Tilgængelige hjælpere" Height="65" Width="296"  Foreground="DarkRed" ItemsSource="{Binding HjælperList, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.75" SelectedItem="{Binding SelectedHjælper, Mode=TwoWay}" SelectionChanged="LedigeHjælpereCombo_OnSelectionChanged">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding Navn}"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>
+            <Button Content="Tilknyt" Height="40" Width="120" Margin="20" Click="TilknytHjælper"></Button>
+            </StackPanel>
 
 
 
 
-        <RelativePanel Margin="0,0,0,0">
+            <RelativePanel Margin="0,0,0,0">
             <ToggleButton Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" Checked="HamburgerButton_OnChecked" />
         </RelativePanel>
 

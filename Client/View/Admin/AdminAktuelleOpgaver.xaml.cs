@@ -125,5 +125,16 @@ namespace Client.View.Admin
         {
             throw new NotImplementedException();
         }
+
+        private void LedigeHjælpereCombo_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            vm.SelectedHjælper = (Hjælpere)LedigeHjælpereCombo.SelectedItem;
+        }
+
+        private void TilknytHjælper(object sender, RoutedEventArgs e)
+        {
+            vm.SelectedOpgave.HjælperTilknyttet = vm.SelectedHjælper.ID;
+            vm.UpdateOpgave(vm.SelectedOpgave);
+        }
     }
 }

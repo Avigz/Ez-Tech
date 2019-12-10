@@ -55,7 +55,7 @@ namespace Client.View.Hjælper
 
         private void HjælperFærdigeOpgaver_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(HjælperFærdigeOpgaver));
+            //Frame.Navigate(typeof(HjælperFærdigeOpgaver));
         }
 
         private void HjælperMinProfil_OnClick(object sender, RoutedEventArgs e)
@@ -76,28 +76,8 @@ namespace Client.View.Hjælper
             }
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPageLogin));
-        }
 
-        private void TextBlock_SelectionChanged_1(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(HjælperMineOpgaver));
-        }
 
-        private void TextBlock_SelectionChanged_2(object sender, RoutedEventArgs e)
-        {
-           throw new NotImplementedException();
-        }
-
-        private void TextBlock_SelectionChanged_3(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(HjælperMinProfil));
-        }
-
-     
-      
 
         private void AfslutOpgave_OnClick(object sender, RoutedEventArgs e)
         {

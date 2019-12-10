@@ -29,23 +29,6 @@ namespace Client.View
             this.InitializeComponent();
             this.DataContext = vm;
 
-            if (vm.LoggedIndHjælper.Navn != null)
-            {
-                if (vm.LoggedIndHjælper.IsAdmin == true)
-                {
-                    this.Frame.Navigate(typeof(View.Admin.AdminPage));
-                }
-
-                if (vm.LoggedIndHjælper.IsAdmin== false)
-                {
-                    this.Frame.Navigate(typeof(View.Hjælper.HjælperPage));
-                }
-            }
-
-            else if (vm.LoggedIndHjælper.Navn == null)
-            {
-                return;
-            }
 
         }
         ViewModel.ViewModel vm = new ViewModel.ViewModel();

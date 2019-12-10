@@ -31,30 +31,30 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
                         Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Forside_OnClick"/>
-                        <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged" />
+                        <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center"  />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE77F;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="HjælperMineOpgaver_OnClick"/>
-                        <TextBlock Text="Mine opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged_1" />
+                        <TextBlock Text="Mine opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center"  />
 
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton3" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEA8D;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="HjælperLedigeOpgaver_OnClick"/>
-                        <TextBlock Text="Ledige opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_OnSelectionChanged" HorizontalAlignment="Stretch" Margin="0,0,0.5,0" />
+                        <TextBlock Text="Ledige opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="0,0,0.5,0" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton4" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE73A;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="HjælperFærdigeOpgaver_OnClick"/>
-                        <TextBlock Text="Færdige Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged_2" />
+                        <TextBlock Text="Færdige Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center"  />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton5" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE77B;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="HjælperMinProfil_OnClick"/>
-                        <TextBlock Text="Min Profil" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged_3" />
+                        <TextBlock Text="Min Profil" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
                 </StackPanel>
 
