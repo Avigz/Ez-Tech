@@ -61,6 +61,10 @@ namespace Client.View.Admin
             return ;
         }
 
-        
+
+        private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
