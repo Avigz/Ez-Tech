@@ -65,7 +65,7 @@
 
 <StackPanel>
             <StackPanel Margin="50">
-                <TextBlock Text="Ledige opgaver" Margin="20"></TextBlock>
+               
                 <ComboBox x:Name="LedigeOpgaverCombo" Header="Ledige Opgaver" Height="65" Width="296"  Foreground="DarkRed" ItemsSource="{Binding OpgaveListMissingHjælper, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.75" SelectedItem="{Binding SelectedOpgave, Mode=TwoWay}" SelectionChanged="LedigeOpgaverCombo_OnSelectionChanged"> <ComboBox.ItemTemplate>
                         <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
