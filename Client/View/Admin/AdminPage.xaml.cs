@@ -53,7 +53,7 @@ namespace Client.View.Admin
 
         private void MenuButton4_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(View.Hjælper.HjælperMinProfil));
+            Frame.Navigate(typeof(AdminHjælpere));
         }
 
         private void MenuButton5_Click(object sender, RoutedEventArgs e)
@@ -61,7 +61,10 @@ namespace Client.View.Admin
             Frame.Navigate(typeof(View.Admin.AdminFærdigeOpgaver1));
         }
 
-        
+        private void OpretOpgave_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AdminOpretOpgave));
+        }
 
     }
 

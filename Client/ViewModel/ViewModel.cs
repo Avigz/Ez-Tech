@@ -126,7 +126,7 @@ namespace Client.ViewModel
             else
             {
                 HjælperSingleton.Instance.AddHjælper(h);
-
+                OnPropertyChanged(nameof(HjælperList));
             }
 
         }
@@ -134,11 +134,13 @@ namespace Client.ViewModel
         public void UpdateHjælper(Hjælpere h)
         {
            HjælperSingleton.Instance.UpdateHjælper(h);
+           OnPropertyChanged(nameof(HjælperList));
         }
 
         public void RemoveHjælper(Hjælpere h)
         {
             HjælperSingleton.Instance.RemoveHjælper(h);
+            OnPropertyChanged(nameof(HjælperList));
         }
 
 

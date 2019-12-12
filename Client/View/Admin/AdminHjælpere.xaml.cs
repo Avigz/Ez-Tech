@@ -27,6 +27,7 @@ namespace Client.View.Admin
         public AdminHjælpere()
         {
             this.InitializeComponent();
+
         }
         ViewModel.ViewModel vm = new ViewModel.ViewModel();
         
@@ -45,10 +46,7 @@ namespace Client.View.Admin
 
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
 
         private void MenuButton1_OnClick(object sender, RoutedEventArgs e)
         {
@@ -57,13 +55,10 @@ namespace Client.View.Admin
 
         private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(HjælperPage));
+            Frame.Navigate(typeof(AdminAktuelleOpgaver));
         }
 
-        private void TextBlock_OnSelectionChanged(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+       
 
         private void Opdater_OnClick(object sender, RoutedEventArgs e)
         {
@@ -77,8 +72,10 @@ namespace Client.View.Admin
 
         private void Opret_OnClick(object sender, RoutedEventArgs e)
         {
-            Hjælpere Default = new Hjælpere(0, "Indtast Navn", "Indtast Nummer", "indtask kodeord", "indtast email", false);
-            vm.SelectedHjælper = Default;
+
+            vm.SelectedHjælper.ID = vm.HjælperList.Count + 1;
+            vm.AddHjælper(vm.SelectedHjælper);
+            
 
         }
 
@@ -95,13 +92,39 @@ namespace Client.View.Admin
 
         private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminHjælpere));
         }
 
         private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
+
+        
+
+        private void NavnBox_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            vm.SelectedHjælper.Navn = NavnBox.Text;
+        }
+
+        private void EmailBox_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            vm.SelectedHjælper.Email = EmailBox.Text;
+        }
+
+
+        private void TlfBox_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            vm.SelectedHjælper.TelefonNummer = TlfBox.Text;
+        }
+
+
+        private void KodeBox_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            vm.SelectedHjælper.Kodeord = KodeBox.Text;
+        }
+
+
     }
 
     
