@@ -27,15 +27,7 @@ namespace Client.View.Hjælper
             this.InitializeComponent();
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-            //Frame.Navigate(typeof(HjælperLedigeOpgaver));
-        }
-
-        private void TextBlock_SelectionChanged_1(object sender, RoutedEventArgs e)
-        {
-
-        }
+      
 
         private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
         {
@@ -49,7 +41,7 @@ namespace Client.View.Hjælper
 
         private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
         {
-            //Frame.Navigate(typeof(HjælperLedigeOpgaver));
+            Frame.Navigate(typeof(HjælperPage));
         }
 
         private void MenuButton7_OnClick(object sender, RoutedEventArgs e)
@@ -59,42 +51,22 @@ namespace Client.View.Hjælper
 
         private void MenuButton6_OnClick(object sender, RoutedEventArgs e)
         {
-            //Frame.Navigate(typeof(HjælperFærdigeOpgaver));
+           Frame.Navigate(typeof(HjælpereFærdigeOpgaver));
         }
 
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            if (mySplitView.IsPaneOpen == true)
+            {
+                mySplitView.IsPaneOpen = false;
+            }
+            else if (mySplitView.IsPaneOpen == false)
+            {
+                mySplitView.IsPaneOpen = true;
+            }
+            
         }
 
-        private void TextBlock_SelectionChanged_2(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPageLogin));
-        }
-
-        private void TextBlock_SelectionChanged_3(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(HjælperMineOpgaver));
-        }
-
-        private void TextBlock_SelectionChanged_4(object sender, RoutedEventArgs e)
-        {
-            //Frame.Navigate(typeof(HjælperFærdigeOpgaver));
-        }
-
-        private void TextBlock_SelectionChanged_5(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(HjælperMinProfil));
-        }
-
-        private void TextBlock_SelectionChanged_6(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+       
     }
 }
