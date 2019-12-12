@@ -27,8 +27,8 @@ namespace Client.ViewModel
             _selectedHjælper = new Hjælpere();
             _selectedKunde = new Kunder();
             _selectedOpgave = new Opgaver();
-            
            
+
         }
 
 
@@ -49,7 +49,7 @@ namespace Client.ViewModel
         get {
             if (_username == null)
             {
-                return "default";
+                return "Indtast brugernavn";
             }
             else
             {
@@ -69,7 +69,7 @@ namespace Client.ViewModel
         get {
             if (_password == null)
             {
-                return "default";
+                return "Indtast kodeord";
             }
             else
             {
@@ -133,15 +133,7 @@ namespace Client.ViewModel
 
         public void UpdateHjælper(Hjælpere h)
         {
-            if (HjælperSingleton.Instance.GetHjælper.Contains(h))
-            {
-                HjælperSingleton.Instance.RemoveHjælper(h);
-                HjælperSingleton.Instance.AddHjælper(h);
-            }
-            else
-            {
-                HjælperSingleton.Instance.AddHjælper(h);
-            }
+           HjælperSingleton.Instance.UpdateHjælper(h);
         }
 
         public void RemoveHjælper(Hjælpere h)
@@ -296,7 +288,13 @@ namespace Client.ViewModel
         public Opgaver SelectedOpgave
         {
             get { return _selectedOpgave; }
-            set { _selectedOpgave = value; OnPropertyChanged((nameof(SelectedOpgave))); }
+            set { _selectedOpgave = value;
+                if ( _selectedOpgave.ID == 0)
+                {
+                    _selectedOpgave.ID = OpgaverSingleton.Instance.GetOpgaver.Count + 1;
+                }
+
+                OnPropertyChanged((nameof(SelectedOpgave))); }
         }
 
         private Kunder _selectedKunde;

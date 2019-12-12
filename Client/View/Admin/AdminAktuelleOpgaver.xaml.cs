@@ -44,41 +44,14 @@ namespace Client.View.Admin
 
         }
 
-        //private void AdminAktuelleSiderForside_OnClick(object sender, RoutedEventArgs e)
-        //{
-        //    Frame.Navigate(typeof(AdminLogin));
-        //}
-
-        private void AdminAktuelleOpgaver_OnClick(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(AdminAktuelleOpgaver));
-        }
-
-        private void AdminAktuelleOpgaverHjælpere_OnClick(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(AdminHjælpere));
-        }
-
-        private void TextBlock_OnSelectionChanged(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void AdminAktuelleOpgaverAfsluttet_OnClick_OnClick(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(AdminFærdigeOpgaver1));
-        }
-
-        private void Hjælpere_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-
         private void Forside_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminPage));
         }
+
+   
+
+
 
         private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
         {
@@ -111,20 +84,10 @@ namespace Client.View.Admin
             vm.RemoveOpgaver(vm.SelectedOpgave);
         }
 
-        private void _OnClick(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(AdminFærdigeOpgaver1));
-        }
+      
 
-        private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void Button1_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+       
+        
 
         private void LedigeHjælpereCombo_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -139,7 +102,7 @@ namespace Client.View.Admin
 
         private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminOpretOpgave));
         }
     }
 }

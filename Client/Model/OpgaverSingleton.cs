@@ -44,7 +44,7 @@ namespace Client.Model
 
         public void AddOpgaver(Opgaver o)
         {
-            DbContext.OpgaverWebApi.Create(DbContext.OpgaverWebApi.Load().Result.Count + 1, o);
+            DbContext.OpgaverWebApi.Create(o.ID, o);
 
         }
 

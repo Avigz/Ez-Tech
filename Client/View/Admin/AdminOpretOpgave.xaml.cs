@@ -26,6 +26,7 @@ namespace Client.View.Admin
         public AdminOpretOpgave()
         {
             this.InitializeComponent();
+          
         }
         public ViewModel.ViewModel vm = new ViewModel.ViewModel();
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
@@ -45,50 +46,43 @@ namespace Client.View.Admin
 
         private void Button1_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminPage));
         }
 
         private void MenuButton2_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminAktuelleOpgaver));
         }
 
         private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminHjælpere));
         }
 
         private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
 
-        private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void TextBlock_OnSelectionChanged(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-
-        private void Opret_OnClick(object sender, RoutedEventArgs e)
-        {
-          vm.AddOpgave(vm.SelectedOpgave);
-        }
-
+ 
 
         private void TilknytKunde_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             vm.SelectedKunde = (Kunder) TilknytKunde.SelectedItem;
         }
-
+    
         private void Tilknyt_OnClick(object sender, RoutedEventArgs e)
         {
+            vm.SelectedOpgave.ID = vm.OpgaveList.Count +1;
             vm.SelectedOpgave.KundeID = vm.SelectedKunde.KundeID;
+            vm.SelectedOpgave.HjælperTilknyttet = null;
+            vm.SelectedOpgave.IsDone = false;
             vm.AddOpgave(vm.SelectedOpgave);
+        }
+
+        private void BeskrivelseBox_OnTextChanged(object sender, TextChangedEventArgs e)
+        {
+            vm.SelectedOpgave.Beskrivelse = BeskrivelseBox.Text.ToString();
         }
     }
 }

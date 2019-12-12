@@ -30,23 +30,23 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="Button1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button1_OnClick"/>
-                        <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_OnSelectionChanged"/>
+                        <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE77F;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton2_OnClick"/>
-                        <TextBlock Text="Aktuelle Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_OnSelectionChanged"/>
+                        <TextBlock Text="Aktuelle Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
 
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton3" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEA8D;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton3_OnClick" />
-                        <TextBlock Text="Hjælpere" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_OnSelectionChanged" />
+                        <TextBlock Text="Hjælpere" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center"  />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton4" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE73A;"
                             Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton4_OnClick"/>
-                        <TextBlock Text="Færdige Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" Height="22" Margin="-0.4,0,152.4,0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Stretch" SelectionChanged="TextBlock_OnSelectionChanged" >
+                        <TextBlock Text="Færdige Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" Height="22" Margin="-0.4,0,152.4,0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Stretch" >
                             <TextBlock.RenderTransform>
                                 <CompositeTransform ScaleY="1"/>
                             </TextBlock.RenderTransform>
@@ -54,43 +54,22 @@
 
                     </StackPanel>
 
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
-                        <Button x:Name="MenuButton5" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE710;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton5_OnClick"/>
-                        <TextBlock Text="Opret Opgave" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" Height="22" Margin="-0.4,0,152.4,0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Stretch" >
-                            <TextBlock.RenderTransform>
-                                <CompositeTransform ScaleY="1"/>
-                            </TextBlock.RenderTransform>
-                        </TextBlock>
-
-                    </StackPanel>
-
+                   
                 </StackPanel>
             </SplitView.Pane>
         </SplitView>
 
         <StackPanel  HorizontalAlignment="Stretch" Margin="0,0,960,0" VerticalAlignment="Stretch">
             <StackPanel  Orientation="Vertical">
-                <TextBlock Text="Beskrivelse:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,180,0,0" SelectionChanged="TextBlock_OnSelectionChanged"></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedOpgave.Beskrivelse, Mode=TwoWay}"/>
-                <StackPanel Orientation="Horizontal" Height="68" Margin="180,0,260,0">
-                    <Button x:Name="Opret" Click="Opret_OnClick" Margin="0,0,0,0" Content="Opret" HorizontalAlignment="Center" VerticalAlignment="Center" Height="37" Width="95"/>
-
-                </StackPanel>
-                <StackPanel Margin="640,0,-325,0" Height="238" RenderTransformOrigin="0.5,0." >
-                    <StackPanel.RenderTransform>
-                        <CompositeTransform ScaleY="-1"/>
-                    </StackPanel.RenderTransform>
-                    <ComboBox x:Name="TilknytKunde" Header="Kunde"  Height="70" Width="215"  Foreground="DarkRed"
-                              ItemsSource="{Binding KunderList, Mode=OneWay}" SelectionChanged="TilknytKunde_OnSelectionChanged" SelectedItem="{Binding SelectedKunde, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="153,0.75" Margin="1,115,0,0">
-                        <ComboBox.RenderTransform>
-                            <CompositeTransform ScaleY="-1"/>
-                        </ComboBox.RenderTransform>
+                <TextBlock Text="Beskrivelse:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,180,0,0" ></TextBlock>
+                <TextBox x:Name="BeskrivelseBox" Margin="175,0,0,0" Text="{Binding SelectedOpgave.Beskrivelse, Mode=TwoWay}" PlaceholderText="Indtast beskrivelse" TextChanged="BeskrivelseBox_OnTextChanged"/>
+                <StackPanel Margin="200,200,100,100" Height="238" >
+                    <ComboBox x:Name="TilknytKunde" Header="Kunde"  Height="70" Width="300"  Foreground="DarkRed"
+                              ItemsSource="{Binding KunderList, Mode=OneWay}" SelectionChanged="TilknytKunde_OnSelectionChanged" SelectedItem="{Binding SelectedKunde, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="1,115,0,0">
                     </ComboBox>
-                    <Button x:Name="Tilknyt" Click="Tilknyt_OnClick" Margin="35,-170,0,0" Content="Tilknyt" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="95" RenderTransformOrigin="0.5,0.5">
-                        <Button.RenderTransform>
-                            <CompositeTransform ScaleY="-1"/>
-                        </Button.RenderTransform>
+
+                    <Button x:Name="Tilknyt" Click="Tilknyt_OnClick" Margin="20,20,20,20" Content="Tilknyt"  Height="37" Width="95" RenderTransformOrigin="0.5,0.5">
+
                     </Button>
                 </StackPanel>
 
