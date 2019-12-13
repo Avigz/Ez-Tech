@@ -136,5 +136,10 @@ namespace Client.View.Admin
             vm.SelectedOpgave.HjælperTilknyttet = vm.SelectedHjælper.ID;
             vm.UpdateOpgave(vm.SelectedOpgave);
         }
+
+        private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
