@@ -93,7 +93,7 @@
 
         <StackPanel Orientation="Vertical" Margin="965,72,1,200">
             <TextBlock  Text="Alle Kunder" Margin="0,-38,0,0"></TextBlock>
-            <ListView x:Name="ListViewHjælpere" ItemsSource="{Binding KunderList, Mode=OneWay}" SelectedItem="{Binding SelectedKunde, Mode=TwoWay}" SelectionChanged="ListViewHjælpere_OnSelectionChanged"  SelectionMode="Single" Width="321" RenderTransformOrigin="0.507,0.684" Margin="0,44,0,29" >
+            <ListView x:Name="ListViewKunder" ItemsSource="{Binding KunderList, Mode=OneWay}" SelectedItem="{Binding SelectedKunde, Mode=TwoWay}" SelectionChanged="ListViewKunder_OnSelectionChanged"  SelectionMode="Single" Width="321" RenderTransformOrigin="0.507,0.684" Margin="0,44,0,29" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,10">

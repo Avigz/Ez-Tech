@@ -70,9 +70,9 @@ namespace Client.View.Admin
         }
 
 
-        private void ListViewHjælpere_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ListViewKunder_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            vm.SelectedHjælper = (Hjælpere)ListViewHjælpere.SelectedItem;
+            vm.SelectedKunde = (Kunder)ListViewKunder.SelectedItem;
         }
 
 
