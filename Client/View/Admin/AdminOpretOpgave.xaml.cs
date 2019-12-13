@@ -89,5 +89,12 @@ namespace Client.View.Admin
         {
             Frame.Navigate(typeof(MainPageLogin));
         }
+
+        private void AdminKunder_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AdminKunder));
+        }
+
+
     }
 }

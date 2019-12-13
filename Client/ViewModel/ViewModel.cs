@@ -279,6 +279,21 @@ namespace Client.ViewModel
           
     }
 
+        public void AddKunde(Kunder k)
+        {
+            KunderSingleton.Instance.AddKunde(k);
+        }
+
+        public void RemoveKunde(Kunder k)
+        {
+            KunderSingleton.Instance.RemoveKunde(k);
+        }
+
+        public void UpdateKunde(Kunder k)
+        {
+            KunderSingleton.Instance.UpdateKunde(k);
+        }
+
     public Hjælpere LoggedIndHjælper
     {
         get { return Login.LoggedInUser; }

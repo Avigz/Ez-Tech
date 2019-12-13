@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="Client.View.Admin.AdminHjælpere"
+    x:Class="Client.View.Admin.AdminKunder"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Client.View.Admin"
@@ -48,9 +48,9 @@
 
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
-                        <Button x:Name="AdminKunder" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE726;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="AdminKunder_OnClick" />
-                        <TextBlock Text="Administrer Kunder" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
+                        <Button x:Name="MenuButton7" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xEA8D;"
+                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="AdminHjælpere_OnClick" />
+                        <TextBlock Text="Administrer Hjælpere" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="logaf" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE845;"
@@ -66,7 +66,7 @@
 
             </SplitView.Pane>
             <StackPanel>
-                <TextBlock Text="Hjælpere" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0"/>
+                <TextBlock Text="Kunder" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0"/>
             </StackPanel>
 
 
@@ -74,17 +74,15 @@
         </SplitView>
         <StackPanel HorizontalAlignment="Stretch" Margin="0,0,960,0" VerticalAlignment="Stretch">
             <StackPanel Orientation="Vertical">
-                <TextBlock Text="HjælperID:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,100,0,0" ></TextBlock>
-                <TextBox x:Name="IDBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.ID, Mode=TwoWay}"/>
+                <TextBlock Text="KundeId:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,100,0,0" ></TextBlock>
+                <TextBox x:Name="IDBox" Margin="175,0,0,0" Text="{Binding SelectedKunde.KundeID, Mode=TwoWay}"/>
                 <TextBlock Text="Navn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" ></TextBlock>
-                <TextBox x:Name="NavnBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.Navn, Mode=TwoWay}" TextChanged="NavnBox_OnTextChanged"/>
-                <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
-                <TextBox x:Name="EmailBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.Email, Mode=TwoWay}" TextChanged="EmailBox_OnTextChanged"/>
+                <TextBox x:Name="NavnBox" Margin="175,0,0,0" Text="{Binding SelectedKunde.KundeNavn, Mode=TwoWay}" TextChanged="NavnBox_OnTextChanged"/>
+                <TextBlock Text="Adresse" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
+                <TextBox x:Name="AdresseBox" Margin="175,0,0,0" Text="{Binding SelectedKunde.KundeAdresse, Mode=TwoWay}" TextChanged="AdresseBox_OnTextChanged"/>
                 <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
-                <TextBox  x:Name="TlfBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.TelefonNummer, Mode=TwoWay}" TextChanged="TlfBox_OnTextChanged"/>
-                <TextBlock Text="Kodeord:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
-                <TextBox x:Name="KodeBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.Kodeord, Mode=TwoWay}" TextChanged="KodeBox_OnTextChanged"/>
-                <StackPanel Orientation="Horizontal" Height="96" Margin="51,0,-13,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <TextBox  x:Name="TlfBox" Margin="175,0,0,0" Text="{Binding SelectedKunde.KundeNummer, Mode=TwoWay}" TextChanged="TlfBox_OnTextChanged"/>
+               <StackPanel Orientation="Horizontal" Height="96" Margin="51,0,-13,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Button Name="Opdater" Click="Opdater_OnClick" Margin="20" Content="Gem"></Button>
                     <Button Name="Slet" Click="Slet_OnClick" Margin="20" Content="Slet"></Button>
                     <Button x:Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret Ny" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -94,18 +92,18 @@
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Margin="965,72,1,200">
-            <TextBlock  Text="Alle hjælpere" Margin="0,-38,0,0"></TextBlock>
-            <ListView x:Name="ListViewHjælpere" ItemsSource="{Binding HjælperList, Mode=OneWay}" SelectedItem="{Binding SelectedHjælper, Mode=TwoWay}" SelectionChanged="ListViewHjælpere_OnSelectionChanged"  SelectionMode="Single" Width="321" RenderTransformOrigin="0.507,0.684" Margin="0,44,0,29" >
+            <TextBlock  Text="Alle Kunder" Margin="0,-38,0,0"></TextBlock>
+            <ListView x:Name="ListViewHjælpere" ItemsSource="{Binding KunderList, Mode=OneWay}" SelectedItem="{Binding SelectedKunde, Mode=TwoWay}" SelectionChanged="ListViewHjælpere_OnSelectionChanged"  SelectionMode="Single" Width="321" RenderTransformOrigin="0.507,0.684" Margin="0,44,0,29" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="0,0,0,10">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Margin="0,0,70,0" Text=" ID"></TextBlock>
-                                <TextBox Width="130" Margin="10,10,0,0" Text="{Binding ID, Mode=OneWay}"></TextBox>
+                                <TextBox Width="130" Margin="10,10,0,0" Text="{Binding KundeID, Mode=OneWay}"></TextBox>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Margin="0,0,70,0" Text=" Name"></TextBlock>
-                                <TextBox Width="130"  Margin="0,10,0,0" Text="{Binding Navn, Mode=OneWay}"></TextBox>
+                                <TextBox Width="130"  Margin="0,10,0,0" Text="{Binding KundeNavn, Mode=OneWay}"></TextBox>
                             </StackPanel>
                         </StackPanel>
                     </DataTemplate>
