@@ -62,7 +62,11 @@ namespace Client.View.Admin
 
         private void Opret_OnClick(object sender, RoutedEventArgs e)
         {
-
+            ListViewKunder.SelectedItem = null;
+            vm.SelectedKunde = new Kunder();
+            vm.SelectedKunde.KundeAdresse = AdresseBox.Text;
+            vm.SelectedKunde.KundeNavn = NavnBox.Text;
+            vm.SelectedKunde.KundeNummer = TlfBox.Text;
             vm.SelectedKunde.KundeID= vm.KunderList.Count + 1;
             vm.AddKunde(vm.SelectedKunde);
 

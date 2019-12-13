@@ -282,16 +282,19 @@ namespace Client.ViewModel
         public void AddKunde(Kunder k)
         {
             KunderSingleton.Instance.AddKunde(k);
+            OnPropertyChanged(nameof(KunderList));
         }
 
         public void RemoveKunde(Kunder k)
         {
             KunderSingleton.Instance.RemoveKunde(k);
+            OnPropertyChanged(nameof(KunderList));
         }
 
         public void UpdateKunde(Kunder k)
         {
             KunderSingleton.Instance.UpdateKunde(k);
+            OnPropertyChanged(nameof(KunderList));
         }
 
     public Hjælpere LoggedIndHjælper

@@ -62,7 +62,8 @@ namespace Client.View.Admin
 
         private void Opret_OnClick(object sender, RoutedEventArgs e)
         {
-
+            ListViewHjælpere.SelectedItem = null;
+            vm.SelectedHjælper = new Hjælpere();
             vm.SelectedHjælper.ID = vm.HjælperList.Count + 1;
             vm.AddHjælper(vm.SelectedHjælper);
             
