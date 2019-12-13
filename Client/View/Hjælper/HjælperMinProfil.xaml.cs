@@ -67,6 +67,10 @@ namespace Client.View.Hjælper
             
         }
 
-       
+
+        private void Logaf_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPageLogin));
+        }
     }
 }

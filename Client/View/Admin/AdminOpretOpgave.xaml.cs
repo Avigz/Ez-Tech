@@ -84,5 +84,10 @@ namespace Client.View.Admin
         {
             vm.SelectedOpgave.Beskrivelse = BeskrivelseBox.Text.ToString();
         }
+
+        private void Logaf_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPageLogin));
+        }
     }
 }

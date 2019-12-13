@@ -91,5 +91,10 @@ namespace Client.View.Hjælper
             vm.SelectedOpgave.HjælperTilknyttet = vm.LoggedIndHjælper.ID;
             vm.UpdateOpgave(vm.SelectedOpgave);
         }
+
+        private void Logaf_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPageLogin));
+        }
     }
 }

@@ -43,12 +43,12 @@ namespace Client.View.Admin
         }
         private void MenuButton1_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPageLogin));
+            Frame.Navigate(typeof(AdminPage));
         }
 
         private void MenuButton3_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(View.Admin.AdminPage));
+            Frame.Navigate(typeof(AdminAktuelleOpgaver));
         }
 
         private void MenuButton4_Click(object sender, RoutedEventArgs e)
@@ -58,7 +58,7 @@ namespace Client.View.Admin
 
         private void MenuButton5_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(View.Admin.AdminFærdigeOpgaver1));
+            Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
 
         private void OpretOpgave_Click(object sender, RoutedEventArgs e)
@@ -66,6 +66,10 @@ namespace Client.View.Admin
             Frame.Navigate(typeof(AdminOpretOpgave));
         }
 
+        private void Logaf_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPageLogin));
+        }
     }
 
     

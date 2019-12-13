@@ -48,16 +48,6 @@ namespace Client.View.Admin
 
        
 
-        private void MenuButton1_OnClick(object sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(AdminAktuelleOpgaver));
-        }
-
        
 
         private void Opdater_OnClick(object sender, RoutedEventArgs e)
@@ -85,9 +75,21 @@ namespace Client.View.Admin
             vm.SelectedHjælper = (Hjælpere)ListViewHjælpere.SelectedItem;
         }
 
+
+        private void MenuButton1_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AdminPage));
+        }
+
+        private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AdminAktuelleOpgaver));
+        }
+
+
         private void MenuButton6_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminOpretOpgave));
         }
 
         private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
@@ -125,6 +127,10 @@ namespace Client.View.Admin
         }
 
 
+        private void Logaf_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPageLogin));
+        }
     }
 
     
