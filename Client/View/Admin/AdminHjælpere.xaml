@@ -66,15 +66,15 @@
         <StackPanel HorizontalAlignment="Stretch" Margin="0,0,960,0" VerticalAlignment="Stretch">
             <StackPanel Orientation="Vertical">
                 <TextBlock Text="HjælperID:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,100,0,0" ></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                <TextBox x:Name="IDBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.ID, Mode=TwoWay}"/>
                 <TextBlock Text="Navn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" ></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Navn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox x:Name="NavnBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.Navn, Mode=TwoWay}" TextChanged="NavnBox_OnTextChanged"/>
                 <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Email, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" SelectionChanged="TextBlock_OnSelectionChanged"></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.TelefonNummer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox x:Name="EmailBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.Email, Mode=TwoWay}" TextChanged="EmailBox_OnTextChanged"/>
+                <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
+                <TextBox  x:Name="TlfBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.TelefonNummer, Mode=TwoWay}" TextChanged="TlfBox_OnTextChanged"/>
                 <TextBlock Text="Kodeord:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
-                <TextBox Margin="175,0,0,0" Text="{Binding SelectedHjælper.Kodeord, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <TextBox x:Name="KodeBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.Kodeord, Mode=TwoWay}" TextChanged="KodeBox_OnTextChanged"/>
                 <StackPanel Orientation="Horizontal" Height="96" Margin="51,0,-13,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Button Name="Opdater" Click="Opdater_OnClick" Margin="20" Content="Gem"></Button>
                     <Button Name="Slet" Click="Slet_OnClick" Margin="20" Content="Slet"></Button>

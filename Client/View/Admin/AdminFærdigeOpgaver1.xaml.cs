@@ -64,7 +64,7 @@ namespace Client.View.Admin
 
         private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminOpretOpgave));
         }
     }
 }

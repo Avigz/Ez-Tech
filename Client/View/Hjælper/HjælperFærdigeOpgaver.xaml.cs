@@ -26,5 +26,30 @@ namespace Client.View.Hjælper
         {
             this.InitializeComponent();
         }
+
+        private void Forside_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
+
+        private void FærdigeOpgaver_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(HjælpereFærdigeOpgaver));
+        }
+
+        private void MinProfil_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(HjælperMinProfil));
+        }
+
+        private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPageLogin));
+        }
+
+        private void Lv_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            return;
+        }
     }
 }

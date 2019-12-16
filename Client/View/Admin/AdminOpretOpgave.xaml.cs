@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Client.Model;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,6 +26,7 @@ namespace Client.View.Admin
         public AdminOpretOpgave()
         {
             this.InitializeComponent();
+          
         }
         public ViewModel.ViewModel vm = new ViewModel.ViewModel();
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
@@ -44,40 +46,43 @@ namespace Client.View.Admin
 
         private void Button1_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminPage));
         }
 
         private void MenuButton2_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminAktuelleOpgaver));
         }
 
         private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminHjælpere));
         }
 
         private void MenuButton4_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
 
-        private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
+ 
+
+        private void TilknytKunde_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            vm.SelectedKunde = (Kunder) TilknytKunde.SelectedItem;
         }
-
-        private void TextBlock_OnSelectionChanged(object sender, RoutedEventArgs e)
+    
+        private void Tilknyt_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            vm.SelectedOpgave.ID = vm.OpgaveList.Count +1;
+            vm.SelectedOpgave.KundeID = vm.SelectedKunde.KundeID;
+            vm.SelectedOpgave.HjælperTilknyttet = null;
+            vm.SelectedOpgave.IsDone = false;
+            vm.AddOpgave(vm.SelectedOpgave);
         }
 
-
-        private void Opret_OnClick(object sender, RoutedEventArgs e)
+        private void BeskrivelseBox_OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            throw new NotImplementedException();
+            vm.SelectedOpgave.Beskrivelse = BeskrivelseBox.Text.ToString();
         }
-
-
     }
 }

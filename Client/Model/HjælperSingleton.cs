@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -45,7 +46,7 @@ namespace Client.Model
 
         public void AddHjælper(Hjælpere h)
         {
-            DbContext.HjælpereWebApi.Create(DbContext.HjælpereWebApi.Load().Result.Count + 1, h);
+            DbContext.HjælpereWebApi.Create(h.ID, h);
         
         }
 
@@ -55,6 +56,10 @@ namespace Client.Model
             
         }
 
+        public void UpdateHjælper(Hjælpere h)
+        {
+            DbContext.HjælpereWebApi.Update(h.ID, h);
+        }
       
 
     }

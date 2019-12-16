@@ -45,17 +45,13 @@ namespace Client.View.Hjælper
 
         private void HjælperLedigeOpgaver_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(HjælperMineOpgaver));
+            Frame.Navigate(typeof(HjælperPage));
         }
 
-        private void TextBlock_OnSelectionChanged(object sender, RoutedEventArgs e)
-        {
-            //Frame.Navigate(typeof(HjælperLedigeOpgaver));
-        }
 
         private void HjælperFærdigeOpgaver_OnClick(object sender, RoutedEventArgs e)
         {
-            //Frame.Navigate(typeof(HjælperFærdigeOpgaver));
+            Frame.Navigate(typeof(HjælpereFærdigeOpgaver));
         }
 
         private void HjælperMinProfil_OnClick(object sender, RoutedEventArgs e)
