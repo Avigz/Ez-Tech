@@ -49,7 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginTest.cs" />
+    <Compile Include="ViewModelTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +59,10 @@
     <ProjectReference Include="..\Database1\Ez-TechDB.sqlproj">
       <Project>{eeb08fee-e2b6-42a8-a3ed-435608901896}</Project>
       <Name>Ez-TechDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatabaseApi\DatabaseApi.csproj">
+      <Project>{9e629926-8263-4638-86bf-a318bb558a07}</Project>
+      <Name>DatabaseApi</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
