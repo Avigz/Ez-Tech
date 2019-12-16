@@ -85,7 +85,11 @@ namespace Client.View.Hjælper
         {
             vm.SelectedOpgave = (Opgaver)ListView.SelectedItem;
         }
-        
-        
+
+
+        private void Logaf_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPageLogin));
+        }
     }
 }

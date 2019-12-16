@@ -53,7 +53,7 @@ namespace Client.View.Admin
 
 
 
-        private void MenuButton3_OnClick(object sender, RoutedEventArgs e)
+        private void AdminHjælpere_OnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(AdminHjælpere));
         }
@@ -103,6 +103,16 @@ namespace Client.View.Admin
         private void MenuButton5_OnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(AdminOpretOpgave));
+        }
+
+        private void Logaf_OnClick_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPageLogin));
+        }
+
+        private void AdminKunder_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AdminKunder));
         }
     }
 }

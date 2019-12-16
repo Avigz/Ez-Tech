@@ -46,7 +46,14 @@
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton7_OnClick"/>
                         <TextBlock Text="Min Profil" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center"  />
                     </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
+                        <Button x:Name="logaf" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE845;"
+                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Logaf_OnClick"/>
+                        <TextBlock Text="Log af" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" Height="22" Margin="-0.4,0,152.4,0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Stretch" >
 
+                        </TextBlock>
+
+                    </StackPanel>
 
 
                     <StackPanel Orientation="Horizontal"/>

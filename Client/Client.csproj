@@ -155,6 +155,9 @@
     <Compile Include="View\Admin\AdminAktuelleOpgaver.xaml.cs">
       <DependentUpon>AdminAktuelleOpgaver.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Admin\AdminKunder.xaml.cs">
+      <DependentUpon>AdminKunder.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Forside\Forsiden.xaml.cs">
       <DependentUpon>Forsiden.xaml</DependentUpon>
     </Compile>
@@ -220,6 +223,10 @@
     <Page Include="View\Admin\AdminAktuelleOpgaver.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Admin\AdminKunder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Forside\Forsiden.xaml">
       <SubType>Designer</SubType>

@@ -29,12 +29,12 @@ namespace Client.View.Hjælper
 
         private void Forside_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(HjælperMinProfil));
         }
 
-        private void FærdigeOpgaver_OnClick(object sender, RoutedEventArgs e)
+        private void LedigeOpgaver_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(HjælpereFærdigeOpgaver));
+            Frame.Navigate(typeof(HjælperPage));
         }
 
         private void MinProfil_OnClick(object sender, RoutedEventArgs e)
@@ -50,6 +50,16 @@ namespace Client.View.Hjælper
         private void Lv_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             return;
+        }
+
+        private void MineOpgaver_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(HjælperMineOpgaver));
+        }
+
+        private void Logaf_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPageLogin));
         }
     }
 }

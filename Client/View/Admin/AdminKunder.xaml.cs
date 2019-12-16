@@ -22,16 +22,16 @@ namespace Client.View.Admin
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AdminHjælpere : Page
+    public sealed partial class AdminKunder : Page
     {
-        public AdminHjælpere()
+        public AdminKunder()
         {
             this.InitializeComponent();
 
         }
         ViewModel.ViewModel vm = new ViewModel.ViewModel();
-        
-	
+
+
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
             if (mySplitView.IsPaneOpen == false)
@@ -46,34 +46,37 @@ namespace Client.View.Admin
 
         }
 
-       
 
-       
+
+
 
         private void Opdater_OnClick(object sender, RoutedEventArgs e)
         {
-           vm.UpdateHjælper(vm.SelectedHjælper);
+            vm.UpdateKunde(vm.SelectedKunde);
         }
 
         private void Slet_OnClick(object sender, RoutedEventArgs e)
         {
-            vm.RemoveHjælper(vm.SelectedHjælper);
+            vm.RemoveKunde(vm.SelectedKunde);
         }
 
         private void Opret_OnClick(object sender, RoutedEventArgs e)
         {
-            ListViewHjælpere.SelectedItem = null;
-            vm.SelectedHjælper = new Hjælpere();
-            vm.SelectedHjælper.ID = vm.HjælperList.Count + 1;
-            vm.AddHjælper(vm.SelectedHjælper);
-            
+            ListViewKunder.SelectedItem = null;
+            vm.SelectedKunde = new Kunder();
+            vm.SelectedKunde.KundeAdresse = AdresseBox.Text;
+            vm.SelectedKunde.KundeNavn = NavnBox.Text;
+            vm.SelectedKunde.KundeNummer = TlfBox.Text;
+            vm.SelectedKunde.KundeID= vm.KunderList.Count + 1;
+            vm.AddKunde(vm.SelectedKunde);
+
 
         }
 
 
-        private void ListViewHjælpere_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ListViewKunder_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            vm.SelectedHjælper = (Hjælpere)ListViewHjælpere.SelectedItem;
+            vm.SelectedKunde = (Kunder)ListViewKunder.SelectedItem;
         }
 
 
@@ -103,43 +106,38 @@ namespace Client.View.Admin
             Frame.Navigate(typeof(AdminFærdigeOpgaver1));
         }
 
-        
+
 
         private void NavnBox_OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            vm.SelectedHjælper.Navn = NavnBox.Text;
+            vm.SelectedKunde.KundeNavn = NavnBox.Text;
         }
 
-        private void EmailBox_OnTextChanged(object sender, TextChangedEventArgs e)
+        private void AdresseBox_OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            vm.SelectedHjælper.Email = EmailBox.Text;
+            vm.SelectedKunde.KundeAdresse = AdresseBox.Text;
         }
 
 
         private void TlfBox_OnTextChanged(object sender, TextChangedEventArgs e)
         {
-            vm.SelectedHjælper.TelefonNummer = TlfBox.Text;
+            vm.SelectedKunde.KundeNummer = TlfBox.Text;
         }
 
 
-        private void KodeBox_OnTextChanged(object sender, TextChangedEventArgs e)
-        {
-            vm.SelectedHjælper.Kodeord = KodeBox.Text;
-        }
-
+        
 
         private void Logaf_OnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPageLogin));
         }
 
-        private void AdminKunder_OnClick(object sender, RoutedEventArgs e)
+        private void AdminHjælpere_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(AdminKunder));
+            Frame.Navigate(typeof(AdminHjælpere));
         }
-
     }
 
-    
+
 
 }

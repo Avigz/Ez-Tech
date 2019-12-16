@@ -50,7 +50,7 @@ namespace Client.Model
 
         public void RemoveKunde(Kunder k)
         {
-            DbContext.HjælpereWebApi.Delete(k.KundeID);
+            DbContext.KunderWebApi.Delete(k.KundeID);
          
         }
 
