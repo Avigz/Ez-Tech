@@ -23,7 +23,7 @@
         <SplitView x:Name="mySplitView" Margin="0,0,0,0" Background="DarkGray" Grid.Row="0" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="150" CompactPaneLength="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2">
             <SplitView.Pane>
 
-                <StackPanel Background="DarkRed" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel Background="DarkRed" Margin="0,50,0,0" HorizontalAlignment="Left" Width="149">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_OnClick" />
@@ -66,7 +66,7 @@
 
             </SplitView.Pane>
             <StackPanel>
-                <TextBlock Text="Hjælpere" FontFamily="Calibri Light" FontSize="65" Foreground="White" Height="83" Margin="10,0,76,0"/>
+                <TextBlock Text="Hjælpere" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="10,0,76,0"/>
             </StackPanel>
 
 
@@ -74,20 +74,20 @@
         </SplitView>
         <StackPanel HorizontalAlignment="Stretch" Margin="0,0,960,0" VerticalAlignment="Stretch">
             <StackPanel Orientation="Vertical">
-                <TextBlock Text="HjælperID:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,100,0,0" ></TextBlock>
+                <TextBlock Text="HjælperID:" FontFamily="Calibri Light" FontSize="40"  Foreground="DarkRed" Height="60" Margin="180,100,0,0" ></TextBlock>
                 <TextBox x:Name="IDBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.ID, Mode=TwoWay}"/>
-                <TextBlock Text="Navn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0" ></TextBlock>
+                <TextBlock Text="Navn:" FontFamily="Calibri Light" FontSize="40"  Foreground="DarkRed" Height="60" Margin="180,0,0,0" ></TextBlock>
                 <TextBox x:Name="NavnBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.Navn, Mode=TwoWay}" TextChanged="NavnBox_OnTextChanged"/>
-                <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
+                <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="DarkRed" Height="60" Margin="180,0,0,0"></TextBlock>
                 <TextBox x:Name="EmailBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.Email, Mode=TwoWay}" TextChanged="EmailBox_OnTextChanged"/>
-                <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
+                <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="DarkRed" Height="60" Margin="180,0,0,0"></TextBlock>
                 <TextBox  x:Name="TlfBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.TelefonNummer, Mode=TwoWay}" TextChanged="TlfBox_OnTextChanged"/>
-                <TextBlock Text="Kodeord:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,0,0,0"></TextBlock>
+                <TextBlock Text="Kodeord:" FontFamily="Calibri Light" FontSize="40"  Foreground="DarkRed" Height="60" Margin="180,0,0,0"></TextBlock>
                 <TextBox x:Name="KodeBox" Margin="175,0,0,0" Text="{Binding SelectedHjælper.Kodeord, Mode=TwoWay}" TextChanged="KodeBox_OnTextChanged"/>
-                <StackPanel Orientation="Horizontal" Height="96" Margin="51,0,-13,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel Orientation="Horizontal" Height="96" Margin="220,0,-13,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <Button Name="Opdater" Click="Opdater_OnClick" Margin="20" Content="Gem"></Button>
                     <Button Name="Slet" Click="Slet_OnClick" Margin="20" Content="Slet"></Button>
-                    <Button x:Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret Ny" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Button x:Name="Opret" Click="Opret_OnClick" Margin="5" Content="Opret Ny" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
 
             </StackPanel>

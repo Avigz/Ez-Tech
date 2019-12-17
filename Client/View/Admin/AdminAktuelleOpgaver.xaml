@@ -28,8 +28,8 @@
                 <StackPanel Background="DarkRed" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="Button1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
-                                Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Forside_OnClick"/>
-                        <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" />
+                                Width="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Stretch" Click="Forside_OnClick" Margin="0,0,0,0.4"/>
+                        <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Center" SelectionChanged="TextBlock_SelectionChanged" />
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
@@ -44,12 +44,12 @@
                         <TextBlock Text="Færdige Opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" Height="22" Margin="-0.4,0,152.4,0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Stretch" >
                         </TextBlock>
                     </StackPanel>
-                    
+
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton5" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE710;"
                                 Width="50" Height="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton5_OnClick"/>
                         <TextBlock Text="Opret Opgave" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" Height="22" Margin="-0.4,0,152.4,0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Stretch" >
-                          
+
                         </TextBlock>
 
                     </StackPanel>
@@ -128,7 +128,7 @@
         </StackPanel>
         <StackPanel>
             <StackPanel Margin="50">
-                <ComboBox x:Name="LedigeHjælpereCombo" Header="Tilgængelige hjælpere" Height="65" Width="296"  Foreground="DarkRed" ItemsSource="{Binding HjælperList, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.75" SelectedItem="{Binding SelectedHjælper, Mode=TwoWay}" SelectionChanged="LedigeHjælpereCombo_OnSelectionChanged">
+                <ComboBox x:Name="LedigeHjælpereCombo" Header="Tilgængelige hjælpere" Margin ="100,0,0,0" Height="65" Width="296"  Foreground="DarkRed" ItemsSource="{Binding HjælperList, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.75" SelectedItem="{Binding SelectedHjælper, Mode=TwoWay}" SelectionChanged="LedigeHjælpereCombo_OnSelectionChanged">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
@@ -138,13 +138,13 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
             </StackPanel>
-            <Button Content="Tilknyt" Height="40" Width="120" Margin="20" Click="TilknytHjælper"></Button>
-            </StackPanel>
+            <Button Content="Tilknyt" Height="40" Width="120" Margin="240,100,0,0" Click="TilknytHjælper"></Button>
+        </StackPanel>
 
 
 
 
-            <RelativePanel Margin="0,0,0,0">
+        <RelativePanel Margin="0,0,0,0">
             <ToggleButton Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White" Checked="HamburgerButton_OnChecked" />
         </RelativePanel>
 

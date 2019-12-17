@@ -161,6 +161,9 @@
     <Compile Include="View\Forside\Forsiden.xaml.cs">
       <DependentUpon>Forsiden.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Forside\OmOs.xaml.cs">
+      <DependentUpon>OmOs.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Hjælper\HjælperFærdigeOpgaver.xaml.cs">
       <DependentUpon>HjælperFærdigeOpgaver.xaml</DependentUpon>
     </Compile>
@@ -229,6 +232,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Forside\Forsiden.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Forside\OmOs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

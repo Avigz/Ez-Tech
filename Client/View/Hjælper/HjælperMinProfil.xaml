@@ -71,15 +71,15 @@
             <!--<StackPanel>-->
             <StackPanel>
                 <TextBlock Text="Min Profil" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="10,0,76,0" />
-                <StackPanel>
-                    <TextBlock Text="Fornavn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,1140,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></TextBlock>
-                    <TextBox Height="40" Margin="0,0,1140,0" Text="{Binding LoggedIndHjælper.Navn }"/>
-                    <TextBlock Text="Efternavn:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,1140,0"></TextBlock>
-                    <TextBox Height="40" Margin="0,0,1140,0"></TextBox>
-                    <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,1140,0"></TextBlock>
-                    <TextBox Height="40" Margin="0,0,1140,0" Text="{Binding LoggedIndHjælper.Email}"></TextBox>
-                    <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="0,0,1140,0" ></TextBlock>
-                    <TextBox Height="40" Margin="0,0,1140,0" Text="{Binding LoggedIndHjælper.TelefonNummer }"></TextBox>
+                <StackPanel RenderTransformOrigin="0.456,0.52" Margin="0,0,-124.4,0" Height="534" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock Text="Fornavn:" FontFamily="Calibri Light" FontSize="40"  Foreground="DarkRed" Height="60" Margin="60,0,1140,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></TextBlock>
+                    <TextBox Height="40" Margin="60,0,1140,0" Text="{Binding LoggedIndHjælper.Navn }"/>
+                    <TextBlock Text="Efternavn:" FontFamily="Calibri Light" FontSize="40"  Foreground="DarkRed" Height="60" Margin="65,0,0,0" HorizontalAlignment="Left" Width="369"/>
+                    <TextBox Height="40" Margin="60,0,1140,0"></TextBox>
+                    <TextBlock Text="Email:" FontFamily="Calibri Light" FontSize="40"  Foreground="DarkRed" Height="60" Margin="60,0,1140,0"></TextBlock>
+                    <TextBox Height="40" Margin="60,0,1140,0" Text="{Binding LoggedIndHjælper.Email}"></TextBox>
+                    <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="DarkRed" Height="60" Margin="60,0,1099.2,0" />
+                    <TextBox Height="40" Margin="60,0,1140,0" Text="{Binding LoggedIndHjælper.TelefonNummer }"></TextBox>
                 </StackPanel>
             </StackPanel>
 

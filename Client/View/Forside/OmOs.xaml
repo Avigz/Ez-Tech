@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="Client.View.Forside.OmOs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Client.View.Forside"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
+        <Grid.RowDefinitions>
+            <RowDefinition   Height="131*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="218*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <SplitView x:Name="mySplitView" Margin="0,0,0,0" Background="DarkGray" Grid.Row="0" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="150" CompactPaneLength="50" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="2">
+            <SplitView.Pane>
+                <StackPanel Background="DarkRed" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
+                        <Button x:Name="MenuButton1" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE10F;"
+                                Width="50" Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Top" Click="MenuButton1_OnClick" Margin="0,0,0,0" Height="50" />
+                        <TextBlock Text="Forside" Foreground="White" FontSize="18" FontFamily="Calibri Light" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="0,0,0,14.4" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets" 
+                                Width="50" Height="50" Background="Transparent" Content="&#xE735;" Click="MenuButton2_OnClick" />
+                        <TextBlock Text="Om os" FontSize="18" Foreground="White" FontFamily="Calibri Light" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+
+
+
+                    </StackPanel>
+
+                </StackPanel>
+
+
+            </SplitView.Pane>
+
+
+
+
+
+
+
+
+            <!--<StackPanel Orientation="Horizontal">
+                        <Button x:Name="MenuButton2" Foreground="White" FontFamily="Segoe MDL2 Assets"
+                       Width="50" Height="50" Background="Transparent" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">-->
+
+
+
+
+            <StackPanel>
+                <TextBlock Text="Om Os" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="10,0,76,0"/>
+            </StackPanel>
+
+
+        </SplitView>
+        <StackPanel Margin="0,20,-9,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <StackPanel Height="577" Margin="-0,110,20,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <TextBlock TextWrapping="Wrap" FontFamily="Calibri light" FontSize="25" Text=" SOMMEROGFRITID er et dansk anpartsselskab stiftet af Torben Petersen og René Voss i 2016. Vores formål er at formidle serviceydelser.
+Her på www.sommerogfritid.dk hjælper vi haveejeren med de daglige opgaver og pligter og formidler Havehjælp i hele Danmark.  Vi er pt. fire partnere, som binder hele vores store formidlingsnetværk af Kunder og HJÆLPERE sammen, så du får, det du med rette kan forvente: Kvalitet og service.
+Du kan finde os og vores kontaktinfo her Vi lægger vægt på at hjælpe lokalt og være lokalt tilstede med HJÆLPERE. Det understøtter, at vi er en grøn virksomhed med fokus på miljø i bred forstand. Vi anerkender social økonomiske virksomheder og søger at bakke op om det rumlige arbejdsmarked. Konkret formidler vi mange småjob eller opgaver til alle, der har flair for havearbejde uanset, om HJÆLPEREN er det grå guld, borgere fra kanten af arbejdsmarkedet eller er den flittige, der vil tjene lidt ekstra.
+Alle HJÆLPERE i SOMMEROGFRITID skal have ren straffeattest. Kan du løse opgaver i haven og opfylde det, så tilmeld dig her Vi har fokus på det grønne og er indehaver af brandnavnet 4greenhelp, det kommer du til at høre meget mere om i fremtiden. 4greenhelp forener de grønne aktiviteter i SOMMEROGFRITID. Vidste du, at vi på hele Sjælland leverer planter og tilbehør til haven direkte til din dør? På webplanteskolen tager vi mod din bestilling 24/7, og lader gartneren udvælge dine planter med kvalitet og omhu og leverer dem direkte til din dør webplanteskolen" Foreground="DarkGreen" Height="889" Margin="170,20,47.8,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            </StackPanel>
+
+        </StackPanel>
+
+        <RelativePanel Margin="0,0,0,0">
+            <ToggleButton x:Name="HamburgerButton" Background="DarkRed" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="50" Height="50" Foreground="White"  Checked="HamburgerButton_OnChecked"/>
+        </RelativePanel>
+
+
+
+    </Grid>
+</Page>

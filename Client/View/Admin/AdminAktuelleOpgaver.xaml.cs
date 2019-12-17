@@ -114,5 +114,10 @@ namespace Client.View.Admin
         {
             Frame.Navigate(typeof(AdminKunder));
         }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

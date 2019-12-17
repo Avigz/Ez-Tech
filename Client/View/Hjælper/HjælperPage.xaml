@@ -8,7 +8,9 @@
     xmlns:vm="using:Client.ViewModel"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-<Page.DataContext><vm:ViewModel></vm:ViewModel></Page.DataContext>
+    <Page.DataContext>
+        <vm:ViewModel></vm:ViewModel>
+    </Page.DataContext>
 
     <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
         <Grid.RowDefinitions>
@@ -19,7 +21,7 @@
             <ColumnDefinition  Width="218*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <SplitView x:Name="mySplitView" Margin="0,0,0,0" Background="DarkGray" Grid.Row="0" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="150" CompactPaneLength="50" Grid.RowSpan="2">
+        <SplitView x:Name="mySplitView" Margin="0,0,0,0" Background="DarkGray" Grid.Row="0" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="150" CompactPaneLength="50" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.51">
             <SplitView.Pane>
                 <StackPanel Background="DarkRed" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
@@ -33,7 +35,7 @@
                         <TextBlock Text="Mine opgaver" Foreground="White" FontSize="12" FontFamily="Calibri Light" VerticalAlignment="Center" />
 
                     </StackPanel>
-                   
+
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
                         <Button x:Name="MenuButton6" Foreground="White" FontFamily="Segoe MDL2 Assets" Content="&#xE73A;"
@@ -62,28 +64,33 @@
 
 
                     </StackPanel>
+
                 </StackPanel>
+
             </SplitView.Pane>
 
+            <StackPanel>
 
-<StackPanel>
-            <StackPanel Margin="50">
-               
-                <ComboBox x:Name="LedigeOpgaverCombo" Header="Ledige Opgaver" Height="65" Width="296"  Foreground="DarkRed" ItemsSource="{Binding OpgaveListMissingHjælper, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.75" SelectedItem="{Binding SelectedOpgave, Mode=TwoWay}" SelectionChanged="LedigeOpgaverCombo_OnSelectionChanged"> <ComboBox.ItemTemplate>
-                        <DataTemplate>
+                <StackPanel Margin="50,0,49.6,0" Height="340" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <TextBlock Text="Hjælper Page" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="-36,0,76.4,110" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                    <StackPanel HorizontalAlignment="Stretch" Height="107" Margin="0,0,-0.2,0" VerticalAlignment="Stretch"></StackPanel>
+                    <ComboBox x:Name="LedigeOpgaverCombo" Header="Ledige Opgaver" Height="97" Width="445" FontSize="30"  Foreground="DarkRed" ItemsSource="{Binding OpgaveListMissingHjælper, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Stretch" RenderTransformOrigin="0.53,0.75" SelectedItem="{Binding SelectedOpgave, Mode=TwoWay}" SelectionChanged="LedigeOpgaverCombo_OnSelectionChanged" Margin="-45,-150,0,10">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding ID}"></TextBlock>
+                                    <TextBlock Text="{Binding ID}"/>
                                 </StackPanel>
                             </DataTemplate>
-                    </ComboBox.ItemTemplate></ComboBox>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
 
                 </StackPanel>
                 <StackPanel>
-        <TextBlock Text="ID" Margin="20"></TextBlock>
-        <TextBox Text="{Binding SelectedOpgave.ID, Mode=OneWay}" ></TextBox>
-        <TextBlock Text="Beskrivelse" Margin="20"></TextBlock>
-        <TextBox Text="{Binding SelectedOpgave.Beskrivelse}"></TextBox>
-         <Button Click="Tilknyt" Content="Tilknyt mig" Margin="20" Width="120" Height="40" ></Button>
+                    <TextBlock Text="ID" Margin="20,20,1100,10" FontSize="30" Foreground="DarkRed"></TextBlock>
+                    <TextBox Text="{Binding SelectedOpgave.ID, Mode=OneWay}" Margin="10,0,1105.6,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                    <TextBlock Text="Beskrivelse" Foreground="DarkRed" FontSize="30" Margin="20,20,1108.6,10" Height="45" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    <TextBox Text="{Binding SelectedOpgave.Beskrivelse}" Margin="10,0,1109.6,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    <Button Click="Tilknyt" Content="Tilknyt mig" Margin="20" Width="120" Height="40" ></Button>
                 </StackPanel>
             </StackPanel>
 

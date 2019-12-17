@@ -25,7 +25,7 @@
             <ColumnDefinition  Width="218*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <SplitView x:Name="mySplitView" Margin="0,0,0,0" Background="DarkGray" Grid.Row="0" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="150" CompactPaneLength="50" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <SplitView x:Name="mySplitView" Margin="0,0,0,5" Background="DarkGray" Grid.Row="0" IsPaneOpen="False" DisplayMode="CompactInline" OpenPaneLength="150" CompactPaneLength="50" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <SplitView.Pane>
                 <StackPanel Background="DarkRed" Margin="0,50,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Stretch"  >
@@ -71,7 +71,7 @@
 
 
         <StackPanel Margin="0,0,0,0" Grid.RowSpan="3">
-            <TextBlock Text="Hjælpers Opgaver" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="83" Margin="300,0,100,0" />
+            <TextBlock Text="Hjælpers Opgaver" FontFamily="Calibri Light" FontSize="65" Foreground="DarkRed" Height="101" Margin="140,0,557,0" />
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Margin="100,100,100,100" Grid.RowSpan="3">

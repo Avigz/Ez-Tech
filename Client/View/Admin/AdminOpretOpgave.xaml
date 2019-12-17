@@ -74,14 +74,13 @@
 
         <StackPanel  HorizontalAlignment="Stretch" Margin="0,0,960,0" VerticalAlignment="Stretch">
             <StackPanel  Orientation="Vertical">
-                <TextBlock Text="Beskrivelse:" FontFamily="Calibri Light" FontSize="40"  Foreground="Black" Height="60" Margin="180,180,0,0" ></TextBlock>
+                <TextBlock Text="Beskrivelse:" FontFamily="Calibri Light" FontSize="40"  Foreground="DarkRed" Height="60" Margin="180,180,0,0" ></TextBlock>
                 <TextBox x:Name="BeskrivelseBox" Margin="175,0,0,0" Text="{Binding SelectedOpgave.Beskrivelse, Mode=TwoWay}" PlaceholderText="Indtast beskrivelse" TextChanged="BeskrivelseBox_OnTextChanged"/>
                 <StackPanel Margin="200,200,100,100" Height="238" >
-                    <ComboBox x:Name="TilknytKunde" Header="Kunde"  Height="70" Width="300"  Foreground="DarkRed"
-                              ItemsSource="{Binding KunderList, Mode=OneWay}" SelectionChanged="TilknytKunde_OnSelectionChanged" SelectedItem="{Binding SelectedKunde, Mode=TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="1,115,0,0">
-                    </ComboBox>
+                    <ComboBox x:Name="TilknytKunde" Header="Kunde" Height="74" FontSize="20"  Foreground="DarkRed"
+                              ItemsSource="{Binding KunderList, Mode=OneWay}" SelectionChanged="TilknytKunde_OnSelectionChanged" SelectedItem="{Binding SelectedKunde, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Margin="-29,0,-31,0"/>
 
-                    <Button x:Name="Tilknyt" Click="Tilknyt_OnClick" Margin="20,20,20,20" Content="Tilknyt"  Height="37" Width="95" RenderTransformOrigin="0.5,0.5">
+                    <Button x:Name="Tilknyt" Click="Tilknyt_OnClick" Margin="-27,20,20,20" Content="Tilknyt"  Height="37" Width="95" RenderTransformOrigin="0.5,0.5">
 
                     </Button>
                 </StackPanel>

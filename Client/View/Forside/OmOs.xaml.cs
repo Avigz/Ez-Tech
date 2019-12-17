@@ -12,48 +12,21 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Client.ViewModel;
-using Client;
-using Client.View.Forside;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Client.View
+namespace Client.View.Forside
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainPageLogin : Page
+    public sealed partial class OmOs : Page
     {
-        public MainPageLogin()
+        public OmOs()
         {
             this.InitializeComponent();
-            this.DataContext = vm;
-
-
         }
-        ViewModel.ViewModel vm = new ViewModel.ViewModel();
-
-
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-        {
-            if (vm.ConfirmLogin() == true)
-            {
-                if (vm.LoggedIndHjælper.IsAdmin)
-                {
-                    Frame.Navigate(typeof(View.Admin.AdminPage));
-                    
-                }
-                else if (vm.LoggedIndHjælper.IsAdmin == false)
-                {
-                    Frame.Navigate(typeof(View.Hjælper.HjælperPage));
-                }
-            }
-          
-
-        }
-
-
+        public ViewModel.ViewModel vm = new ViewModel.ViewModel();
 
         private void HamburgerButton_OnChecked(object sender, RoutedEventArgs e)
         {
@@ -66,9 +39,19 @@ namespace Client.View
                 mySplitView.IsPaneOpen = false;
             }
 
+
+        }
+        private void HamburgerButton_OnChecked1(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
-        private void MenuButton2_Click(object sender, RoutedEventArgs e)
+        private void MenuButton1_OnClick(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(sourcePageType: typeof(MainPageLogin));
+        }
+
+        private void MenuButton2_OnClick(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(OmOs));
         }
