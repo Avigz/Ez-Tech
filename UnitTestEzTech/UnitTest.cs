@@ -68,23 +68,29 @@ namespace UnitTestEzTech
         public void LoginTest()
         {
             //Arrange
+            ViewModel vm = new ViewModel();
+            Hjælpere h1 = vm.HjælperList[1];
+            vm.Username = h1.Navn;
+            vm.Password = h1.Kodeord;
+            bool TrueIfLoggedIN;
 
             //Act
+            TrueIfLoggedIN = vm.ConfirmLogin();
 
             //Assert
-
+            Assert.IsTrue(TrueIfLoggedIN);
         }
+
         [TestMethod]
         public void HentHjælperIndividuelleOpgaverPåDB()
         {
             //Arrange
             ViewModel vm = new ViewModel();
-            Hjælpere h1 = vm.HjælperList[2];
-            int expectedAmount = 2;
+            Hjælpere h1 = vm.HjælperList[1];
+            vm.LoggedIndHjælper = h1;
+            int expectedAmount = 1;
             int actualAmount;
-
             //Act
-            vm.SelectedHjælper = h1;
             actualAmount = vm.LoggedInHjælperOpgaverNotDone.Count;
 
             //Assert
