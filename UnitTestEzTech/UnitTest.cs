@@ -8,10 +8,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace UnitTestEzTech
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void OpdateringAfOpgavePåDB()
         {
             //Arrange
             ViewModel vm = new ViewModel();
@@ -19,11 +19,7 @@ namespace UnitTestEzTech
             Opgaver o1 = new Opgaver(20,20,"Hækklipning 4 timer", null, false);
             string expectedPreUpdate = "Hækklipning 4 timer";
             string expectedPostUpdate = "græsslåning";
-
-
             //Act
-            
-          
             vm.UpdateOpgave(o1);
 
             var Query1 = from n in vm.OpgaveList where n.ID == 20 select n;
@@ -35,7 +31,7 @@ namespace UnitTestEzTech
             }
 
 
-            var Query2 = from n in vm.OpgaveList where n.Beskrivelse == expectedPostUpdate select n;
+          var Query2 = from n in vm.OpgaveList where n.Beskrivelse == expectedPostUpdate select n;
 
             string ActualPostUpdate = Query2.FirstOrDefault().Beskrivelse;
 
@@ -48,7 +44,7 @@ namespace UnitTestEzTech
 
 
         [TestMethod]
-        public void TestMethod2()
+        public void OpdateringAfKundePåDB()
         {
             //Arrange
 
@@ -58,7 +54,7 @@ namespace UnitTestEzTech
 
         }
         [TestMethod]
-        public void TestMethod3()
+        public void OpdateringAfHjælperPåDB()
         {
             //Arrange
 
@@ -66,6 +62,49 @@ namespace UnitTestEzTech
 
             //Assert
 
+        }
+
+        [TestMethod]
+        public void LoginTest()
+        {
+            //Arrange
+
+            //Act
+
+            //Assert
+
+        }
+        [TestMethod]
+        public void HentHjælperIndividuelleOpgaverPåDB()
+        {
+            //Arrange
+            ViewModel vm = new ViewModel();
+            Hjælpere h1 = vm.HjælperList[2];
+            int expectedAmount = 2;
+            int actualAmount;
+
+            //Act
+            vm.SelectedHjælper = h1;
+            actualAmount = vm.LoggedInHjælperOpgaverNotDone.Count;
+
+            //Assert
+            Assert.AreEqual(expectedAmount,actualAmount);
+        }
+
+        [TestMethod]
+        public void OpgaverMissingHjælper()
+        {
+            //Arrange
+            ViewModel vm = new ViewModel();
+            int expectedAmount = 3;
+            int ActualAmount;
+
+            //Act
+            ActualAmount = vm.OpgaveListMissingHjælper.Count;
+
+            //Assert
+
+            Assert.AreEqual(expectedAmount, ActualAmount);
         }
     }
 }
