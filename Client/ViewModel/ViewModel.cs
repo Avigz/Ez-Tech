@@ -252,15 +252,6 @@ namespace Client.ViewModel
             OpgaverSingleton.Instance.UpdateOpgave(O);
             OnPropertyChanged(nameof(OpgaveList));
 
-            //if (OpgaverSingleton.Instance.GetOpgaver.Contains(O))
-            //{
-            //    OpgaverSingleton.Instance.RemoveOpgaver(O);
-            //    OpgaverSingleton.Instance.AddOpgaver(O);
-            //}
-            //else
-            //{
-            //    OpgaverSingleton.Instance.AddOpgaver(O);
-            //}
         }
 
         public void RemoveOpgaver(Opgaver o)

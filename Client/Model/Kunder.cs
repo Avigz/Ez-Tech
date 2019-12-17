@@ -23,10 +23,10 @@ namespace Client.Model
 
         public Kunder(int id, string kundenavn, string kundenummer, string kundeadresse)
         {
-            _kundeId = id;
-            _kundeNavn = kundenavn;
-            _kundeNummer = kundenummer;
-            _kundeAdresse = kundeadresse;
+            KundeID = id;
+            KundeNavn = kundenavn;
+            KundeNummer = kundenummer;
+            KundeAdresse = kundeadresse;
 
             Opgaver = new HashSet<Opgaver>();
         }
