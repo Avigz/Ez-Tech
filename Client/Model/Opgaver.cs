@@ -23,11 +23,11 @@ namespace Client.Model
         #region Constructor
         public Opgaver(int _id, int _kundeId, string _beskrivelse, int? _hjælperTilknyttet, bool _isDone)
 {
-    _id = ID;
-    _kundeId = KundeID;
-    _beskrivelse = Beskrivelse;
-    _hjælperTilknyttet = HjælperTilknyttet;
-    _isDone = IsDone;
+    ID =_id;
+    KundeID = _kundeId;
+    Beskrivelse = _beskrivelse;
+    HjælperTilknyttet = _hjælperTilknyttet;
+    IsDone = _isDone;
 }
 
         public Opgaver() { }

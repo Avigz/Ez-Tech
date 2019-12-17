@@ -1,6 +1,5 @@
 ﻿
 using System;
-using System.Linq;
 using Client.Model;
 using Client.ViewModel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -15,33 +14,32 @@ namespace UnitTestEzTech
         {
             //Arrange
             ViewModel vm = new ViewModel();
-            
+            DBPersistency dbContext = new DBPersistency();
+            Kunder k1 = new Kunder(20,"Carl","20202020","Solvej22");
             Opgaver o1 = new Opgaver(20,20,"Hækklipning 4 timer", null, false);
             string expectedPreUpdate = "Hækklipning 4 timer";
             string expectedPostUpdate = "græsslåning";
 
 
             //Act
-            
-          
-            vm.UpdateOpgave(o1);
+            vm.SelectedOpgave = o1;
+            vm.AddKunde(k1);
+            vm.AddOpgave(o1);
+         
 
-            var Query1 = from n in vm.OpgaveList where n.ID == 20 select n;
- 
-            if (Query1.FirstOrDefault().Beskrivelse == expectedPreUpdate)
+            if (vm.OpgaveList[20].Beskrivelse == expectedPreUpdate)
             {
                 o1.Beskrivelse = "græsslåning";
                 vm.UpdateOpgave(o1);
             }
+            
 
-
-            var Query2 = from n in vm.OpgaveList where n.Beskrivelse == expectedPostUpdate select n;
-
-            string ActualPostUpdate = Query2.FirstOrDefault().Beskrivelse;
+          
+            
 
             //Assert
 
-            Assert.AreEqual(expectedPostUpdate, ActualPostUpdate);
+            Assert.Equals(expectedPostUpdate,vm.OpgaveList[20].Beskrivelse);
 
 
         }
