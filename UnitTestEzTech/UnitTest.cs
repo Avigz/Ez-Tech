@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Linq;
+using Windows.UI.Composition;
 using Client.Model;
 using Client.ViewModel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -44,17 +45,26 @@ namespace UnitTestEzTech
 
 
         [TestMethod]
-        public void OpdateringAfKundePåDB()
+        public void OprettekseAfKundePåDB()
         {
             //Arrange
+            ViewModel vm = new ViewModel();
+            Kunder k1 = new Kunder();
+            k1.KundeAdresse = "Testvej22";
+            k1.KundeNavn = "TestPerson";
+            k1.KundeNummer = "9999999";
 
+            int amntPreCreate = vm.KunderList.Count;
+            int amntPostCreate;
             //Act
-
+            vm.AddKunde(k1);
+            amntPostCreate = vm.KunderList.Count;
             //Assert
-
+            Assert.AreNotEqual(amntPreCreate, amntPostCreate);
+            Assert.AreEqual(k1.KundeNavn, vm.KunderList[amntPostCreate-1].KundeNavn);
         }
         [TestMethod]
-        public void OpdateringAfHjælperPåDB()
+        public void SletningAfHjælperPåDB()
         {
             //Arrange
 
