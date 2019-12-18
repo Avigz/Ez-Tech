@@ -53,14 +53,14 @@ namespace Client.View.Admin
 
 
 
-        private void AdminHjælpere_OnClick(object sender, RoutedEventArgs e)
+        private void AdminHjÃ¦lpere_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(AdminHjælpere));
+            Frame.Navigate(typeof(AdminHjÃ¦lpere));
         }
 
-        private void FærdigeOpgaver_OnClick(object sender, RoutedEventArgs e)
+        private void FÃ¦rdigeOpgaver_OnClick(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(AdminFærdigeOpgaver1));
+            Frame.Navigate(typeof(AdminFÃ¦rdigeOpgaver1));
         }
 
         private void Lv_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -89,14 +89,14 @@ namespace Client.View.Admin
        
         
 
-        private void LedigeHjælpereCombo_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void LedigeHjÃ¦lpereCombo_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            vm.SelectedHjælper = (Hjælpere)LedigeHjælpereCombo.SelectedItem;
+            vm.SelectedHjÃ¦lper = (HjÃ¦lpere)LedigeHjÃ¦lpereCombo.SelectedItem;
         }
 
-        private void TilknytHjælper(object sender, RoutedEventArgs e)
+        private void TilknytHjÃ¦lper(object sender, RoutedEventArgs e)
         {
-            vm.SelectedOpgave.HjælperTilknyttet = vm.SelectedHjælper.ID;
+            vm.SelectedOpgave.HjÃ¦lperTilknyttet = vm.SelectedHjÃ¦lper.ID;
             vm.UpdateOpgave(vm.SelectedOpgave);
         }
 
