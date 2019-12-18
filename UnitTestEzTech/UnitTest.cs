@@ -128,6 +128,24 @@ namespace UnitTestEzTech
             Assert.AreEqual(expectedAmount,actualAmount);
         }
 
+        [TestMethod] public void TilknytOpgaveTilHjælper()
+        {
+            //Arrange
+            ViewModel vm = new ViewModel();
+            Hjælpere h1 = vm.HjælperList[1];
+            vm.LoggedIndHjælper = h1;
+            Opgaver o1 = vm.OpgaveList[1];
+            o1.HjælperTilknyttet = 2;
+            int expectedAmount = 2;
+          
+            //Act
+            vm.UpdateOpgave(o1);
+            int actualAmount = vm.LoggedInHjælperOpgaverNotDone.Count;
+
+            //Assert
+            Assert.AreEqual(expectedAmount, actualAmount);
+        }
+
         [TestMethod]
         public void OpgaverMissingHjælper()
         {
