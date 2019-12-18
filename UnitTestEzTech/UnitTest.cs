@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using Windows.UI.Composition;
+using Client;
 using Client.Model;
 using Client.ViewModel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -50,28 +51,32 @@ namespace UnitTestEzTech
             //Arrange
             ViewModel vm = new ViewModel();
             Kunder k1 = new Kunder();
+            k1.KundeID = 5;
             k1.KundeAdresse = "Testvej22";
             k1.KundeNavn = "TestPerson";
             k1.KundeNummer = "9999999";
 
-            int amntPreCreate = vm.KunderList.Count;
-            int amntPostCreate;
             //Act
             vm.AddKunde(k1);
-            amntPostCreate = vm.KunderList.Count;
+          
             //Assert
-            Assert.AreNotEqual(amntPreCreate, amntPostCreate);
-            Assert.AreEqual(k1.KundeNavn, vm.KunderList[amntPostCreate-1].KundeNavn);
+       
+            Assert.AreEqual(k1.KundeNavn, vm.KunderList[4].KundeNavn);
         }
         [TestMethod]
         public void SletningAfHjælperPåDB()
         {
             //Arrange
-
+            ViewModel vm = new ViewModel();
+            Hjælpere h1 = vm.HjælperList[1];
             //Act
-
+            h1.ID = 99;
+            vm.AddHjælper(h1);
+            int CountPreDelete = vm.HjælperList.Count;
+            vm.RemoveHjælper(h1);
+            int CountPostDelete = vm.HjælperList.Count;
             //Assert
-
+            Assert.AreNotEqual(CountPostDelete, CountPreDelete);
         }
 
         [TestMethod]
@@ -128,7 +133,7 @@ namespace UnitTestEzTech
         {
             //Arrange
             ViewModel vm = new ViewModel();
-            int expectedAmount = 3;
+            int expectedAmount = 1;
             int ActualAmount;
 
             //Act
