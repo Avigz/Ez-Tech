@@ -94,7 +94,14 @@
                 </ListView.ItemTemplate>
             </ListView>
             <StackPanel>
-                <Button Content="Afslut Opgave" Margin="0,300,992,0" Click="AfslutOpgave_OnClick" HorizontalAlignment="Right" VerticalAlignment="Top"></Button>
+                <Button Content="Afslut Opgave" Margin="0,300,992,0" Click="AfslutOpgave_OnClick" HorizontalAlignment="Right" VerticalAlignment="Top">
+                    <Button.Flyout>
+                        <Flyout x:Name="Flyout1">
+                            <TextBlock Text="Opgaven er afsluttet">
+                            </TextBlock>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
             </StackPanel>
         </StackPanel>
 

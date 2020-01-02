@@ -42,8 +42,10 @@ namespace Client.Model
         #endregion
         public async Task Create(int key, T obj)
             {
-                //
-                string UrlNew = _url + "/" + key;
+            // Json . NET er et tredjepartsbibliotek, der hjælper med konvertering mellem JSON- tekst og. NET- objekt bruger JsonSerializer.
+            // JsonSerializer konverterer. NET objekter i deres JSON- ækvivalente tekst og
+            // tilbage igen ved at kortlægge. NET- objekt-ejendomsnavne til JSON- ejendomsnavne. 
+            string UrlNew = _url + "/" + key;
                 string Serialized = JsonConvert.SerializeObject(obj);
                 StringContent SC = new StringContent(Serialized, Encoding.UTF8, "application/json");
                 HttpResponseMessage Response = _httpClient.PostAsync(_url, SC).Result;

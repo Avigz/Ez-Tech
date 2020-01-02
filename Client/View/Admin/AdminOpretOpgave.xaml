@@ -81,7 +81,12 @@
                               ItemsSource="{Binding KunderList, Mode=OneWay}" SelectionChanged="TilknytKunde_OnSelectionChanged" SelectedItem="{Binding SelectedKunde, Mode=TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Margin="-29,0,-31,0"/>
 
                     <Button x:Name="Tilknyt" Click="Tilknyt_OnClick" Margin="-27,20,20,20" Content="Tilknyt"  Height="37" Width="95" RenderTransformOrigin="0.5,0.5">
-
+                        <Button.Flyout>
+                            <Flyout x:Name="Flyout1">
+                                <TextBlock Text="Kunden er tilknyttet og opgaven er oprettet">
+                                </TextBlock>
+                            </Flyout>
+                        </Button.Flyout>
                     </Button>
                 </StackPanel>
 

@@ -90,7 +90,14 @@
                     <TextBox Text="{Binding SelectedOpgave.ID, Mode=OneWay}" Margin="10,0,1105.6,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                     <TextBlock Text="Beskrivelse" Foreground="DarkRed" FontSize="30" Margin="20,20,1108.6,10" Height="45" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                     <TextBox Text="{Binding SelectedOpgave.Beskrivelse}" Margin="10,0,1109.6,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                    <Button Click="Tilknyt" Content="Tilknyt mig" Margin="20" Width="120" Height="40" ></Button>
+                    <Button Click="Tilknyt" Content="Tilknyt mig" Margin="20" Width="120" Height="40" >
+                        <Button.Flyout>
+                            <Flyout x:Name="Flyout1">
+                                <TextBlock Text="Du er nu tilknyttet opgaven">
+                                </TextBlock>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
                 </StackPanel>
             </StackPanel>
 
