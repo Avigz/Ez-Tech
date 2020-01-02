@@ -13,7 +13,7 @@
         <vm:ViewModel></vm:ViewModel>
     </Page.DataContext>
 
-    <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
+    <Grid RenderTransformOrigin="0.529,0.5">
         <Grid.RowDefinitions>
             <RowDefinition Height="131*"></RowDefinition>
         </Grid.RowDefinitions>
@@ -157,7 +157,7 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
             </StackPanel>
-            <Button Content="Tilknyt" Height="40" Width="120" Margin="240,100,0,0" Click="TilknytHjælper">
+            <Button Content="Tilknyt" Height="40"  Width="120" Margin="240,100,0,0" Click="TilknytHjælper">
                 <Button.Flyout>
                     <Flyout x:Name="Flyout4">
                         <TextBlock Text="Hjælper er tilknyttet opgaven">
