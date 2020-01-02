@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModel="using:Client.ViewModel"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,0">
     <Page.DataContext>
         <viewModel:ViewModel></viewModel:ViewModel>
     </Page.DataContext>
@@ -97,7 +97,7 @@
                                 <TextBox  Margin="22,-40,-30,4" Background="White" Text="{Binding KundeID, Mode=TwoWay}" FontFamily="Calibri Light" Height="32" Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                             </StackPanel>
 
-                          
+
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
