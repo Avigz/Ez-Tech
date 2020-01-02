@@ -132,10 +132,6 @@
     <Compile Include="Model\Login.cs" />
     <Compile Include="Model\Opgaver.cs" />
     <Compile Include="Model\OpgaverSingleton.cs" />
-    <Compile Include="Model\SelectedHjælperSingleton.cs" />
-    <Compile Include="Model\SelectedKundeSingleton.cs" />
-    <Compile Include="Model\SelectedLoginUserSingleton.cs" />
-    <Compile Include="Model\SelectedOpgaverSingleton.cs" />
     <Compile Include="Model\WebApiAsync.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
