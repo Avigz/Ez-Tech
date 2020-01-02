@@ -15,13 +15,14 @@ namespace UnitTestEzTech
         [TestMethod]
         public void OpdateringAfOpgavePåDB()
         {
-            //Arrange
+            //Arrange - Opstilling
             ViewModel vm = new ViewModel();
             
             Opgaver o1 = new Opgaver(20,20,"Hækklipning 4 timer", null, false);
             string expectedPreUpdate = "Hækklipning 4 timer";
             string expectedPostUpdate = "græsslåning";
-            //Act
+
+            //Act - Handling vi ønsker udført
             vm.UpdateOpgave(o1);
 
             var Query1 = from n in vm.OpgaveList where n.ID == 20 select n;
@@ -37,7 +38,7 @@ namespace UnitTestEzTech
 
             string ActualPostUpdate = Query2.FirstOrDefault().Beskrivelse;
 
-            //Assert
+            //Assert - Kontrollere resultatet af handlingen ud fra opstillingen.
 
             Assert.AreEqual(expectedPostUpdate, ActualPostUpdate);
 

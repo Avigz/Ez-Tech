@@ -35,9 +35,14 @@ namespace Client.Model
                 _url = serverURL + "/" + _apiPrefix + "/" + apiID;
             }
 
-            #endregion
+
+            //det er vores handler, til at sende og modtage request fra serveren. Det er hvad vores databseAPi bygget ud fra.
+            //disse metoder skal sikrer at alle de funktioner vi køre i mod vores databaseapi at de er korrekt opsat.
+            
+        #endregion
         public async Task Create(int key, T obj)
             {
+                //
                 string UrlNew = _url + "/" + key;
                 string Serialized = JsonConvert.SerializeObject(obj);
                 StringContent SC = new StringContent(Serialized, Encoding.UTF8, "application/json");

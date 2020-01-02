@@ -37,13 +37,13 @@ namespace Client.Model
             }
         }
 
-
+        //ligenu gøre den det, at når man vi have fat i hjælpere der ligger i en collection, så henter den bare et nyt ned fra databasen
         public ObservableCollection<Hjælpere> GetHjælper
         {
             get { return new ObservableCollection<Hjælpere>(DbContext.HjælpereWebApi.Load().Result); }
 
         }
-
+        //man hiver fat i databasens-kontroller, ved at tilføje hjælpere --> den tager mod hjælpere.
         public void AddHjælper(Hjælpere h)
         {
             DbContext.HjælpereWebApi.Create(h.ID, h);
