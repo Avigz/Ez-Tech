@@ -11,7 +11,7 @@
     <Page.DataContext>
         <Vm:ViewModel></Vm:ViewModel>
     </Page.DataContext>
-    <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
+    <Grid RenderTransformOrigin="0.529,0.5">
         <Grid.RowDefinitions>
             <RowDefinition   Height="131*"></RowDefinition>
         </Grid.RowDefinitions>
@@ -83,9 +83,30 @@
                 <TextBlock Text="TelefonNummer:" FontFamily="Calibri Light" FontSize="40"  Foreground="DarkRed" Height="60" Margin="180,0,0,0"></TextBlock>
                 <TextBox  x:Name="TlfBox" Margin="175,0,0,0" Text="{Binding SelectedKunde.KundeNummer, Mode=TwoWay}" TextChanged="TlfBox_OnTextChanged"/>
                 <StackPanel Orientation="Horizontal" Height="92" Margin="215,0,1,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                    <Button Name="Opdater" Click="Opdater_OnClick" Margin="20" Content="Gem"></Button>
-                    <Button Name="Slet" Click="Slet_OnClick" Margin="20" Content="Slet"></Button>
-                    <Button x:Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret Ny" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Button Name="Opdater" Click="Opdater_OnClick" Margin="20" Content="Gem">
+                        <Button.Flyout>
+                            <Flyout x:Name="Flyout1">
+                                <TextBlock Text="Ændringerne er gemt">
+                                </TextBlock>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                    <Button Name="Slet" Click="Slet_OnClick" Margin="20" Content="Slet">
+                        <Button.Flyout>
+                            <Flyout x:Name="Flyout2">
+                                <TextBlock Text="Kunden er slettet">
+                                </TextBlock>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                   <Button  x:Name="Opret" Click="Opret_OnClick" Margin="20" Content="Opret Ny" HorizontalAlignment="Center" VerticalAlignment="Center" >
+                       <Button.Flyout>
+                           <Flyout x:Name="Flyout3">
+                               <TextBlock Text="Kunden er oprettet">
+                               </TextBlock>
+                           </Flyout>
+                       </Button.Flyout>
+                    </Button>
                 </StackPanel>
 
             </StackPanel>

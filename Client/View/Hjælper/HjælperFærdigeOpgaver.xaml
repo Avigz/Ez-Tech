@@ -12,7 +12,7 @@
         <viewModel:ViewModel></viewModel:ViewModel>
     </Page.DataContext>
 
-    <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
+    <Grid RenderTransformOrigin="0.529,0.5">
         <Grid.RowDefinitions>
             <RowDefinition   Height="131*"></RowDefinition>
         </Grid.RowDefinitions>
