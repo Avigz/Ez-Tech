@@ -35,10 +35,17 @@ namespace Client.Model
                 _url = serverURL + "/" + _apiPrefix + "/" + apiID;
             }
 
-            #endregion
+
+            //det er vores handler, til at sende og modtage request fra serveren. Det er hvad vores databseAPi bygget ud fra.
+            //disse metoder skal sikrer at alle de funktioner vi køre i mod vores databaseapi at de er korrekt opsat.
+            
+        #endregion
         public async Task Create(int key, T obj)
             {
-                string UrlNew = _url + "/" + key;
+            // Json . NET er et tredjepartsbibliotek, der hjælper med konvertering mellem JSON- tekst og. NET- objekt bruger JsonSerializer.
+            // JsonSerializer konverterer. NET objekter i deres JSON- ækvivalente tekst og
+            // tilbage igen ved at kortlægge. NET- objekt-ejendomsnavne til JSON- ejendomsnavne. 
+            string UrlNew = _url + "/" + key;
                 string Serialized = JsonConvert.SerializeObject(obj);
                 StringContent SC = new StringContent(Serialized, Encoding.UTF8, "application/json");
                 HttpResponseMessage Response = _httpClient.PostAsync(_url, SC).Result;

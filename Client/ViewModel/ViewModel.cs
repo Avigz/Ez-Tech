@@ -14,10 +14,10 @@ using Client.Model;
 
 namespace Client.ViewModel
 {
-    public class ViewModel: INotifyPropertyChanged
+    public class ViewModel : INotifyPropertyChanged
     {
-       
-         
+
+
         public ViewModel()
         {
             ObservableCollection<Hjælpere> HjælperList = new ObservableCollection<Hjælpere>();
@@ -27,85 +27,87 @@ namespace Client.ViewModel
             _selectedHjælper = new Hjælpere();
             _selectedKunde = new Kunder();
             _selectedOpgave = new Opgaver();
-           
+
 
         }
 
 
-    [NotifyPropertyChangedInvocator]
-    protected virtual void OnPropertyChanged(string propertyName)
-    {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
-
-     
-    private string _username { get; set; }
-    private string _password { get; set; }
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
 
+        private string _username { get; set; }
+        //private string _password { get; set; }
+
+        public string Password { get; set; }
 
         public string Username
-    {
-        get {
-            if (_username == null)
-            {
-                return "Indtast brugernavn";
-            }
-            else
-            {
-                return _username;
-            }
-
-            }
-        set
         {
-            _username = value;
-            OnPropertyChanged(nameof(Username));
-        }
-    }
-    
-    public string Password
-    {
-        get {
-            if (_password == null)
+            get
             {
-                return "Indtast kodeord";
-            }
-            else
-            {
-                return _password;
+               /* if (_username == null)
+                {
+                    return "Indtast brugernavn";
                 }
+                else
+                {
+                    return _username;
+                }*/
+               return _username;
 
-             }
-        set
-        {
-            _password = value;
-            OnPropertyChanged(nameof(Password));
+            }
+            set
+            {
+                _username = value;
+                OnPropertyChanged(nameof(Username));
+            }
         }
-    }
 
-    
-
-    public bool ConfirmLogin()
-    {
-        if (Login.LoginAsync(Username, Password) == true)
+        /*public string Password
         {
-               LoggedIndHjælper = Login.LoggedInUser;
+            get {
+                if (_password == null)
+                {
+                    return "Indtast kodeord";
+                }
+                else
+                {
+                    return _password;
+                    }
+
+                 }
+            set
+            {
+                _password = value;
+                OnPropertyChanged(nameof(Password));
+            }
+        } */
+
+
+
+        public bool ConfirmLogin()
+        {
+            if (Login.LoginAsync(Username, Password) == true)
+            {
+                LoggedIndHjælper = Login.LoggedInUser;
                 return true;
-            
+
+            }
+
+            else
+            {
+                return false;
+            }
+
+
         }
 
-        else
-        {
-            return false;
-        }
 
 
-    }
-
-   
-
-    public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         #region HjælperProps
         public ObservableCollection<Hjælpere> HjælperList
@@ -133,8 +135,8 @@ namespace Client.ViewModel
 
         public void UpdateHjælper(Hjælpere h)
         {
-           HjælperSingleton.Instance.UpdateHjælper(h);
-           OnPropertyChanged(nameof(HjælperList));
+            HjælperSingleton.Instance.UpdateHjælper(h);
+            OnPropertyChanged(nameof(HjælperList));
         }
 
         public void RemoveHjælper(Hjælpere h)
@@ -161,7 +163,7 @@ namespace Client.ViewModel
             get
             {
                 var LoggedInHjælperOpgQuery =
-                    from n in OpgaveList where n.HjælperTilknyttet == LoggedIndHjælper.ID && n.IsDone==false select n;
+                    from n in OpgaveList where n.HjælperTilknyttet == LoggedIndHjælper.ID && n.IsDone == false select n;
                 ObservableCollection<Opgaver> HjælpersOpgaver = new ObservableCollection<Opgaver>();
 
                 foreach (var v in LoggedInHjælperOpgQuery)
@@ -207,7 +209,7 @@ namespace Client.ViewModel
 
         }
 
-       
+
 
         public ObservableCollection<Opgaver> OpgaveListDone
         {
@@ -265,10 +267,10 @@ namespace Client.ViewModel
 
 
         public ObservableCollection<Kunder> KunderList
-    {
-        get { return KunderSingleton.Instance.GetKunder;}
-          
-    }
+        {
+            get { return KunderSingleton.Instance.GetKunder; }
+
+        }
 
         public void AddKunde(Kunder k)
         {
@@ -288,24 +290,27 @@ namespace Client.ViewModel
             OnPropertyChanged(nameof(KunderList));
         }
 
-    public Hjælpere LoggedIndHjælper
-    {
-        get { return Login.LoggedInUser; }
-        set { Login.LoggedInUser = value; OnPropertyChanged((nameof(LoggedIndHjælper))); }
-    }
+        public Hjælpere LoggedIndHjælper
+        {
+            get { return Login.LoggedInUser; }
+            set { Login.LoggedInUser = value; OnPropertyChanged((nameof(LoggedIndHjælper))); }
+        }
 
-    private Opgaver _selectedOpgave;
+        private Opgaver _selectedOpgave;
 
         public Opgaver SelectedOpgave
         {
             get { return _selectedOpgave; }
-            set { _selectedOpgave = value;
-                if ( _selectedOpgave.ID == 0)
+            set
+            {
+                _selectedOpgave = value;
+                if (_selectedOpgave.ID == 0)
                 {
                     _selectedOpgave.ID = OpgaverSingleton.Instance.GetOpgaver.Count + 1;
                 }
 
-                OnPropertyChanged((nameof(SelectedOpgave))); }
+                OnPropertyChanged((nameof(SelectedOpgave)));
+            }
         }
 
         private Kunder _selectedKunde;
@@ -328,6 +333,6 @@ namespace Client.ViewModel
             }
         }
     }
-   
+
 
 }

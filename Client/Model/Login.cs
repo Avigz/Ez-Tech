@@ -23,16 +23,19 @@ namespace Client.Model
         }
 
         #region methods
-        public static bool LoginAsync(string Uname, string Pw)
+        public static bool LoginAsync(string username, string password)
             {
-               
+                if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+                {
+                    return false;
+                }
 
                 DBPersistency DbContext = new DBPersistency();
                 List<Hjælpere> lookupList = DbContext.HjælpereWebApi.Load().Result;
-                IEnumerable<Hjælpere> Query = from n in lookupList where n.Navn == Uname select n;
+                IEnumerable<Hjælpere> Query = from n in lookupList where n.Navn == username select n;
                 
-                string _uname = Uname;
-                string _pw = Pw;
+                string _uname = username;
+                string _pw = password;
 
                 if (Query.FirstOrDefault().Navn == _uname && Query.FirstOrDefault().Kodeord == _pw)
                 {

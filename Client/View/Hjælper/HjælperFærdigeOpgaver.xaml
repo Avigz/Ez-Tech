@@ -7,12 +7,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:viewModel="using:Client.ViewModel"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,0">
     <Page.DataContext>
         <viewModel:ViewModel></viewModel:ViewModel>
     </Page.DataContext>
 
-    <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
+    <Grid RenderTransformOrigin="0.529,0.5">
         <Grid.RowDefinitions>
             <RowDefinition   Height="131*"></RowDefinition>
         </Grid.RowDefinitions>
@@ -97,7 +97,7 @@
                                 <TextBox  Margin="22,-40,-30,4" Background="White" Text="{Binding KundeID, Mode=TwoWay}" FontFamily="Calibri Light" Height="32" Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                             </StackPanel>
 
-                          
+
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

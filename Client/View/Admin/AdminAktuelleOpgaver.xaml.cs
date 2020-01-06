@@ -72,6 +72,7 @@ namespace Client.View.Admin
         {
             vm.SelectedOpgave.IsDone = true;
             vm.UpdateOpgave(vm.SelectedOpgave);
+
         
         }
 
