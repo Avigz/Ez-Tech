@@ -138,6 +138,7 @@ namespace Client.View.Admin
             Frame.Navigate(typeof(AdminKunder));
         }
 
+       
     }
 
     

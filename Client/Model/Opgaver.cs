@@ -63,6 +63,7 @@ namespace Client.Model
             set { _isDone = value; OnPropertyChanged(nameof(IsDone)); }
         }
 
+//virtual benyttes når, der er noget man skal bruge i det omfang lige  her og nu. oprettes når den skal bruges.
         public virtual Kunder Kunde { get; set; }
         #endregion
 

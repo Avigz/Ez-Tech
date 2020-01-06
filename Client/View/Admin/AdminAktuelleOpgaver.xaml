@@ -13,7 +13,7 @@
         <vm:ViewModel></vm:ViewModel>
     </Page.DataContext>
 
-    <Grid RenderTransformOrigin="0.529,0.5" Background="DarkSlateGray">
+    <Grid RenderTransformOrigin="0.529,0.5">
         <Grid.RowDefinitions>
             <RowDefinition Height="131*"></RowDefinition>
         </Grid.RowDefinitions>
@@ -84,7 +84,7 @@
 
         <StackPanel Orientation="Vertical" Margin="20,200,0,0" Height="655" HorizontalAlignment="Center" VerticalAlignment="Top" Width="993" >
             <TextBlock Text="Alle Aktuelle Opgaver" Height="70" FontSize="50" Foreground="DarkRed" Margin="0,0,2.333,0" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-            <ListView x:Name="Lv" ItemsSource="{Binding OpgaveNotDone}" SelectedItem="{Binding SelectedOpgave, Mode=TwoWay}" RenderTransformOrigin="0.507,0.684" Margin="118,0,121.333,0" SelectionChanged="Lv_OnSelectionChanged" Height="464" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+            <ListView x:Name="Lv" ItemsSource="{Binding OpgaveNotDone}" SelectedItem="{Binding SelectedOpgave, Mode=TwoWay}" RenderTransformOrigin="0.507,0.684" Margin="118,0,0,0" SelectionChanged="Lv_OnSelectionChanged" Height="464" HorizontalAlignment="Left" Width="838">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Height="108" Width="810" Margin="0,0,0,0" RenderTransformOrigin="0.588,0.531">
@@ -99,7 +99,7 @@
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal" Height="35" Margin="0,0,0,0">
-                                <TextBlock Margin="301,0,-566,0" Text="hjælperTilknyttet:" FontFamily="Calibri Light" Height="26" FontSize="18" Foreground="white" HorizontalAlignment="Stretch" />
+                                <TextBlock Margin="301,0,-477,0" Text="hjælperTilknyttet:" FontFamily="Calibri Light" Height="26" FontSize="18" Foreground="white" VerticalAlignment="Stretch" />
                                 <TextBox Margin="441,0,-448,0" Text="{Binding HjælperTilknyttet, Mode=TwoWay}" Height="35" FontFamily="Calibri Light" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Height="39" Margin="14.6,0,-187.4,0" VerticalAlignment="Center">
@@ -111,24 +111,43 @@
                                 <TextBox  Margin="22,-40,-30,4" Background="White" Text="{Binding KundeID, Mode=TwoWay}" FontFamily="Calibri Light" Height="32" Foreground="Black" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                             </StackPanel>
 
-                            <!--<StackPanel Orientation="Horizontal" Height="35" Margin="14,0,-105,0" VerticalAlignment="Center" HorizontalAlignment="Stretch">
-                                    <TextBlock Margin="15,0,-180,0" Text="Beskrivelse:" FontFamily="Calibri Light" Height="35" FontSize="18" Foreground="white" VerticalAlignment="Stretch" />
-                                    <TextBox Margin="96,0,-158,0" Text="{Binding Beskrivelse, Mode=TwoWay}" Height="35" FontFamily="Calibri Light" Foreground="Black" Background="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                                </StackPanel>-->
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Done" Click="DoneClick" Margin="20"/>
-                <Button Content="Opdater" Click="OpdaterClick" Margin="20"/>
-                <Button Content="Slet" Click="SletClick" Margin="20"/>
+                <Button Content="Opdater" Click="OpdaterClick" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="70">
+                    <Button.Flyout>
+                        <Flyout x:Name="Flyout1">
+                            <TextBlock Text="Opgaven er opdateret">
+                            </TextBlock>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+
+                <Button Content="Slet" Click="SletClick" Margin="28">
+                    <Button.Flyout>
+                        <Flyout x:Name="Flyout2">
+                            <TextBlock Text="Opgaven er slettet">
+                            </TextBlock>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
+
+                <Button Content="Done" Click="DoneClick" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Width="58">
+                    <Button.Flyout>
+                        <Flyout x:Name="Flyout3">
+                            <TextBlock Text="Opgaven er afsluttet">
+                            </TextBlock>
+                        </Flyout>
+                    </Button.Flyout>
+                </Button>
 
             </StackPanel>
         </StackPanel>
         <StackPanel>
             <StackPanel Margin="50">
-                <ComboBox x:Name="LedigeHjælpereCombo" Header="Tilgængelige hjælpere" Margin ="100,0,0,0" Height="65" Width="296"  Foreground="DarkRed" ItemsSource="{Binding HjælperList, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.75" SelectedItem="{Binding SelectedHjælper, Mode=TwoWay}" SelectionChanged="LedigeHjælpereCombo_OnSelectionChanged">
+                <ComboBox x:Name="LedigeHjælpereCombo" Header="Tilgængelige hjælpere" Margin ="100,25,0,0" Height="66" Width="296"  Foreground="DarkRed" ItemsSource="{Binding HjælperList, Mode=OneWay}" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.53,0.75" SelectedItem="{Binding SelectedHjælper, Mode=TwoWay}" SelectionChanged="LedigeHjælpereCombo_OnSelectionChanged">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
@@ -138,10 +157,15 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
             </StackPanel>
-            <Button Content="Tilknyt" Height="40" Width="120" Margin="240,100,0,0" Click="TilknytHjælper"></Button>
+            <Button Content="Tilknyt" Height="40"  Width="120" Margin="240,100,0,0" Click="TilknytHjælper">
+                <Button.Flyout>
+                    <Flyout x:Name="Flyout4">
+                        <TextBlock Text="Hjælper er tilknyttet opgaven">
+                        </TextBlock>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
         </StackPanel>
-
-
 
 
         <RelativePanel Margin="0,0,0,0">

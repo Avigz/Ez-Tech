@@ -72,5 +72,10 @@ namespace Client.View
         {
             Frame.Navigate(typeof(OmOs));
         }
+
+        private void PasswordBox_OnPasswordChanged(object sender, RoutedEventArgs e)
+        {
+            vm.Password = PasswordBox.Password;
+        }
     }
 }
